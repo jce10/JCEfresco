@@ -1,0 +1,102 @@
+28Si(d,p)29Si(g.s.) DWBA
+NAMELIST
+ &FRESCO hcm=0.100 rmatch=20.000 rintp=0.20
+    hnl=0.100 rnl=4.000 centre=-0.45
+    jtmin=0.0 jtmax=30.0 absend=-0.10
+    thmin=1.0 thmax=180.0 thinc=1.0
+    iter=1 chans=1 smats=2 xstabl=1
+    elab=12.0 /
+
+ &PARTITION namep='d' massp=2.0141 zp=1 namet='28Si' masst=27.9769 zt=14 nex=1 /
+ &STATES jp=1.0 ptyp=1 ep=0.0000 cpot=1 jt=0.0 ptyt=1 et=0.0000 /
+
+ &PARTITION namep='p' massp=1.0078 zp=1 namet='29Si' masst=28.9765 zt=14 qval=6.246 pwf=F nex=1 /
+ &STATES jp=0.5 ptyp=1 ep=0.0000 cpot=2 jt=0.5 ptyt=1 et=0.0000 /
+ &PARTITION /
+
+ ! ---------------------------
+ ! Entrance: 28Si + d
+ ! Table values:
+ ! V   = -86.35 MeV
+ ! rr  = 1.15 fm
+ ! ar  = 0.81 fm
+ ! Wv  = 0
+ ! 4Ws = 74.5 MeV
+ ! ri  = 1.34 fm
+ ! ai  = 0.68 fm
+ ! Vso = 0
+ ! rc  = 1.15 fm
+ ! nonlocal = 0.54 fm
+ ! ---------------------------
+
+ &POT kp=1 type=0 p(1:7)=28.000 0.000 1.150 0.000 0.000 0.000 0.000 /
+ &POT kp=1 type=1 p(1:6)=86.35 1.150 0.810 0.000 1.340 0.680 /
+ &POT kp=1 type=2 p(1:3)=74.50 1.340 0.680 /
+ ! &POT kp=1 type=3 p(1:3)=0.000 0.000 0.000 /
+
+ ! ---------------------------
+ ! Exit: 29Si + p
+ ! Table values:
+ ! V   = -(55.8 + 0.32*E)  or possibly paper convention equivalent
+ ! rr  = 1.17 fm
+ ! ar  = 0.75 fm
+ ! Wv  = lesser of 0 or (2.7 - 0.22E)
+ ! ri  = 1.32 fm
+ ! ai  = 0.51 fm
+ ! 4Ws = 47.2 - E
+ ! rso = 1.01 fm
+ ! aso = 0.75 fm
+ ! Vso = -24.8 MeV
+ ! rc  = 1.25 fm
+ !
+ ! You need to choose the channel energy E used in the paper.
+ ! Replace VP, WV, WS with the corresponding numbers.
+ ! ---------------------------
+
+ &POT kp=2 type=0 p(1:7)=29.000 0.000 1.250 0.000 0.000 0.000 0.000 /
+ &POT kp=2 type=1 p(1:6)=VP   1.170 0.750  WV   1.320 0.510 /
+ &POT kp=2 type=2 p(1:3)=WS   1.320 0.510 /
+ &POT kp=2 type=3 p(1:3)=-24.8 1.010 0.750 /
+
+ ! ---------------------------
+ ! Bound state: 28Si + n -> 29Si(g.s.)
+ ! Table values:
+ ! V     = varied to fit binding energy
+ ! r0    = 1.16 fm
+ ! a0    = 0.78 fm
+ ! Wv    = 0
+ ! 4Ws   = 0
+ ! Vso   = 25  (Thomas spin-orbit units)
+ ! rso   = 1.16 fm
+ ! aso   = 0.78 fm
+ ! rc    = 1.16 fm
+ ! nonlocal = 0.85 fm
+ ! ---------------------------
+
+ &POT kp=3 type=0 p(1:7)=28.000 0.000 1.160 0.000 0.000 0.000 0.000 /
+ &POT kp=3 type=1 p(1:3)=VBOUND 1.160 0.780 /
+ &POT kp=3 type=3 p(1:3)=25.00 1.160 0.780 /
+ &POT /
+
+ ! ---------------------------
+ ! Deuteron overlap
+ ! Standard placeholder choice here.
+ ! Replace with your preferred np/deuteron prescription if needed.
+ ! ---------------------------
+
+ &POT kp=4 type=0 p(1:7)=1.000 0.000 1.000 0.000 0.000 0.000 0.000 /
+ &POT kp=4 type=1 shape=2 p(1:3)=72.15 0.000 1.484 /
+ &POT /
+
+ &OVERLAP kn1=1 ic1=1 ic2=2 in=1
+    nn=1 l=0 sn=0.5 j=0.5
+    kbpot=4 be=2.2246 isc=1 /
+ &OVERLAP kn1=2 ic1=1 ic2=2 in=2
+    nn=2 l=0 sn=0.5 j=0.5
+    kbpot=3 be=8.473 isc=1 /
+ &OVERLAP /
+
+ &COUPLING icto=2 icfrom=1 kind=7 ip1=0 ip2=-1 ip3=0 /
+   &CFP in=1 ib=1 ia=1 kn=1 a=1.4142 /
+   &CFP in=2 ib=1 ia=1 kn=2 a=1.0000 /
+ &COUPLING /
