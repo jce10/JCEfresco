@@ -1,0 +1,36 @@
+How this works...
+=================
+
+The makefile is set up such that for a give input file in inputFiles/ -- say test.fri -- one can run "make test" and it will:
+
+ 1. run that file through fresco (to generate the output test.fro in outputFiles/)
+ 2. parse the fresco default cross-section output file (fort.16)
+ 3. separate each state into easily-plottable text files in plotFiles (state0.txt, state1.txt, etc.)
+    --> the state number (state#.txt) is in the order in which they appear in the input file
+        (hence state0.txt is usually elastic scattering)
+
+Crude image files (jpgs) are also created in plotFiles.
+
+NOTE: all of the above requires:
+
+ 1. the conv_fort.cpp code has been compiled successfully (into convFort executable)
+ 2. your computer is successfully able to run the bash script for the crude plotting
+
+=================
+
+If any of the above /doesn't/ work, then the bare minimum needed to run fresco is as follows:
+
+$ fresco < bla.fri > bla.fro
+
+Then in addition to the blanket *.fro file (in which is contained ALL info), there are various fort.* files which are this same output split into more convenient files. For example, all differential xsecs for all states are in fort.16.
+
+What each fort.* file contains is in the manual.
+
+=================
+
+Also included:
+
+ * A set of lecture slides from Nick Keeley's fresco workshop from the past couple of years (~2019)
+   --> very helpful, geared toward first-timers
+
+ * An entire directory of what I call "originalFiles" -- i.e. every unaltered example file I've ever been sent by the experts

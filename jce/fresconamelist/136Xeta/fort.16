@@ -1,0 +1,53 @@
+#  17 angles,  1 tensor ranks for 0=projectile
+@subtitle   "(T,ALPHA) REACTION ON 136-XENON AT SUB-BARRIER ENERGIES"                       
+@legend ON
+@legend x1 0.2
+@legend y1 0.8
+@g0 type LOGY
+@yaxis ticklabel format power
+@xaxis label "Scattering angle (degrees)"
+@yaxis label "Cross section (mb/sr)"
+@legend string   0 "Partition=  1 Excit=  1 near/far= 1"
+#legend string   0 "Lab energy =    5.8900"
+@s0 linestyle   1
+#  Theta       sigma       iT11        T20         T21         T22         Kyy for projectile
+   66.00       1.003    
+   71.00       1.002    
+   76.00       1.001    
+   81.00       1.000    
+   86.00      0.9979    
+   91.00      0.9945    
+   96.00      0.9899    
+   101.0      0.9843    
+   106.0      0.9781    
+   111.0      0.9715    
+   116.0      0.9649    
+   121.0      0.9582    
+   126.0      0.9517    
+   131.0      0.9453    
+   136.0      0.9391    
+   141.0      0.9333    
+   146.0      0.9279    
+ END
+@legend string   1 "Partition=  2 Excit=  1 near/far= 1"
+#legend string   0 "Lab energy =    5.8900"
+@s1 linestyle   2
+#  Theta       sigma       iT11        T20         T21         T22         Kyy for projectile
+   66.00      0.3315E-03
+   71.00      0.5080E-03
+   76.00      0.7425E-03
+   81.00      0.1036E-02
+   86.00      0.1381E-02
+   91.00      0.1767E-02
+   96.00      0.2178E-02
+   101.0      0.2599E-02
+   106.0      0.3015E-02
+   111.0      0.3414E-02
+   116.0      0.3788E-02
+   121.0      0.4133E-02
+   126.0      0.4444E-02
+   131.0      0.4718E-02
+   136.0      0.4952E-02
+   141.0      0.5149E-02
+   146.0      0.5316E-02
+ END

@@ -118,10 +118,12 @@ import matplotlib.pyplot as plt
 # ========================================================== #
 
 
-# ========== Coupled Channel gracias de Ken ========== #
-sections = scrape_fort16_sections("/home/jce18b/Programs/fresco/Exercises/12Cdp_CC/fort.16")
-plot_sections_individually(sections)
-# ========================================================== #
+# # ========== Coupled Channel gracias de Ken ========== #
+# sections = scrape_fort16_sections("/home/jce18b/Programs/fresco/Exercises/12Cdp_CC/fort.16")
+# plot_sections_individually(sections)
+# # ========================================================== #
+
+
 
 
 
