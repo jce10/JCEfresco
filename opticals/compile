@@ -1,3 +1,0 @@
-ifort -o KD KDParamCode.f KD-pot.f90 -O
-ifort -o Souk soukhovitskii.f Souk-frescogen.f90 KDParamCode.f -O
-ifort -o maslov maslov-pot.f90	-O

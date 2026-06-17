@@ -1,6 +1,0 @@
-numpy
-polars
-matplotlib
-scipy
-pandas
-odfpy

@@ -1,0 +1,18 @@
+state0 | line#: 1017
+2H       & 12C      in state #   1 with spins & parities 1.0  + &  0.0  +;  0
+
+state1 | line#: 1384
+2H       & 12C      in state #   2 with spins & parities 1.0  + &  2.0  +;  1
+
+state2 | line#: 1631
+1H       & 13C      in state #   1 with spins & parities 0.5  + &  0.5  -;  0
+
+state3 | line#: 1878
+1H       & 13C      in state #   2 with spins & parities 0.5  + &  0.5  +;  1
+
+state4 | line#: 2125
+1H       & 13C      in state #   3 with spins & parities 0.5  + &  1.5  -;  0
+
+state5 | line#: 2372
+1H       & 13C      in state #   4 with spins & parities 0.5  + &  2.5  +;  0
+

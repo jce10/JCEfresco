@@ -1,0 +1,33 @@
+state0 | line#: 10927
+2H       &  25Al    in state #   1 with spins & parities 1.0  + &  2.5  +;  0
+
+state1 | line#: 12375
+2H       &  25Al    in state #   2 with spins & parities 1.0  + &  2.5  +;  0
+
+state2 | line#: 13463
+2H       &  25Al    in state #   3 with spins & parities 1.0  + &  2.5  +;  0
+
+state3 | line#: 14551
+2H       &  25Al    in state #   4 with spins & parities 0.0  + &  2.5  +;  0
+
+state4 | line#: 15639
+2H       &  25Al    in state #   5 with spins & parities 0.0  + &  2.5  +;  0
+
+state5 | line#: 16727
+2H       &  25Al    in state #   6 with spins & parities 2.0  + &  2.5  +;  0
+
+state6 | line#: 17815
+2H       &  25Al    in state #   7 with spins & parities 2.0  + &  2.5  +;  0
+
+state7 | line#: 18903
+2H       &  25Al    in state #   8 with spins & parities 3.0  + &  2.5  +;  0
+
+state8 | line#: 19991
+2H       &  25Al    in state #   9 with spins & parities 3.0  + &  2.5  +;  0
+
+state9 | line#: 21079
+1H       &  26Al    in state #   1 with spins & parities 0.5  + &  5.0  +;  0
+
+state10 | line#: 21082
+1NN      &  26Si    in state #   1 with spins & parities 0.5  + &  3.0  +;  0
+

@@ -1,0 +1,712 @@
+SECTION 1: GLOBAL CONTROLS
+
+
+** 70 channel, 6Li + 58Si at 34.0 MeV
+0.07    120.0   0.21    0.14    15.0    -2.24
+ 00. 70.  +.00   F F
+3  0.0     180.   1.0  1         -10.0  
+0.01   1  6099 1  48
+ 1 1 0 0 1 3 0 0 0 1 0 0 1
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+SECTION 2: REACTION PARTITIONS
+
+
+Partition #1
+Card 6
+6Li     6.01512 3.0       59   58Ni   57.9353 28.0    0.0
+
+Explicitly
+6Li       | NAME(1) | projectile name
+6.01512   | MASS(1) | projectile mass
+3.0       | ZZ(1)   | projectile charge
+
+59        | NEX     | number of excitation pairs/states listed
+(blank)   | PWF     | default Coulomb-wave handling
+
+58Ni      | NAME(2) | target/core name
+57.9353   | MASS(2) | target/core mass
+28.0      | ZZ(2)   | target/core charge
+0.0       | QVAL    | partition Q-value
+
+
+Card 7
+1.0   +1 0.0000            1  0.0   +1 0.00
+
+Explicitly:
+6Li projectile:
+1.0      | Jp    | 6Li ground-state spin
++1       | BANDp | positive parity
+0.0000   | Ep    | excitation energy
+
+58Ni target:
+1        | KP    | optical potential index for this state pair
+0.0      | Jt    | 58Ni spin
++1       | BANDt | positive parity
+0.00     | Et    | excitation energy
+
+
+The first four 6Li entries are the bound ground state plus three resonant/pseudostate entries.
+
+3.0   +1 2.186             1       1
+2.0   +1 4.3100            1       1
+1.0   +1 5.7000            1       1
+
+The trailing values are how one indicates to FRESCO that we are copying the same target partition info and which OMPs to use. 
+
+1 | COPYt | copy target state/pair #1, i.e. keep 58Ni as 0+ g.s.
+1 | KP    | use optical potential set 1 / same entrance-channel potential bookkeeping
+
+
+The rest of these Card 7's are for discretizating the continuum.
+These are all MIDPOINT energies of each bin of width defined in the form factors.
+In Partition 1 Card 7 we are manually building the continuum into energy "bins" of energy "widths" of our choosing. 
+
+L = 0
+1.0   +1 1.5571            1       1
+1.0   +1 1.8657            1       1
+1.0   +1 2.4930            1       1
+1.0   +1 3.4338            1       1
+1.0   +1 4.6883            1       1
+1.0   +1 6.2563            1       1
+1.0   +1 8.1380            1       1
+
+L = 1
+0.0   -1 1.5571            1       1
+1.0   -1 1.5571            1       1
+2.0   -1 1.5571            1       1
+0.0   -1 1.8657            1       1
+1.0   -1 1.8657            1       1
+2.0   -1 1.8657            1       1
+0.0   -1 2.4930            1       1
+1.0   -1 2.4930            1       1
+2.0   -1 2.4930            1       1
+0.0   -1 3.4338            1       1
+1.0   -1 3.4338            1       1
+2.0   -1 3.4338            1       1
+0.0   -1 4.6883            1       1
+1.0   -1 4.6883            1       1
+2.0   -1 4.6883            1       1
+0.0   -1 6.2563            1       1
+1.0   -1 6.2563            1       1
+2.0   -1 6.2563            1       1 
+0.0   -1 8.1380            1       1
+1.0   -1 8.1380            1       1
+2.0   -1 8.1380            1       1
+
+L = 2
+3.0   +1 3.2182            1       1 
+3.0   +1 4.6883            1       1 
+2.0   +1 6.2563            1       1
+3.0   +1 6.2563            1       1
+2.0   +1 8.1380            1       1
+3.0   +1 8.1380            1       1
+
+L = 3
+2.0   -1 1.5571            1       1
+3.0   -1 1.5571            1       1
+4.0   -1 1.5571            1       1
+2.0   -1 1.8657            1       1
+3.0   -1 1.8657            1       1
+4.0   -1 1.8657            1       1
+2.0   -1 2.4930            1       1
+3.0   -1 2.4930            1       1
+4.0   -1 2.4930            1       1
+2.0   -1 3.4338            1       1
+3.0   -1 3.4338            1       1
+4.0   -1 3.4338            1       1
+2.0   -1 4.6883            1       1
+3.0   -1 4.6883            1       1
+4.0   -1 4.6883            1       1
+2.0   -1 6.2563            1       1
+3.0   -1 6.2563            1       1
+4.0   -1 6.2563            1       1
+2.0   -1 8.1380            1       1
+3.0   -1 8.1380            1       1
+4.0   -1 8.1380            1       1
+
+
+----------------------------------------------------------------------------------------------------------------------------
+Partition #2
+This is the partition for the intermediate reaction stage. This acts as an intermediate cluster configuration that
+  operates as a transfer coupling partition. This is indicated by the -1 NEX value that tells FRESCO that the cross sections 
+  for this partition are not printed.
+The whole reaction chain is as follows: 58Ni(6Li,a)60Cu(a,d)62Zn.
+The Q-value inputted, 9.7796 MeV, corresponds to the first half of the equation: 58Ni(6Li,a)60Cu.
+
+Card 6
+4He     4.0026  2.0       -1   60Cu   59.9374 29.0     9.7796
+
+Explicitly:
+4He        | NAME(1) | projectile name
+4.0026     | MASS(1) | projectile mass
+2.0        | ZZ(1)   | projectile charge
+
+-1         | NEX     | special transfer-only partition flag
+(blank)    | PWF     | default Coulomb-wave handling
+
+60Cu       | NAME(2) | target/core name
+59.9374    | MASS(2) | target/core mass
+29.0       | ZZ(2)   | target/core charge
+
+9.7796     | QVAL    | partition Q-value
+
+
+Card 7
+0.0   +1 0.0       0       2  0.5   +1 0.00
+
+Explicitly:
+0.0        | Jp      | projectile spin
+blank      | COPYp   | not a copied state
++1         | BANDp   | positive parity / band label
+0.0        | Ep      | projectile excitation energy
+
+0          | KKp     | rotational-band K quantum number
+blank      | Tp      | isospin not specified
+blank      | KP      | default optical potential index
+blank      | PWF     | default Coulomb-wave treatment
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Partition #3
+
+Card 6
+2H      2.0141  1.0        4   62Zn   61.9343 30.0     1.8949
+
+Explicitly:
+2H          | NAME(1) | projectile/ejectile name
+2.0141      | MASS(1) | projectile/ejectile mass
+1.0         | ZZ(1)   | projectile/ejectile charge
+
+4           | NEX     | number of excitation pairs/states listed
+blank       | PWF     | default Coulomb-wave treatment
+
+62Zn        | NAME(2) | target/residual nucleus
+61.9343     | MASS(2) | target/residual mass
+30.0        | ZZ(2)   | target/residual charge
+
+1.8949      | QVAL    | partition Q-value relative to partition 1
+
+
+Card 7
+1.0   +1 0.0              10  0.0   +1 0.0000
+     1                    10  2.0   +1 0.9538
+     1                    10  4.0   +1 2.1861
+     1                    10  6.0   +1 3.7076
+
+Explicitly:
+GS pair
+1.0         | Jp      | deuteron spin
+blank       | COPYp   | not copied from another state
++1          | BANDp   | positive parity
+0.0         | Ep      | excitation energy = 0
+
+blank       | KKp     | no rotational K quantum number
+blank       | Tp      | isospin unspecified
+blank       | KP      | default optical potential index
+blank       | PWF     | default Coulomb-wave handling
+10          | Jt      | target spin = 0+ state bookkeeping
+blank       | COPYt   | not copied
+
+0.0         | BANDt   | rotational band index
++1          | parity  | positive parity
+0.0000      | Et      | excitation energy = 0.0000 MeV
+
+blank       | KKt     | no explicit K value
+blank       | Tt      | isospin unspecified
+blank       | EXCH    | no exchange symmetry flag
+blank       | IGNORE  | normal convergence
+blank       | INFAM   | no external amplitudes
+blank       | OUTFAM  | no external outputs
+
+1st excited state
+1           | COPYp   | copy projectile state #1
+
+10          | KP      | optical potential index
+2.0         | Jt      | target spin
++1          | parity  | positive parity
+0.9538      | Et      | excitation energy
+
+2nd excited state
+1           | COPYp   | reuse projectile state #1
+
+10          | KP      | optical potential index
+4.0         | Jt      | target spin
++1          | parity
+2.1861      | Et      | excitation energy
+
+3rd excited state
+1           | COPYp   | reuse projectile state #1
+
+10          | KP      | optical potential index
+6.0         | Jt      | target spin
++1          | parity
+3.7076      | Et      | excitation energy
+
+rotational band coupling scheme for 62Zn.
+
+-----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+SECTION 3: OPTICAL MODEL POTENTIALS
+
+
+OMPs!! yayyyyy!!!
+
+
+  58Ni + 6Li Coulomb entrance channel  <--------> 9Be + 6Li Coulomb
+  1 0  0    58.0     0.0     1.3
+  
+  60Cu + a Coulomb intermediate channel <--------> 11B + a Coulomb
+  2 0  0    60.0     0.0     1.3
+  
+  a + d internal potential <--------> keep the same
+  3 0  0     1.0     0.0     3.0
+  3 1  2 106.815     0.0   2.191 
+  3 1  2 -48.231     0.0   1.607
+  
+  a + d internal potential + spin-orbit potential constructed a la Y. Sakuragi, M. Y ahiro and M. Kamimura
+    that is read in (7) and multiplied by 0.5. KEEP THE SAME
+  4 0  0     1.0     0.0     3.0
+  4 1  2  49.410     0.0   2.191
+  4 1  2 -22.310     0.0   1.607
+  4 3  7     0.5                                            <---- 7 read in external fort.4 file x 0.5 factor
+  
+  a + 58Ni OMP  <--------> a + Be change
+  5 0  0    58.0     0.0     1.3
+  5 1  0   106.1    1.07   0.807
+  5 2  0                            16.6    1.35   0.629
+  
+  d + 58Ni OMP <--------> d + 9Be change
+  6 0  0    58.0     0.0    1.40
+  6 1  0   166.5    1.44    0.53    20.0    1.44    0.53
+  
+  a + d internal potential + spin-orbit potential constructed a la Y. Sakuragi, M. Y ahiro and M. Kamimura
+    that is read in (7) and multiplied by 0.5. KEEP THE SAME
+  7 0  0     1.0     0.0     3.0
+  7 1  2  84.640     0.0   2.377
+  7 1  2 -31.620     0.0   1.852
+  7 3  7     1.0
+  
+ d + 62Zn exit channel  <--------> d + 13C with deformations !!!update Mn(E)!!!
+ 10 0  0    62.0     0.0     1.3
+ 1011 10         34.9926                                    <---- Coulomb deformation
+ 10 1  0   86.39    1.17   0.766    1.41   1.325   0.806
+ 10-2  0                            9.43   1.325   0.806
+ 1011 10          1.0258                                    <---- type 11 = deformed target (matrix elements from ROTOR)
+ 10 3  0    3.18    1.07    0.66
+ 
+  a + d internal potential <--------> keep the same
+ 13 0  0     1.0     0.0     3.0
+ 13 1  2 106.783     0.0   2.191 
+ 13 1  2 -48.217     0.0   1.607
+ 
+ a + 58Ni binding/transfer potential to form 62Zn  <--------> a + 9Be = 13C
+ 14 0  0    58.0     0.0    1.25
+ 14 1  0    50.0    1.25    0.65
+ 
+ a + d internal potential <--------> keep the same.
+ 17 0  0     1.0     0.0     3.0
+ 17 1  2  84.606     0.0   2.377
+ 17 1  2 -31.607     0.0   1.852
+ 17 4  7     1.0
+  
+0
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+SECTION 4: FORM FACTORS
+
+
+  Normal form factor definition for 6Li ground state
+  1    1 2 1 0   2 0   1.0   1.0    3  0  1.4737  1  1  0 		        | 6Li GS
+
+  ------------------------------------------------------------------- |
+
+  2    1 2 1 0   1 2   1.0   3.0    7  0 -0.4950 14  3  0-90 -0.9700	|
+
+  Form factors for the continuum begin here after the binding energy S_a(6Li) - Ex
+  I'll explicitly label every input for form factor #2, but continuum-related inputs start from KBPOT onward:
+
+  2           | KN1   | form-factor index
+  blank/0     | KN2   | no range; this is just FF #2
+  1           | IC1   | partition containing core/composite nucleus
+  2           | IC2   | other partition involved in the form factor
+  1           | IN    | particle is in projectile side
+  0           | KIND  | ordinary one-particle (LN,SN)JN form factor
+
+  blank       | CH1   | no special cluster label
+  1           | NN    | number of radial nodes
+  2           | L     | orbital angular momentum l = 2
+  blank/0     | LMAX  | unused for KIND = 0
+  1.0         | SN    | intrinsic spin of transferred/bound particle; here deuteron spin s = 1
+  blank/0     | IA    | core state index; omitted/default
+  3.0         | JN    | total single-particle angular momentum j = 3
+  blank/0     | IB    | composite state index; omitted/default
+
+  7           | KBPOT | binding potential index
+  0           | KRPOT | transfer potential index
+  -0.4950     | BE    | continuum bin midpoint energy
+  14          | ISC   | continuum weighting prescription
+  3           | IPC   | print control
+  0           | NFL   | wavefuntion file unit
+  -90         | NAM   | use 90 integration steps in continuum-bin averaging
+  -0.9700     | AMPL  | UPPER bin spacing
+
+  So physically FF #2 is roughly:
+      α+d,ℓ=2,s=1,j=3+,Ebin​≈0.495 MeV
+  using POT = 7 defined above.
+
+  Continuum weighting 4/14 weight wavefuntions by T(k)* (useful for resonances)
+  So here are the first few excited states (resonances!!!) in 6Li so we use 4
+  Extra weighting (14) near threshold to stabilize continuum behavior.
+
+  ------------------------------------------------------------------- |
+
+  3    1 2 1 0   1 2   1.0   2.0    7  0 -1.9651  4  3  0-90 -3.9102	| 
+  4    1 2 1 0   1 2   1.0   1.0    7  0 -5.0228  4  3  0-90-10.0256	| 
+  
+  Extra weighting (12) near threshold to stabilize continuum behavior.
+  Normal weighting (2) farther from threshold.
+  L = 0
+  5    1 2 1 0   2 0   1.0   1.0    3  0 -0.0834 12  1  0-90 -0.1468	| 
+  6    1 2 1 0   2 0   1.0   1.0    3  0 -0.3920 12  1  0-90 -0.4704	| 
+  7    1 2 1 0   2 0   1.0   1.0    3  0 -1.0193  2  1  0-90 -0.7841	| 
+  8    1 2 1 0   2 0   1.0   1.0    3  0 -1.9601  2  1  0-90 -1.0976	| 
+  9    1 2 1 0   2 0   1.0   1.0    3  0 -3.2146  2  1  0-90 -1.4113	| 
+ 10    1 2 1 0   2 0   1.0   1.0    3  0 -4.7826  2  1  0-90 -1.7249	| 
+ 11    1 2 1 0   2 0   1.0   1.0    3  0 -6.6643  2  1  0-90 -2.0385	| 
+ 
+ L = 1
+ 12    1 2 1 0   1 1   1.0   0.0    4  0 -0.0834 12  1  0-90 -0.1468	|
+ 13    1 2 1 0   1 1   1.0   1.0    4  0 -0.0834 12  1  0-90 -0.1468	|
+ 14    1 2 1 0   1 1   1.0   2.0    4  0 -0.0834 12  1  0-90 -0.1468	|
+ 15    1 2 1 0   1 1   1.0   0.0    4  0 -0.3920 12  1  0-90 -0.4704	|
+ 16    1 2 1 0   1 1   1.0   1.0    4  0 -0.3920 12  1  0-90 -0.4704	|
+ 17    1 2 1 0   1 1   1.0   2.0    4  0 -0.3920 12  1  0-90 -0.4704	|
+ 18    1 2 1 0   1 1   1.0   0.0    4  0 -1.0193  2  1  0-90 -0.7841	|
+ 19    1 2 1 0   1 1   1.0   1.0    4  0 -1.0193  2  1  0-90 -0.7841	|
+ 20    1 2 1 0   1 1   1.0   2.0    4  0 -1.0193  2  1  0-90 -0.7841	|
+ 21    1 2 1 0   1 1   1.0   0.0    4  0 -1.9601  2  1  0-90 -1.0976	|
+ 22    1 2 1 0   1 1   1.0   1.0    4  0 -1.9601  2  1  0-90 -1.0976	|
+ 23    1 2 1 0   1 1   1.0   2.0    4  0 -1.9601  2  1  0-90 -1.0976	|
+ 24    1 2 1 0   1 1   1.0   0.0    4  0 -3.2146  2  1  0-90 -1.4113	|
+ 25    1 2 1 0   1 1   1.0   1.0    4  0 -3.2146  2  1  0-90 -1.4113	|
+ 26    1 2 1 0   1 1   1.0   2.0    4  0 -3.2146  2  1  0-90 -1.4113	|
+ 27    1 2 1 0   1 1   1.0   0.0    4  0 -4.7826  2  1  0-90 -1.7249	|
+ 28    1 2 1 0   1 1   1.0   1.0    4  0 -4.7826  2  1  0-90 -1.7249	|
+ 29    1 2 1 0   1 1   1.0   2.0    4  0 -4.7826  2  1  0-90 -1.7249	|
+ 30    1 2 1 0   1 1   1.0   0.0    4  0 -6.6643  2  1  0-90 -2.0385	|
+ 31    1 2 1 0   1 1   1.0   1.0    4  0 -6.6643  2  1  0-90 -2.0385	|
+ 32    1 2 1 0   1 1   1.0   2.0    4  0 -6.6643  2  1  0-90 -2.0385	|
+ 
+ L = 2
+ 33    1 2 1 0   1 2   1.0   3.0    7  0 -1.7445  2  1  0-90 -1.5290	|
+ 34    1 2 1 0   1 2   1.0   3.0    7  0 -3.2146  2  1  0-90 -1.4113	|
+ 35    1 2 1 0   1 2   1.0   2.0    7  0 -4.7826  2  1  0-90 -1.7249	|
+ 36    1 2 1 0   1 2   1.0   3.0    7  0 -4.7826  2  1  0-90 -1.7249	|
+ 37    1 2 1 0   1 2   1.0   2.0    7  0 -6.6643  2  1  0-90 -2.0385	|
+ 38    1 2 1 0   1 2   1.0   3.0    7  0 -6.6643  2  1  0-90 -2.0385	|
+ 
+ L = 3
+ 39    1 2 1 0   1 3   1.0   2.0    3  0 -0.0834 12  1  0-90 -0.1468	|
+ 40    1 2 1 0   1 3   1.0   3.0    3  0 -0.0834 12  1  0-90 -0.1468	|
+ 41    1 2 1 0   1 3   1.0   4.0    3  0 -0.0834 12  1  0-90 -0.1468	|
+ 42    1 2 1 0   1 3   1.0   2.0    3  0 -0.3920 12  1  0-90 -0.4704	|
+ 43    1 2 1 0   1 3   1.0   3.0    3  0 -0.3920 12  1  0-90 -0.4704	|
+ 44    1 2 1 0   1 3   1.0   4.0    3  0 -0.3920 12  1  0-90 -0.4704	|
+ 45    1 2 1 0   1 3   1.0   2.0    3  0 -1.0193  2  1  0-90 -0.7841	|
+ 46    1 2 1 0   1 3   1.0   3.0    3  0 -1.0193  2  1  0-90 -0.7841	|
+ 47    1 2 1 0   1 3   1.0   4.0    3  0 -1.0193  2  1  0-90 -0.7841	|
+ 48    1 2 1 0   1 3   1.0   2.0    3  0 -1.9601  2  1  0-90 -1.0976	|
+ 49    1 2 1 0   1 3   1.0   3.0    3  0 -1.9601  2  1  0-90 -1.0976	|
+ 50    1 2 1 0   1 3   1.0   4.0    3  0 -1.9601  2  1  0-90 -1.0976	|
+ 51    1 2 1 0   1 3   1.0   2.0    3  0 -3.2146  2  1  0-90 -1.4113	|
+ 52    1 2 1 0   1 3   1.0   3.0    3  0 -3.2146  2  1  0-90 -1.4113	|
+ 53    1 2 1 0   1 3   1.0   4.0    3  0 -3.2146  2  1  0-90 -1.4113	|
+ 54    1 2 1 0   1 3   1.0   2.0    3  0 -4.7826  2  1  0-90 -1.7249	|
+ 55    1 2 1 0   1 3   1.0   3.0    3  0 -4.7826  2  1  0-90 -1.7249	|
+ 56    1 2 1 0   1 3   1.0   4.0    3  0 -4.7826  2  1  0-90 -1.7249 	|
+ 57    1 2 1 0   1 3   1.0   2.0    3  0 -6.6643  2  1  0-90 -2.0385	|
+ 58    1 2 1 0   1 3   1.0   3.0    3  0 -6.6643  2  1  0-90 -2.0385	|
+ 59    1 2 1 0   1 3   1.0   4.0    3  0 -6.6643  2  1  0-90 -2.0385	|
+ 
+ (6Li | a + d)
+ 71    1 3 1 0   2 0   0.0   0.0   13  0  1.4737  1  1  0		| Sa(6Li) = 1.4737 MeV
+ 71          | KN1   | form-factor index
+blank/0     | KN2   | no range
+
+1           | IC1   | partition 1
+3           | IC2   | partition 3
+1           | IN    | projectile-side overlap
+0           | KIND  | ordinary one-particle form factor
+
+blank       | CH1   | no cluster label
+2           | NN    | node count
+0           | L     | orbital angular momentum
+blank/0     | LMAX  | unused for KIND=0
+0.0         | SN    | spin of transferred cluster/particle
+blank/0     | IA    | core state index
+0.0         | JN    | total j
+blank/0     | IB    | composite state index
+
+13          | KBPOT | (6Li | α+d) internal potential
+0           | KRPOT | use KBPOT
+1.4737      | BE    | bound α+d separation energy of 6Li
+1           | ISC   | vary binding / bound-state control
+1           | IPC   | print final + wavefunction
+0           | NFL   | no external wavefunction file
+
+ 
+
+ 72    1 3 2 0   7 0   0.0   0.0   14  0  3.3692  1  0  0		| Sa(62Zn) = 3.364 MeV | SECOND NUCLEUS FROM WHICH TO COUPLE
+72          | KN1   | form-factor index
+blank/0     | KN2   | no range
+
+1           | IC1   | partition 1
+3           | IC2   | partition 3
+2           | IN    | target-side overlap
+0           | KIND  | ordinary one-particle form factor
+
+blank       | CH1   | no cluster label
+7           | NN    | node count
+0           | L     | α orbital angular momentum relative to 58Ni
+blank/0     | LMAX  | unused for KIND=0
+0.0         | SN    | α spin = 0
+blank/0     | IA    | core state index
+0.0         | JN    | total j = 0
+blank/0     | IB    | composite state index
+
+14          | KBPOT | (62Zn | α+58Ni) binding potential
+0           | KRPOT | use KBPOT
+3.3692      | BE    | α binding energy for 62Zn ground state
+1           | ISC   | bound-state control
+0           | IPC   | minimal print
+0           | NFL   | no external wavefunction file
+
+
+
+ 73    1 3 2 0   6 2   0.0   2.0   14  0  2.4154  1  0  0		|
+ 73          | KN1   | form-factor index
+blank/0     | KN2   | no range
+
+1           | IC1   | partition 1
+3           | IC2   | partition 3
+2           | IN    | target-side overlap
+0           | KIND  | ordinary one-particle form factor
+
+blank       | CH1   | no cluster label
+6           | NN    | node count
+2           | L     | α orbital angular momentum relative to 58Ni
+blank/0     | LMAX  | unused for KIND=0
+0.0         | SN    | α spin = 0
+blank/0     | IA    | core state index
+2.0         | JN    | total j = 2
+blank/0     | IB    | composite state index
+
+14          | KBPOT | (62Zn | α + 58Ni) binding potential
+0           | KRPOT | use KBPOT
+2.4154      | BE    | α binding energy for 62Zn 2+ state
+1           | ISC   | bound-state control
+0           | IPC   | minimal print
+0           | NFL   | no external wavefunction file
+ 
+
+
+ 74-77 "go back" to continuum bins. why?
+ Here is where the card tells the code how to construct transfer couplings TO/FROM continuum states.
+ Form factors 2-59 defined the projectile continuum itself, while form factors 74-77 tell the transfer operators how to CONNECT them. 
+ 
+ using partition 1 and 3 
+ 74 75 1 3 1 3   1 2 2 0.0 1 2.0 4 17  0 -5.0228  4  3  0-90-10.0256 	|
+ 76    1 3 1 3   1 2 2 0.0 1 2.0 3 17  0 -1.9651  4  3  0-90 -3.9102	|
+
+ 77    1 3 1 3   1 2 2 0.0 1 2.0 2 17  0 -0.4950 14  3  0-90 -0.9700	|
+
+ I want to, again, explicitly label each of the settings in form factor 77 now that there are extra settings that were deactivated
+ in the form factor defining the continuum bin. 
+
+ 77          | KN1   | form-factor index
+ blank/0     | KN2   | no range; this is just FF #77
+ 1           | IC1   | first partition involved
+ 3           | IC2   | second partition involved
+ 1           | IN    | particle is in projectile side
+ 3           | KIND  | coupled-core / summed coupled-channel form factor
+
+ blank       | CH1   | no special cluster label
+ 1           | NN    | node count for this component
+ 2           | L     | minimum/component orbital angular momentum l = 2
+ 2           | LMAX  | maximum l included in the coupled sum
+ 0.0         | SN    | intrinsic spin used in coupled-core construction
+ 1           | IA    | core state index included in the coupled form factor
+ 2.0         | JN    | maximum/intermediate j included in the sum
+ 2           | IB    | composite state index
+
+ 17          | KBPOT | (6Li | α+d) internal potential
+ 0           | KRPOT | transfer potential index; 0 means use KBPOT
+ -0.4950     | BE    | continuum bin midpoint energy
+ 14          | ISC   | continuum weighting prescription
+ 3           | IPC   | print control
+ 0           | NFL   | wavefunction file unit
+ -90         | NAM   | explicit continuum-bin integration/range control
+ -0.9700     | AMPL  | other bin boundary, here upper edge in negative-BE convention
+ 
+ BIG difference being:
+   KIND = 0  → simple (L,S)J form factor
+   KIND = 3  → summed/coupled-core form factor
+
+  So FF#77 is not just “make one ℓ=2,j=3 bin.” 
+  It is using the coupled-channel form-factor machinery to connect continuum pieces in the transfer/coupling sector.
+
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+SECTION 4: OVERLAPS AND SPECTROSCOPIC AMPLITUDES
+
+
+   ***** 6Li breakup *****
+   Overlap of 6Li (projectile, form factor 1), with each and every discretized channel (binned continuum).
+   This is the reaction mechanism itself. Below we tell FRESCO "what talks to what?"
+   
+  1   2   3 3 0 0  5.0     6.0
+  
+  1       | ICTO   | couple TO partition 1
+  2       | ICFROM | couple FROM partition 2
+
+  3       | KIND   | projectile excitation coupling
+  3       | IP1    | multipole order Q=3
+  0       | IP2    | Coulomb + nuclear coupling
+  0       | IP3    | include all reorientation terms
+
+  5.0     | P1     | fragment-target potential KP index
+  6.0     | P2     | core-target potential KP index
+
+  This coupling is saying: "use the projectile excitation machinery to couple partition 2 into partition 1."
+  i.e. using a multipole coupling, couple the following:
+    α+60Cu ↔ 6Li+58Ni
+
+Card 19 
+
+      IN   IB  IA  KN  A
+       1   1   1   1  1.0000                                            
+       1   2   1   2  1.0000
+       1   3   1   3  1.0000
+       1   4   1   4  1.0000
+       1   5   1   5  1.0000
+       1   6   1   6  1.0000
+       1   7   1   7  1.0000
+       1   8   1   8  1.0000
+       1   9   1   9  1.0000
+       1  10   1  10  1.0000
+       1  11   1  11  1.0000
+       1  12   1  12  1.0000
+       1  13   1  13  1.0000
+       1  14   1  14  1.0000
+       1  15   1  15  1.0000
+       1  16   1  16  1.0000
+       1  17   1  17  1.0000
+       1  18   1  18  1.0000
+       1  19   1  19  1.0000
+       1  20   1  20  1.0000
+       1  21   1  21  1.0000
+       1  22   1  22  1.0000
+       1  23   1  23  1.0000
+       1  24   1  24  1.0000
+       1  25   1  25  1.0000
+       1  26   1  26  1.0000
+       1  27   1  27  1.0000
+       1  28   1  28  1.0000
+       1  29   1  29  1.0000
+       1  30   1  30  1.0000
+       1  31   1  31  1.0000
+       1  32   1  32  1.0000
+       1  33   1  33  1.0000
+       1  34   1  34  1.0000
+       1  35   1  35  1.0000
+       1  36   1  36  1.0000
+       1  37   1  37  1.0000
+       1  38   1  38  1.0000
+       1  39   1  39  1.0000
+       1  40   1  40  1.0000
+       1  41   1  41  1.0000
+       1  42   1  42  1.0000
+       1  43   1  43  1.0000
+       1  44   1  44  1.0000
+       1  45   1  45  1.0000
+       1  46   1  46  1.0000
+       1  47   1  47  1.0000
+       1  48   1  48  1.0000
+       1  49   1  49  1.0000
+       1  50   1  50  1.0000
+       1  51   1  51  1.0000
+       1  52   1  52  1.0000
+       1  53   1  53  1.0000
+       1  54   1  54  1.0000
+       1  55   1  55  1.0000
+       1  56   1  56  1.0000
+       1  57   1  57  1.0000
+       1  58   1  58  1.0000
+      -1  59   1  59  1.0000
+   
+   
+   ***** Transfer overlaps *****
+   
+  3   1   7 0-2 5
+   
+   3       | ICTO   | couple TO partition 3
+   1       | ICFROM | couple FROM partition 1
+ 
+   7       | KIND   | finite-range transfer coupling
+ 
+   0       | IP1    | POST form transfer operator (IP1 = 1 for PRIOR form)
+   -2      | IP2    | non-orthogonality remnant treatment
+   5       | IP3    | remnant/core-core potential index
+
+  KIND 7 --> finite-range = CRC alpha-transfer coupling!
+  This card says: “Perform finite-range transfer coupling between partitions 1 and 3.”
+  i.e. this means
+    6Li+58Ni ↔ d+62Zn
+  via α-transfer (the actual CRC reaction step).
+
+  IP3 = 5 
+  from the manual: IP3 = KPCORE. This means "which potential to use between the two cores in the remnant interaction.
+  So if IP3=5, then it uses potential set 5 in the remnant/core-core interaction.
+  5 = alpha + 58Ni optical potential --> MAKES PERFECT PHYSICAL SENSE!!!
+
+       1   1   1  71  1.0
+       1       | IN   | projectile-side overlap
+       1       | IB   | composite state index #1
+       1       | IA   | core state index #1
+       71      | KN   | use form factor #71
+       1.0     | A    | spectroscopic amplitude
+
+       1   2   1  77  1.0
+       1       | IN   | projectile-side overlap
+       2       | IB   | composite/bin state #2
+       1       | IA   | core state index #1
+       77      | KN   | continuum-transfer FF #77
+       1.0     | A    | unit amplitude
+
+       1   3   1  76  1.0
+       CRC 
+
+       1   4   1  75  1.0
+       CRC
+
+       2   1   1  72  1.529
+       2       | IN   | target-side overlap
+       1       | IB   | composite state #1
+       1       | IA   | core state #1
+       72      | KN   | use FF 72
+       1.529   | A    | spectroscopic amplitude
+
+      -2   2   1  73  0.704
+      -2      | IN   | target-side overlap + END Card 17 input
+      2       | IB   | composite state #2
+      1       | IA   | core state #1
+      73      | KN   | use FF 73
+      0.704   | A    | spectroscopic amplitude
+
+
+   0   1   1
+34.0
+EOF

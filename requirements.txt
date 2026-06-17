@@ -1,6 +1,7 @@
-numpy
-polars
 matplotlib
-scipy
-pandas
+mpmath
+numpy
 odfpy
+pandas
+polars
+scipy
