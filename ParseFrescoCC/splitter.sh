@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
 
-FULL_FRESCO_DIR="/home/jce18b/Programs/JCEfresco/jce/9Be6Lid_cdcc"
-SPLITTER="/home/jce18b/Programs/JCEfresco/ParseFrescoCC/split_fort16.py"
+FULL_FRESCO_DIR="/home/jce/Programs/JCEfresco/jce/9Be6Lid_cdcc"
+# FULL_FRESCO_DIR="/home/jce/Programs/JCEfresco/jce/9Be6Lid_dwba"
+SPLITTER="/home/jce/Programs/JCEfresco/ParseFrescoCC/split_fort16.py"
 
 for state_dir in "$FULL_FRESCO_DIR"/*keV/; do
     state_name=$(basename "$state_dir")

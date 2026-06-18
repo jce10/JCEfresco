@@ -1,0 +1,6 @@
+state0 | line#: 843
+6Li      & 9Be      in state #   1 with spins & parities 1.0  + &  1.5  -;  0
+
+state1 | line#: 2291
+2H       & 13C      in state #   1 with spins & parities 1.0  + &  2.5  -;  0
+

@@ -35,9 +35,9 @@ def extract_cross_section_map(
     print(f"Found {state_counter} cross-section sections.")
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    root_dir = Path("/home/jce18b/Programs/JCEfresco/jce")
+    # root_dir = Path("/home/jce18b/Programs/JCEfresco/jce")
 
     # 9Be(6Li,d) first try
     # fro = "/home/jce18b/Programs/JCEfresco/jce/9Be6Lid_cdcc/10750keV_short/10750keV_cdcc_short.fro"
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     # fro = "/home/jce18b/Programs/JCEfresco/exercises/25Aldn_CDCC/25Aldn_fromken.fro"
 
     # 12C(d,p) 9.9 MeV CRC
-    fro = root_dir / "12Cdp_CRC" / "12Cdp_CRC_9500keV.fro"
-    output_file = root_dir / "12Cdp_CRC" / "fresco_dists" / "cross_section_map.txt"
+    # fro = root_dir / "12Cdp_CRC" / "12Cdp_CRC_9500keV.fro"
+    # output_file = root_dir / "12Cdp_CRC" / "fresco_dists" / "cross_section_map.txt"
 
-    extract_cross_section_map(fro, output_file)
+    # extract_cross_section_map(fro, output_file)

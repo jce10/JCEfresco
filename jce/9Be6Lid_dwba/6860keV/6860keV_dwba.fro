@@ -103,7 +103,7 @@
 
  data =  1  1  1  1  0.8307,  so  < [6Li      #  1] / [2H       #  1]  * Eigen-form #  1>  =   0.8307            BE =  1.474     1
 
- data =  2  1  1  2  0.4359,  so  < [13C      #  1] / [9Be      #  1]  * Eigen-form #  2>  =   0.4359            BE =  3.788     2
+ data =  2  1  1  2  1.3589,  so  < [13C      #  1] / [9Be      #  1]  * Eigen-form #  2>  =   1.3589            BE =  3.788     2
   LOCF =            9
  KNT =   2, KNP =   1: NK,NG,loc=   1   1   1  10  T  T  F
 
@@ -116,7 +116,7 @@
    NLL,NLN,NLO =         248         252         151
 0File   9 needs RL =   74896    REAL*8 numbers, and NR =    38. i.e.    22.77 Megabytes
    File            9  RECL =      606416
-0RECOMMENDED NON-LOCAL WIDTH IS GREATER THAN    9.80 FM.,  RECOMMENDED CENTRATION  -0.10, after    0.18 secs.
+0RECOMMENDED NON-LOCAL WIDTH IS GREATER THAN    9.80 FM.,  RECOMMENDED CENTRATION  -0.10, after    0.14 secs.
 0Relative non-local usages (rms) are
     0.004   0.004   0.005   0.005   0.006   0.007   0.008   0.009   0.010   0.012   0.015   0.019   0.023   0.030   0.038
     0.047   0.059   0.072   0.088   0.106   0.125   0.147   0.171   0.196   0.223   0.251   0.281   0.311   0.342   0.376
@@ -139,7 +139,7 @@
    from    0.00000     to   0.00000     in     0 intervals
 
  Largest real,imaginary parts of any form factor at R=   24.00 are   6.00E-02  4.49E-12 MeV
- Finished all Couplings @   0.185589001               9
+ Finished all Couplings @   0.148414999               9
 
  Non-symmetric Hamiltonian
 1***********************************************************************************************************************************
@@ -171,334 +171,332 @@
  Coupling #   1 to   2 from   1 of KIND= 7
 0L-couplings:
 
-   1  4  1  2 10  1  1  1.0  1  2  1.0  2.0   1  0.94868  0.86603  0.43590  0.83070 2.974972519674E-01 -0.39894   -0.119
+   1  4  1  2 10  1  1  1.0  1  2  1.0  2.0   1  0.94868  0.86603  1.35890  0.83070 9.274351870643E-01 -0.39894   -0.370
 
-   2  4  1  2 10  1  1  1.0  1  2  2.0  2.0   1  0.31623  0.38730  0.43590  0.83070 4.434827190123E-02 -0.39894   -0.018
+   2  4  1  2 10  1  1  1.0  1  2  2.0  2.0   1  0.31623  0.38730  1.35890  0.83070 1.382538748667E-01 -0.39894   -0.055
 
-   2  5  1  2 10  1  1  1.0  1  2  2.0  3.0   1  1.00000  0.91652  0.43590  0.83070 3.318720782998E-01 -0.39894   -0.132
+   2  5  1  2 10  1  1  1.0  1  2  2.0  3.0   1  1.00000  0.91652  1.35890  0.83070 1.034597264290E+00 -0.39894   -0.413
 
-   3  4  1  2 10  1  1  1.0  3  2  2.0  2.0   3  0.31623 -0.39441  0.43590  0.83070-4.516206953953E-02  0.31987   -0.014
+   3  4  1  2 10  1  1  1.0  3  2  2.0  2.0   3  0.31623 -0.39441  1.35890  0.83070-1.407908548217E-01  0.31987   -0.045
 
-   3  5  1  2 10  1  1  1.0  3  2  2.0  3.0   3  1.00000  0.06667  0.43590  0.83070 2.414014158494E-02  0.31987    0.008
+   3  5  1  2 10  1  1  1.0  3  2  2.0  3.0   3  1.00000  0.06667  1.35890  0.83070 7.525587741913E-02  0.31987    0.024
 
-   3  6  1  2 10  1  1  1.0  3  4  2.0  3.0   3  1.00000  1.00000  0.43590  0.83070 3.621021237741E-01 -0.36935   -0.134
- Reaction Xsec     0.5+/ 1 @ 1 =   1.547 , Out:   0.000#   0.053/   1.547f
- Reaction Xsec     0.5+/ 1 @ 2 =   1.547 , Out:   0.000#   0.067/   1.547f
- Reaction Xsec     0.5+/ 3 @ 3 =   1.551 , Out:   0.000#   0.017/   1.551f
+   3  6  1  2 10  1  1  1.0  3  4  2.0  3.0   3  1.00000  1.00000  1.35890  0.83070 1.128838161287E+00 -0.36935   -0.417
+ Reaction Xsec     0.5+/ 1 @ 1 =   1.547 , Out:   0.000#   0.511/   1.547f
+ Reaction Xsec     0.5+/ 1 @ 2 =   1.547 , Out:   0.000#   0.648/   1.547f
+ Reaction Xsec     0.5+/ 3 @ 3 =   1.551 , Out:   0.000#   0.166/   1.551f
 
  Total SPIN, PARITY =     0.5 -,      6 chs,      3 cc.  Rmin & Coul turning =    0.0    0.9
 
  Coupling #   1 to   2 from   1 of KIND= 7
 0L-couplings:
 
-   1  4  1  2 10  1  1  1.0  0  1  1.0  2.0   0  0.94868  0.74536  0.43590  0.83070 2.560448672027E-01 -0.48860   -0.125
+   1  4  1  2 10  1  1  1.0  0  1  1.0  2.0   0  0.94868  0.74536  1.35890  0.83070 7.982091187082E-01 -0.48860   -0.390
 
-   2  4  1  2 10  1  1  1.0  2  1  1.0  2.0   2  0.94868  0.16667  0.43590  0.83070 5.725337283552E-02  0.30902    0.018
+   2  4  1  2 10  1  1  1.0  2  1  1.0  2.0   2  0.94868  0.16667  1.35890  0.83070 1.784849849692E-01  0.30902    0.055
 
-   2  5  1  2 10  1  1  1.0  2  3  1.0  2.0   2  0.94868  1.00000  0.43590  0.83070 3.435202370131E-01 -0.37847   -0.130
+   2  5  1  2 10  1  1  1.0  2  3  1.0  2.0   2  0.94868  1.00000  1.35890  0.83070 1.070909909815E+00 -0.37847   -0.405
 
-   3  4  1  2 10  1  1  1.0  2  1  2.0  2.0   2  0.31623 -0.50000  0.43590  0.83070-5.725337283552E-02  0.30902   -0.018
+   3  4  1  2 10  1  1  1.0  2  1  2.0  2.0   2  0.31623 -0.50000  1.35890  0.83070-1.784849849692E-01  0.30902   -0.055
 
-   3  5  1  2 10  1  1  1.0  2  3  2.0  2.0   2  0.31623  0.33333  0.43590  0.83070 3.816891522368E-02 -0.37847   -0.014
+   3  5  1  2 10  1  1  1.0  2  3  2.0  2.0   2  0.31623  0.33333  1.35890  0.83070 1.189899899794E-01 -0.37847   -0.045
 
-   3  6  1  2 10  1  1  1.0  2  3  2.0  3.0   2  1.00000  0.94281  0.43590  0.83070 3.413931562703E-01 -0.37847   -0.129
- Reaction Xsec     0.5-/ 0 @ 1 =   1.546 , Out:   0.000#   0.109/   1.546f
- Reaction Xsec     0.5-/ 2 @ 2 =   1.549 , Out:   0.000#   0.020/   1.549f
- Reaction Xsec     0.5-/ 2 @ 3 =   1.549 , Out:   0.000#   0.020/   1.549f
+   3  6  1  2 10  1  1  1.0  2  3  2.0  3.0   2  1.00000  0.94281  1.35890  0.83070 1.064278824944E+00 -0.37847   -0.403
+ Reaction Xsec     0.5-/ 0 @ 1 =   1.546 , Out:   0.000#   1.063/   1.545f
+ Reaction Xsec     0.5-/ 2 @ 2 =   1.549 , Out:   0.000#   0.196/   1.548f
+ Reaction Xsec     0.5-/ 2 @ 3 =   1.549 , Out:   0.000#   0.196/   1.548f
  Allocate arrays for           11  channels, of which           11  need wfs.
 
  Total SPIN, PARITY =     1.5 +,     11 chs,      5 cc.  Rmin & Coul turning =    0.1    1.3
- Reaction Xsec     1.5+/ 1 @ 1 =   3.094 , Out:   0.000#   0.196/   3.094f
- Reaction Xsec     1.5+/ 1 @ 2 =   3.094 , Out:   0.000#   0.197/   3.094f
- Reaction Xsec     1.5+/ 1 @ 3 =   3.094 , Out:   0.000#   0.125/   3.094f
- Reaction Xsec     1.5+/ 3 @ 4 =   3.102 , Out:   0.000#   0.043/   3.102f
- Reaction Xsec     1.5+/ 3 @ 5 =   3.102 , Out:   0.000#   0.036/   3.102f
+ Reaction Xsec     1.5+/ 1 @ 1 =   3.094 , Out:   0.000#   1.904/   3.093f
+ Reaction Xsec     1.5+/ 1 @ 2 =   3.094 , Out:   0.000#   1.919/   3.093f
+ Reaction Xsec     1.5+/ 1 @ 3 =   3.094 , Out:   0.000#   1.213/   3.093f
+ Reaction Xsec     1.5+/ 3 @ 4 =   3.102 , Out:   0.000#   0.415/   3.101f
+ Reaction Xsec     1.5+/ 3 @ 5 =   3.102 , Out:   0.000#   0.353/   3.102f
 
  Total SPIN, PARITY =     1.5 -,     11 chs,      5 cc.  Rmin & Coul turning =    0.1    1.3
- Reaction Xsec     1.5-/ 0 @ 1 =   3.092 , Out:   0.000#   0.219/   3.092f
- Reaction Xsec     1.5-/ 2 @ 2 =   3.097 , Out:   0.000#   0.050/   3.097f
- Reaction Xsec     1.5-/ 2 @ 3 =   3.097 , Out:   0.000#   0.045/   3.097f
- Reaction Xsec     1.5-/ 2 @ 4 =   3.097 , Out:   0.000#   0.041/   3.097f
- Reaction Xsec     1.5-/ 4 @ 5 =   3.112 , Out:   0.000#   0.012/   3.112f
+ Reaction Xsec     1.5-/ 0 @ 1 =   3.092 , Out:   0.000#   2.125/   3.090f
+ Reaction Xsec     1.5-/ 2 @ 2 =   3.097 , Out:   0.000#   0.481/   3.097f
+ Reaction Xsec     1.5-/ 2 @ 3 =   3.097 , Out:   0.000#   0.441/   3.097f
+ Reaction Xsec     1.5-/ 2 @ 4 =   3.097 , Out:   0.000#   0.400/   3.097f
+ Reaction Xsec     1.5-/ 4 @ 5 =   3.112 , Out:   0.000#   0.113/   3.112f
  Allocate arrays for           14  channels, of which           14  need wfs.
 
  Total SPIN, PARITY =     2.5 +,     14 chs,      6 cc.  Rmin & Coul turning =    0.3    1.9
- Reaction Xsec     2.5+/ 1 @ 1 =   4.642 , Out:   0.000#   0.464/   4.641f
- Reaction Xsec     2.5+/ 1 @ 2 =   4.642 , Out:   0.000#   0.293/   4.641f
- Reaction Xsec     2.5+/ 3 @ 3 =   4.653 , Out:   0.000#   0.119/   4.653f
- Reaction Xsec     2.5+/ 3 @ 4 =   4.653 , Out:   0.000#   0.076/   4.653f
- Reaction Xsec     2.5+/ 3 @ 5 =   4.653 , Out:   0.000#   0.054/   4.653f
- Reaction Xsec     2.5+/ 5 @ 6 =   4.670 , Out:   0.000#   9.303#   4.670f
+ Reaction Xsec     2.5+/ 1 @ 1 =   4.642 , Out:   0.000#   4.514/   4.637f
+ Reaction Xsec     2.5+/ 1 @ 2 =   4.642 , Out:   0.000#   2.850/   4.639f
+ Reaction Xsec     2.5+/ 3 @ 3 =   4.653 , Out:   0.000#   1.155/   4.652f
+ Reaction Xsec     2.5+/ 3 @ 4 =   4.653 , Out:   0.000#   0.743/   4.652f
+ Reaction Xsec     2.5+/ 3 @ 5 =   4.653 , Out:   0.000#   0.524/   4.652f
+ Reaction Xsec     2.5+/ 5 @ 6 =   4.670 , Out:   0.000#   0.090/   4.670f
 
  Total SPIN, PARITY =     2.5 -,     14 chs,      6 cc.  Rmin & Coul turning =    0.3    1.9
- Reaction Xsec     2.5-/ 0 @ 1 =   4.638 , Out:   0.000#   0.522/   4.637f
- Reaction Xsec     2.5-/ 2 @ 2 =   4.646 , Out:   0.000#   0.170/   4.646f
- Reaction Xsec     2.5-/ 2 @ 3 =   4.646 , Out:   0.000#   0.100/   4.646f
- Reaction Xsec     2.5-/ 2 @ 4 =   4.646 , Out:   0.000#   0.067/   4.646f
- Reaction Xsec     2.5-/ 4 @ 5 =   4.668 , Out:   0.000#   0.025/   4.667f
- Reaction Xsec     2.5-/ 4 @ 6 =   4.668 , Out:   0.000#   0.018/   4.667f
+ Reaction Xsec     2.5-/ 0 @ 1 =   4.638 , Out:   0.000#   5.077/   4.633f
+ Reaction Xsec     2.5-/ 2 @ 2 =   4.646 , Out:   0.000#   1.653/   4.644f
+ Reaction Xsec     2.5-/ 2 @ 3 =   4.646 , Out:   0.000#   0.970/   4.645f
+ Reaction Xsec     2.5-/ 2 @ 4 =   4.646 , Out:   0.000#   0.650/   4.645f
+ Reaction Xsec     2.5-/ 4 @ 5 =   4.668 , Out:   0.000#   0.239/   4.667f
+ Reaction Xsec     2.5-/ 4 @ 6 =   4.668 , Out:   0.000#   0.178/   4.667f
  Allocate arrays for           15  channels, of which           15  need wfs.
 
  Total SPIN, PARITY =     3.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    0.4    2.4
- Reaction Xsec     3.5+/ 1 @ 1 =   6.189 , Out:   0.000#   1.121/   6.188f
- Reaction Xsec     3.5+/ 3 @ 2 =   6.204 , Out:   0.000#   0.357/   6.203f
- Reaction Xsec     3.5+/ 3 @ 3 =   6.204 , Out:   0.000#   0.185/   6.204f
- Reaction Xsec     3.5+/ 3 @ 4 =   6.204 , Out:   0.000#   0.102/   6.204f
- Reaction Xsec     3.5+/ 5 @ 5 =   6.227 , Out:   0.000#   0.036/   6.227f
- Reaction Xsec     3.5+/ 5 @ 6 =   6.227 , Out:   0.000#   0.014/   6.227f
+ Reaction Xsec     3.5+/ 1 @ 1 =   6.189 , Out:   0.000#   0.011    6.178f
+ Reaction Xsec     3.5+/ 3 @ 2 =   6.204 , Out:   0.000#   3.466/   6.200f
+ Reaction Xsec     3.5+/ 3 @ 3 =   6.204 , Out:   0.000#   1.797/   6.202f
+ Reaction Xsec     3.5+/ 3 @ 4 =   6.204 , Out:   0.000#   0.995/   6.203f
+ Reaction Xsec     3.5+/ 5 @ 5 =   6.227 , Out:   0.000#   0.351/   6.227f
+ Reaction Xsec     3.5+/ 5 @ 6 =   6.227 , Out:   0.000#   0.137/   6.227f
 
  Total SPIN, PARITY =     3.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    0.4    2.4
- Reaction Xsec     3.5-/ 2 @ 1 =   6.195 , Out:   0.000#   0.273/   6.194f
- Reaction Xsec     3.5-/ 2 @ 2 =   6.195 , Out:   0.000#   0.152/   6.195f
- Reaction Xsec     3.5-/ 4 @ 3 =   6.223 , Out:   0.000#   0.062/   6.223f
- Reaction Xsec     3.5-/ 4 @ 4 =   6.223 , Out:   0.000#   0.036/   6.223f
- Reaction Xsec     3.5-/ 4 @ 5 =   6.223 , Out:   0.000#   0.024/   6.223f
- Reaction Xsec     3.5-/ 6 @ 6 =   6.272 , Out:   0.000#   0.027/   6.272f
+ Reaction Xsec     3.5-/ 2 @ 1 =   6.195 , Out:   0.000#   2.655/   6.192f
+ Reaction Xsec     3.5-/ 2 @ 2 =   6.195 , Out:   0.000#   1.477/   6.193f
+ Reaction Xsec     3.5-/ 4 @ 3 =   6.223 , Out:   0.000#   0.600/   6.223f
+ Reaction Xsec     3.5-/ 4 @ 4 =   6.223 , Out:   0.000#   0.354/   6.223f
+ Reaction Xsec     3.5-/ 4 @ 5 =   6.223 , Out:   0.000#   0.236/   6.223f
+ Reaction Xsec     3.5-/ 6 @ 6 =   6.272 , Out:   0.000#   0.262/   6.272f
 
  Total SPIN, PARITY =     4.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    0.6    2.9
- Reaction Xsec     4.5+/ 3 @ 1 =   7.755 , Out:   0.000#   0.549/   7.754f
- Reaction Xsec     4.5+/ 3 @ 2 =   7.755 , Out:   0.000#   0.285/   7.754f
- Reaction Xsec     4.5+/ 5 @ 3 =   7.784 , Out:   0.000#   0.110/   7.783f
- Reaction Xsec     4.5+/ 5 @ 4 =   7.784 , Out:   0.000#   0.050/   7.784f
- Reaction Xsec     4.5+/ 5 @ 5 =   7.784 , Out:   0.000#   0.017/   7.784f
- Reaction Xsec     4.5+/ 7 @ 6 =   7.838 , Out:   0.000#   0.014/   7.838f
+ Reaction Xsec     4.5+/ 3 @ 1 =   7.755 , Out:   0.000#   5.333/   7.749f
+ Reaction Xsec     4.5+/ 3 @ 2 =   7.755 , Out:   0.000#   2.767/   7.752f
+ Reaction Xsec     4.5+/ 5 @ 3 =   7.784 , Out:   0.000#   1.071/   7.783f
+ Reaction Xsec     4.5+/ 5 @ 4 =   7.784 , Out:   0.000#   0.489/   7.783f
+ Reaction Xsec     4.5+/ 5 @ 5 =   7.784 , Out:   0.000#   0.168/   7.783f
+ Reaction Xsec     4.5+/ 7 @ 6 =   7.838 , Out:   0.000#   0.136/   7.838f
 
  Total SPIN, PARITY =     4.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    0.6    2.9
- Reaction Xsec     4.5-/ 2 @ 1 =   7.743 , Out:   0.000#   1.161/   7.742f
- Reaction Xsec     4.5-/ 4 @ 2 =   7.779 , Out:   0.000#   0.160/   7.779f
- Reaction Xsec     4.5-/ 4 @ 3 =   7.779 , Out:   0.000#   0.085/   7.779f
- Reaction Xsec     4.5-/ 4 @ 4 =   7.779 , Out:   0.000#   0.046/   7.779f
- Reaction Xsec     4.5-/ 6 @ 5 =   7.840 , Out:   0.000#   0.034/   7.840f
- Reaction Xsec     4.5-/ 6 @ 6 =   7.840 , Out:   0.000#   0.034/   7.840f
+ Reaction Xsec     4.5-/ 2 @ 1 =   7.743 , Out:   0.000#   0.011    7.732f
+ Reaction Xsec     4.5-/ 4 @ 2 =   7.779 , Out:   0.000#   1.552/   7.778f
+ Reaction Xsec     4.5-/ 4 @ 3 =   7.779 , Out:   0.000#   0.822/   7.778f
+ Reaction Xsec     4.5-/ 4 @ 4 =   7.779 , Out:   0.000#   0.450/   7.779f
+ Reaction Xsec     4.5-/ 6 @ 5 =   7.840 , Out:   0.000#   0.331/   7.839f
+ Reaction Xsec     4.5-/ 6 @ 6 =   7.840 , Out:   0.000#   0.328/   7.839f
 
  Total SPIN, PARITY =     5.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    0.8    3.5
- Reaction Xsec     5.5+/ 3 @ 1 =   9.306 , Out:   0.000#   1.158/   9.305f
- Reaction Xsec     5.5+/ 5 @ 2 =   9.340 , Out:   0.000#   0.277/   9.340f
- Reaction Xsec     5.5+/ 5 @ 3 =   9.340 , Out:   0.000#   0.140/   9.340f
- Reaction Xsec     5.5+/ 5 @ 4 =   9.340 , Out:   0.000#   0.062/   9.340f
- Reaction Xsec     5.5+/ 7 @ 5 =   9.406 , Out:   0.000#   0.038/   9.406f
- Reaction Xsec     5.5+/ 7 @ 6 =   9.406 , Out:   0.000#   0.018/   9.406f
+ Reaction Xsec     5.5+/ 3 @ 1 =   9.306 , Out:   0.000#   0.011    9.294f
+ Reaction Xsec     5.5+/ 5 @ 2 =   9.340 , Out:   0.000#   2.696/   9.338f
+ Reaction Xsec     5.5+/ 5 @ 3 =   9.340 , Out:   0.000#   1.360/   9.339f
+ Reaction Xsec     5.5+/ 5 @ 4 =   9.340 , Out:   0.000#   0.599/   9.340f
+ Reaction Xsec     5.5+/ 7 @ 5 =   9.406 , Out:   0.000#   0.366/   9.405f
+ Reaction Xsec     5.5+/ 7 @ 6 =   9.406 , Out:   0.000#   0.170/   9.406f
 
  Total SPIN, PARITY =     5.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    0.8    3.5
- Reaction Xsec     5.5-/ 4 @ 1 =   9.335 , Out:   0.000#   0.223/   9.335f
- Reaction Xsec     5.5-/ 4 @ 2 =   9.335 , Out:   0.000#   0.119/   9.335f
- Reaction Xsec     5.5-/ 6 @ 3 =   9.408 , Out:   0.000#   0.053/   9.408f
- Reaction Xsec     5.5-/ 6 @ 4 =   9.408 , Out:   0.000#   0.041/   9.408f
- Reaction Xsec     5.5-/ 6 @ 5 =   9.408 , Out:   0.000#   0.040/   9.408f
- Reaction Xsec     5.5-/ 8 @ 6 =   9.366 , Out:   0.000#   0.018/   9.366f
+ Reaction Xsec     5.5-/ 4 @ 1 =   9.335 , Out:   0.000#   2.168/   9.333f
+ Reaction Xsec     5.5-/ 4 @ 2 =   9.335 , Out:   0.000#   1.154/   9.334f
+ Reaction Xsec     5.5-/ 6 @ 3 =   9.408 , Out:   0.000#   0.512/   9.407f
+ Reaction Xsec     5.5-/ 6 @ 4 =   9.408 , Out:   0.000#   0.403/   9.407f
+ Reaction Xsec     5.5-/ 6 @ 5 =   9.408 , Out:   0.000#   0.393/   9.407f
+ Reaction Xsec     5.5-/ 8 @ 6 =   9.366 , Out:   0.000#   0.176/   9.366f
 
  Total SPIN, PARITY =     6.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    0.9    4.0
- Reaction Xsec     6.5+/ 5 @ 1 =  10.897 , Out:   0.000#   0.325/  10.897f
- Reaction Xsec     6.5+/ 5 @ 2 =  10.897 , Out:   0.000#   0.168/  10.897f
- Reaction Xsec     6.5+/ 7 @ 3 =  10.973 , Out:   0.000#   0.093/  10.973f
- Reaction Xsec     6.5+/ 7 @ 4 =  10.973 , Out:   0.000#   0.046/  10.973f
- Reaction Xsec     6.5+/ 7 @ 5 =  10.973 , Out:   0.000#   0.020/  10.973f
- Reaction Xsec     6.5+/ 9 @ 6 =  10.693 , Out:   0.000#   8.519#  10.693f
+ Reaction Xsec     6.5+/ 5 @ 1 =  10.897 , Out:   0.000#   3.158/  10.894f
+ Reaction Xsec     6.5+/ 5 @ 2 =  10.897 , Out:   0.000#   1.631/  10.895f
+ Reaction Xsec     6.5+/ 7 @ 3 =  10.973 , Out:   0.000#   0.904/  10.972f
+ Reaction Xsec     6.5+/ 7 @ 4 =  10.973 , Out:   0.000#   0.446/  10.973f
+ Reaction Xsec     6.5+/ 7 @ 5 =  10.973 , Out:   0.000#   0.198/  10.973f
+ Reaction Xsec     6.5+/ 9 @ 6 =  10.693 , Out:   0.000#   0.083/  10.693f
 
  Total SPIN, PARITY =     6.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    0.9    4.0
- Reaction Xsec     6.5-/ 4 @ 1 =  10.891 , Out:   0.000#   0.318/  10.891f
- Reaction Xsec     6.5-/ 6 @ 2 =  10.976 , Out:   0.000#   0.097/  10.976f
- Reaction Xsec     6.5-/ 6 @ 3 =  10.976 , Out:   0.000#   0.063/  10.976f
- Reaction Xsec     6.5-/ 6 @ 4 =  10.976 , Out:   0.000#   0.048/  10.976f
- Reaction Xsec     6.5-/ 8 @ 5 =  10.927 , Out:   0.000#   0.064/  10.927f
- Reaction Xsec     6.5-/ 8 @ 6 =  10.927 , Out:   0.000#   0.022/  10.927f
+ Reaction Xsec     6.5-/ 4 @ 1 =  10.891 , Out:   0.000#   3.091/  10.888f
+ Reaction Xsec     6.5-/ 6 @ 2 =  10.976 , Out:   0.000#   0.939/  10.975f
+ Reaction Xsec     6.5-/ 6 @ 3 =  10.976 , Out:   0.000#   0.610/  10.975f
+ Reaction Xsec     6.5-/ 6 @ 4 =  10.976 , Out:   0.000#   0.469/  10.975f
+ Reaction Xsec     6.5-/ 8 @ 5 =  10.927 , Out:   0.000#   0.624/  10.926f
+ Reaction Xsec     6.5-/ 8 @ 6 =  10.927 , Out:   0.000#   0.217/  10.927f
 
  Total SPIN, PARITY =     7.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    1.1    4.6
- Reaction Xsec     7.5+/ 5 @ 1 =  12.454 , Out:   0.000#   0.380/  12.453f
- Reaction Xsec     7.5+/ 7 @ 2 =  12.541 , Out:   0.000#   0.202/  12.541f
- Reaction Xsec     7.5+/ 7 @ 3 =  12.541 , Out:   0.000#   0.109/  12.541f
- Reaction Xsec     7.5+/ 7 @ 4 =  12.541 , Out:   0.000#   0.053/  12.541f
- Reaction Xsec     7.5+/ 9 @ 5 =  12.221 , Out:   0.000#   0.031/  12.221f
- Reaction Xsec     7.5+/ 9 @ 6 =  12.221 , Out:   0.000#   0.010/  12.221f
+ Reaction Xsec     7.5+/ 5 @ 1 =  12.454 , Out:   0.000#   3.689/  12.450f
+ Reaction Xsec     7.5+/ 7 @ 2 =  12.541 , Out:   0.000#   1.967/  12.539f
+ Reaction Xsec     7.5+/ 7 @ 3 =  12.541 , Out:   0.000#   1.059/  12.540f
+ Reaction Xsec     7.5+/ 7 @ 4 =  12.541 , Out:   0.000#   0.515/  12.540f
+ Reaction Xsec     7.5+/ 9 @ 5 =  12.221 , Out:   0.000#   0.297/  12.221f
+ Reaction Xsec     7.5+/ 9 @ 6 =  12.221 , Out:   0.000#   0.099/  12.221f
 
  Total SPIN, PARITY =     7.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    1.1    4.6
- Reaction Xsec     7.5-/ 6 @ 1 =  12.544 , Out:   0.000#   0.110/  12.544f
- Reaction Xsec     7.5-/ 6 @ 2 =  12.544 , Out:   0.000#   0.072/  12.544f
- Reaction Xsec     7.5-/ 8 @ 3 =  12.488 , Out:   0.000#   0.165/  12.488f
- Reaction Xsec     7.5-/ 8 @ 4 =  12.488 , Out:   0.000#   0.076/  12.488f
- Reaction Xsec     7.5-/ 8 @ 5 =  12.488 , Out:   0.000#   0.025/  12.488f
- Reaction Xsec     7.5-/10 @ 6 =  10.121 , Out:   0.000#   3.798#  10.121f
+ Reaction Xsec     7.5-/ 6 @ 1 =  12.544 , Out:   0.000#   1.068/  12.543f
+ Reaction Xsec     7.5-/ 6 @ 2 =  12.544 , Out:   0.000#   0.698/  12.543f
+ Reaction Xsec     7.5-/ 8 @ 3 =  12.488 , Out:   0.000#   1.608/  12.486f
+ Reaction Xsec     7.5-/ 8 @ 4 =  12.488 , Out:   0.000#   0.741/  12.487f
+ Reaction Xsec     7.5-/ 8 @ 5 =  12.488 , Out:   0.000#   0.246/  12.488f
+ Reaction Xsec     7.5-/10 @ 6 =  10.121 , Out:   0.000#   0.037/  10.121f
 
  Total SPIN, PARITY =     8.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    1.2    5.1
- Reaction Xsec     8.5+/ 7 @ 1 =  14.109 , Out:   0.000#   0.228/  14.108f
- Reaction Xsec     8.5+/ 7 @ 2 =  14.109 , Out:   0.000#   0.124/  14.108f
- Reaction Xsec     8.5+/ 9 @ 3 =  13.749 , Out:   0.000#   0.077/  13.749f
- Reaction Xsec     8.5+/ 9 @ 4 =  13.749 , Out:   0.000#   0.035/  13.749f
- Reaction Xsec     8.5+/ 9 @ 5 =  13.749 , Out:   0.000#   0.011/  13.749f
- Reaction Xsec     8.5+/11 @ 6 =   7.562 , Out:   0.000#   1.071#   7.562f
+ Reaction Xsec     8.5+/ 7 @ 1 =  14.109 , Out:   0.000#   2.218/  14.106f
+ Reaction Xsec     8.5+/ 7 @ 2 =  14.109 , Out:   0.000#   1.210/  14.107f
+ Reaction Xsec     8.5+/ 9 @ 3 =  13.749 , Out:   0.000#   0.747/  13.748f
+ Reaction Xsec     8.5+/ 9 @ 4 =  13.749 , Out:   0.000#   0.344/  13.748f
+ Reaction Xsec     8.5+/ 9 @ 5 =  13.749 , Out:   0.000#   0.111/  13.749f
+ Reaction Xsec     8.5+/11 @ 6 =   7.562 , Out:   0.000#   0.010/   7.562f
 
  Total SPIN, PARITY =     8.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    1.2    5.1
- Reaction Xsec     8.5-/ 6 @ 1 =  14.112 , Out:   0.000#   0.124/  14.111f
- Reaction Xsec     8.5-/ 8 @ 2 =  14.049 , Out:   0.000#   0.355/  14.048f
- Reaction Xsec     8.5-/ 8 @ 3 =  14.049 , Out:   0.000#   0.190/  14.049f
- Reaction Xsec     8.5-/ 8 @ 4 =  14.049 , Out:   0.000#   0.087/  14.049f
- Reaction Xsec     8.5-/10 @ 5 =  11.386 , Out:   0.000#   0.013/  11.386f
- Reaction Xsec     8.5-/10 @ 6 =  11.386 , Out:   0.000#   4.420#  11.386f
+ Reaction Xsec     8.5-/ 6 @ 1 =  14.112 , Out:   0.000#   1.209/  14.110f
+ Reaction Xsec     8.5-/ 8 @ 2 =  14.049 , Out:   0.000#   3.448/  14.045f
+ Reaction Xsec     8.5-/ 8 @ 3 =  14.049 , Out:   0.000#   1.844/  14.047f
+ Reaction Xsec     8.5-/ 8 @ 4 =  14.049 , Out:   0.000#   0.843/  14.048f
+ Reaction Xsec     8.5-/10 @ 5 =  11.386 , Out:   0.000#   0.131/  11.386f
+ Reaction Xsec     8.5-/10 @ 6 =  11.386 , Out:   0.000#   0.043/  11.386f
 
  Total SPIN, PARITY =     9.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    1.4    5.7
- Reaction Xsec     9.5+/ 7 @ 1 =  15.676 , Out:   0.000#   0.258/  15.676f
- Reaction Xsec     9.5+/ 9 @ 2 =  15.276 , Out:   0.000#   0.160/  15.276f
- Reaction Xsec     9.5+/ 9 @ 3 =  15.276 , Out:   0.000#   0.087/  15.276f
- Reaction Xsec     9.5+/ 9 @ 4 =  15.276 , Out:   0.000#   0.040/  15.276f
- Reaction Xsec     9.5+/11 @ 5 =   8.402 , Out:   0.000#   3.723#   8.402f
- Reaction Xsec     9.5+/11 @ 6 =   8.402 , Out:   0.000#   1.223#   8.402f
+ Reaction Xsec     9.5+/ 7 @ 1 =  15.676 , Out:   0.000#   2.509/  15.674f
+ Reaction Xsec     9.5+/ 9 @ 2 =  15.276 , Out:   0.000#   1.560/  15.275f
+ Reaction Xsec     9.5+/ 9 @ 3 =  15.276 , Out:   0.000#   0.843/  15.275f
+ Reaction Xsec     9.5+/ 9 @ 4 =  15.276 , Out:   0.000#   0.386/  15.276f
+ Reaction Xsec     9.5+/11 @ 5 =   8.402 , Out:   0.000#   0.036/   8.402f
+ Reaction Xsec     9.5+/11 @ 6 =   8.402 , Out:   0.000#   0.012/   8.402f
 
  Total SPIN, PARITY =     9.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    1.4    5.7
- Reaction Xsec     9.5-/ 8 @ 1 =  15.610 , Out:   0.000#   0.394/  15.609f
- Reaction Xsec     9.5-/ 8 @ 2 =  15.610 , Out:   0.000#   0.213/  15.610f
- Reaction Xsec     9.5-/10 @ 3 =  12.651 , Out:   0.000#   0.033/  12.651f
- Reaction Xsec     9.5-/10 @ 4 =  12.651 , Out:   0.000#   0.015/  12.651f
- Reaction Xsec     9.5-/10 @ 5 =  12.651 , Out:   0.000#   4.897#  12.651f
- Reaction Xsec     9.5-/12 @ 6 =   4.706 , Out:   0.000#   0.230#   4.706f
+ Reaction Xsec     9.5-/ 8 @ 1 =  15.610 , Out:   0.000#   3.831/  15.606f
+ Reaction Xsec     9.5-/ 8 @ 2 =  15.610 , Out:   0.000#   2.073/  15.608f
+ Reaction Xsec     9.5-/10 @ 3 =  12.651 , Out:   0.000#   0.321/  12.651f
+ Reaction Xsec     9.5-/10 @ 4 =  12.651 , Out:   0.000#   0.149/  12.651f
+ Reaction Xsec     9.5-/10 @ 5 =  12.651 , Out:   0.000#   0.048/  12.651f
+ Reaction Xsec     9.5-/12 @ 6 =   4.706 , Out:   0.000#   2.231#   4.706f
 
  Total SPIN, PARITY =    10.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    1.6    6.2
- Reaction Xsec    10.5+/ 9 @ 1 =  16.804 , Out:   0.000#   0.177/  16.804f
- Reaction Xsec    10.5+/ 9 @ 2 =  16.804 , Out:   0.000#   0.096/  16.804f
- Reaction Xsec    10.5+/11 @ 3 =   9.242 , Out:   0.000#   8.964#   9.242f
- Reaction Xsec    10.5+/11 @ 4 =   9.242 , Out:   0.000#   4.176#   9.242f
- Reaction Xsec    10.5+/11 @ 5 =   9.242 , Out:   0.000#   1.343#   9.242f
- Reaction Xsec    10.5+/13 @ 6 =   2.598 , Out:   0.000#   0.043#   2.598f
+ Reaction Xsec    10.5+/ 9 @ 1 =  16.804 , Out:   0.000#   1.717/  16.802f
+ Reaction Xsec    10.5+/ 9 @ 2 =  16.804 , Out:   0.000#   0.937/  16.803f
+ Reaction Xsec    10.5+/11 @ 3 =   9.242 , Out:   0.000#   0.087/   9.242f
+ Reaction Xsec    10.5+/11 @ 4 =   9.242 , Out:   0.000#   0.041/   9.242f
+ Reaction Xsec    10.5+/11 @ 5 =   9.242 , Out:   0.000#   0.013/   9.242f
+ Reaction Xsec    10.5+/13 @ 6 =   2.598 , Out:   0.000#   0.417#   2.598f
 
  Total SPIN, PARITY =    10.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    1.6    6.2
- Reaction Xsec    10.5-/ 8 @ 1 =  17.171 , Out:   0.000#   0.436/  17.170f
- Reaction Xsec    10.5-/10 @ 2 =  13.916 , Out:   0.000#   0.067/  13.916f
- Reaction Xsec    10.5-/10 @ 3 =  13.916 , Out:   0.000#   0.037/  13.916f
- Reaction Xsec    10.5-/10 @ 4 =  13.916 , Out:   0.000#   0.017/  13.916f
- Reaction Xsec    10.5-/12 @ 5 =   5.177 , Out:   0.000#   0.785#   5.177f
- Reaction Xsec    10.5-/12 @ 6 =   5.177 , Out:   0.000#   0.258#   5.177f
+ Reaction Xsec    10.5-/ 8 @ 1 =  17.171 , Out:   0.000#   4.235/  17.167f
+ Reaction Xsec    10.5-/10 @ 2 =  13.916 , Out:   0.000#   0.656/  13.915f
+ Reaction Xsec    10.5-/10 @ 3 =  13.916 , Out:   0.000#   0.358/  13.916f
+ Reaction Xsec    10.5-/10 @ 4 =  13.916 , Out:   0.000#   0.165/  13.916f
+ Reaction Xsec    10.5-/12 @ 5 =   5.177 , Out:   0.000#   7.631#   5.177f
+ Reaction Xsec    10.5-/12 @ 6 =   5.177 , Out:   0.000#   2.511#   5.177f
 
  Total SPIN, PARITY =    11.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    1.7    6.8
- Reaction Xsec    11.5+/ 9 @ 1 =  18.332 , Out:   0.000#   0.194/  18.331f
- Reaction Xsec    11.5+/11 @ 2 =  10.083 , Out:   0.000#   0.018/  10.083f
- Reaction Xsec    11.5+/11 @ 3 =  10.083 , Out:   0.000#   9.874#  10.083f
- Reaction Xsec    11.5+/11 @ 4 =  10.083 , Out:   0.000#   4.586#  10.083f
- Reaction Xsec    11.5+/13 @ 5 =   2.834 , Out:   0.000#   0.145#   2.834f
- Reaction Xsec    11.5+/13 @ 6 =   2.834 , Out:   0.000#   0.048#   2.834f
+ Reaction Xsec    11.5+/ 9 @ 1 =  18.332 , Out:   0.000#   1.886/  18.330f
+ Reaction Xsec    11.5+/11 @ 2 =  10.083 , Out:   0.000#   0.174/  10.083f
+ Reaction Xsec    11.5+/11 @ 3 =  10.083 , Out:   0.000#   0.096/  10.083f
+ Reaction Xsec    11.5+/11 @ 4 =  10.083 , Out:   0.000#   0.045/  10.083f
+ Reaction Xsec    11.5+/13 @ 5 =   2.834 , Out:   0.000#   1.408#   2.834f
+ Reaction Xsec    11.5+/13 @ 6 =   2.834 , Out:   0.000#   0.464#   2.834f
 
  Total SPIN, PARITY =    11.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    1.7    6.8
- Reaction Xsec    11.5-/10 @ 1 =  15.181 , Out:   0.000#   0.074/  15.181f
- Reaction Xsec    11.5-/10 @ 2 =  15.181 , Out:   0.000#   0.040/  15.181f
- Reaction Xsec    11.5-/12 @ 3 =   5.647 , Out:   0.000#   1.858#   5.647f
- Reaction Xsec    11.5-/12 @ 4 =   5.647 , Out:   0.000#   0.871#   5.647f
- Reaction Xsec    11.5-/12 @ 5 =   5.647 , Out:   0.000#   0.281#   5.647f
- Reaction Xsec    11.5-/14 @ 6 =   1.334 , Out:   0.000#   0.007#   1.334f
+ Reaction Xsec    11.5-/10 @ 1 =  15.181 , Out:   0.000#   0.716/  15.180f
+ Reaction Xsec    11.5-/10 @ 2 =  15.181 , Out:   0.000#   0.394/  15.181f
+ Reaction Xsec    11.5-/12 @ 3 =   5.647 , Out:   0.000#   0.018/   5.647f
+ Reaction Xsec    11.5-/12 @ 4 =   5.647 , Out:   0.000#   8.460#   5.647f
+ Reaction Xsec    11.5-/12 @ 5 =   5.647 , Out:   0.000#   2.734#   5.647f
+ Reaction Xsec    11.5-/14 @ 6 =   1.334 , Out:   0.000#   0.073#   1.334f
 
  Total SPIN, PARITY =    12.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    1.9    7.3
- Reaction Xsec    12.5+/11 @ 1 =  10.923 , Out:   0.000#   0.019/  10.923f
- Reaction Xsec    12.5+/11 @ 2 =  10.923 , Out:   0.000#   0.011/  10.923f
- Reaction Xsec    12.5+/13 @ 3 =   3.070 , Out:   0.000#   0.338#   3.070f
- Reaction Xsec    12.5+/13 @ 4 =   3.070 , Out:   0.000#   0.159#   3.070f
- Reaction Xsec    12.5+/13 @ 5 =   3.070 , Out:   0.000#   0.052#   3.070f
- Reaction Xsec    12.5+/15 @ 6 =   0.657 , Out:   0.000#   0.001#   0.657f
+ Reaction Xsec    12.5+/11 @ 1 =  10.923 , Out:   0.000#   0.189/  10.923f
+ Reaction Xsec    12.5+/11 @ 2 =  10.923 , Out:   0.000#   0.105/  10.923f
+ Reaction Xsec    12.5+/13 @ 3 =   3.070 , Out:   0.000#   3.286#   3.070f
+ Reaction Xsec    12.5+/13 @ 4 =   3.070 , Out:   0.000#   1.546#   3.070f
+ Reaction Xsec    12.5+/13 @ 5 =   3.070 , Out:   0.000#   0.502#   3.070f
+ Reaction Xsec    12.5+/15 @ 6 =   0.657 , Out:   0.000#   0.012#   0.657f
 
  Total SPIN, PARITY =    12.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    1.9    7.3
- Reaction Xsec    12.5-/10 @ 1 =  16.446 , Out:   0.000#   0.080/  16.446f
- Reaction Xsec    12.5-/12 @ 2 =   6.118 , Out:   0.000#   3.662#   6.118f
- Reaction Xsec    12.5-/12 @ 3 =   6.118 , Out:   0.000#   2.030#   6.118f
- Reaction Xsec    12.5-/12 @ 4 =   6.118 , Out:   0.000#   0.948#   6.118f
- Reaction Xsec    12.5-/14 @ 5 =   1.445 , Out:   0.000#   0.025#   1.445f
- Reaction Xsec    12.5-/14 @ 6 =   1.445 , Out:   0.000#   0.008#   1.445f
+ Reaction Xsec    12.5-/10 @ 1 =  16.446 , Out:   0.000#   0.780/  16.445f
+ Reaction Xsec    12.5-/12 @ 2 =   6.118 , Out:   0.000#   0.036/   6.118f
+ Reaction Xsec    12.5-/12 @ 3 =   6.118 , Out:   0.000#   0.020/   6.118f
+ Reaction Xsec    12.5-/12 @ 4 =   6.118 , Out:   0.000#   9.217#   6.118f
+ Reaction Xsec    12.5-/14 @ 5 =   1.445 , Out:   0.000#   0.243#   1.445f
+ Reaction Xsec    12.5-/14 @ 6 =   1.445 , Out:   0.000#   0.080#   1.445f
 
  Total SPIN, PARITY =    13.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    2.0    7.9
- Reaction Xsec    13.5+/11 @ 1 =  11.763 , Out:   0.000#   0.021/  11.763f
- Reaction Xsec    13.5+/13 @ 2 =   3.306 , Out:   0.000#   0.658#   3.306f
- Reaction Xsec    13.5+/13 @ 3 =   3.306 , Out:   0.000#   0.367#   3.306f
- Reaction Xsec    13.5+/13 @ 4 =   3.306 , Out:   0.000#   0.172#   3.306f
- Reaction Xsec    13.5+/15 @ 5 =   0.708 , Out:   0.000#   0.004#   0.708f
- Reaction Xsec    13.5+/15 @ 6 =   0.708 , Out:   0.000#   0.001#   0.708f
+ Reaction Xsec    13.5+/11 @ 1 =  11.763 , Out:   0.000#   0.204/  11.763f
+ Reaction Xsec    13.5+/13 @ 2 =   3.306 , Out:   0.000#   6.391#   3.306f
+ Reaction Xsec    13.5+/13 @ 3 =   3.306 , Out:   0.000#   3.563#   3.306f
+ Reaction Xsec    13.5+/13 @ 4 =   3.306 , Out:   0.000#   1.674#   3.306f
+ Reaction Xsec    13.5+/15 @ 5 =   0.708 , Out:   0.000#   0.041#   0.708f
+ Reaction Xsec    13.5+/15 @ 6 =   0.708 , Out:   0.000#   0.013#   0.708f
 
  Total SPIN, PARITY =    13.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    2.0    7.9
- Reaction Xsec    13.5-/12 @ 1 =   6.589 , Out:   0.000#   3.945#   6.589f
- Reaction Xsec    13.5-/12 @ 2 =   6.589 , Out:   0.000#   2.199#   6.589f
- Reaction Xsec    13.5-/14 @ 3 =   1.556 , Out:   0.000#   0.058#   1.556f
- Reaction Xsec    13.5-/14 @ 4 =   1.556 , Out:   0.000#   0.027#   1.556f
- Reaction Xsec    13.5-/14 @ 5 =   1.556 , Out:   0.000#   0.009#   1.556f
- Reaction Xsec    13.5-/16 @ 6 =   0.316 , Out:   0.000#   0.000#   0.316f
+ Reaction Xsec    13.5-/12 @ 1 =   6.589 , Out:   0.000#   0.038/   6.589f
+ Reaction Xsec    13.5-/12 @ 2 =   6.589 , Out:   0.000#   0.021/   6.589f
+ Reaction Xsec    13.5-/14 @ 3 =   1.556 , Out:   0.000#   0.561#   1.556f
+ Reaction Xsec    13.5-/14 @ 4 =   1.556 , Out:   0.000#   0.265#   1.556f
+ Reaction Xsec    13.5-/14 @ 5 =   1.556 , Out:   0.000#   0.086#   1.556f
+ Reaction Xsec    13.5-/16 @ 6 =   0.316 , Out:   0.000#   0.002#   0.316f
 
  Total SPIN, PARITY =    14.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    2.2    8.4
- Reaction Xsec    14.5+/13 @ 1 =   3.542 , Out:   0.000#   0.705#   3.542f
- Reaction Xsec    14.5+/13 @ 2 =   3.542 , Out:   0.000#   0.395#   3.542f
- Reaction Xsec    14.5+/15 @ 3 =   0.758 , Out:   0.000#   0.010#   0.758f
- Reaction Xsec    14.5+/15 @ 4 =   0.758 , Out:   0.000#   0.005#   0.758f
- Reaction Xsec    14.5+/15 @ 5 =   0.758 , Out:   0.000#   0.001#   0.758f
+ Reaction Xsec    14.5+/13 @ 1 =   3.542 , Out:   0.000#   6.849#   3.542f
+ Reaction Xsec    14.5+/13 @ 2 =   3.542 , Out:   0.000#   3.838#   3.542f
+ Reaction Xsec    14.5+/15 @ 3 =   0.758 , Out:   0.000#   0.093#   0.758f
+ Reaction Xsec    14.5+/15 @ 4 =   0.758 , Out:   0.000#   0.044#   0.758f
+ Reaction Xsec    14.5+/15 @ 5 =   0.758 , Out:   0.000#   0.014#   0.758f
  Reaction Xsec    14.5+/17 @ 6 =   0.150 , Out:   0.000#   0.000#   0.150f
 
  Total SPIN, PARITY =    14.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    2.2    8.4
- Reaction Xsec    14.5-/12 @ 1 =   7.059 , Out:   0.000#   4.243#   7.059f
- Reaction Xsec    14.5-/14 @ 2 =   1.667 , Out:   0.000#   0.111#   1.667f
- Reaction Xsec    14.5-/14 @ 3 =   1.667 , Out:   0.000#   0.062#   1.667f
- Reaction Xsec    14.5-/14 @ 4 =   1.667 , Out:   0.000#   0.029#   1.667f
- Reaction Xsec    14.5-/16 @ 5 =   0.339 , Out:   0.000#   0.001#   0.339f
- Reaction Xsec    14.5-/16 @ 6 =   0.339 , Out:   0.000#   0.000#   0.339f
+ Reaction Xsec    14.5-/12 @ 1 =   7.059 , Out:   0.000#   0.041/   7.059f
+ Reaction Xsec    14.5-/14 @ 2 =   1.667 , Out:   0.000#   1.079#   1.667f
+ Reaction Xsec    14.5-/14 @ 3 =   1.667 , Out:   0.000#   0.605#   1.667f
+ Reaction Xsec    14.5-/14 @ 4 =   1.667 , Out:   0.000#   0.285#   1.667f
+ Reaction Xsec    14.5-/16 @ 5 =   0.339 , Out:   0.000#   0.007#   0.339f
+ Reaction Xsec    14.5-/16 @ 6 =   0.339 , Out:   0.000#   0.002#   0.339f
 
  Total SPIN, PARITY =    15.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    2.4    9.0
- Reaction Xsec    15.5+/13 @ 1 =   3.778 , Out:   0.000#   0.754#   3.778f
- Reaction Xsec    15.5+/15 @ 2 =   0.809 , Out:   0.000#   0.018#   0.809f
- Reaction Xsec    15.5+/15 @ 3 =   0.809 , Out:   0.000#   0.010#   0.809f
- Reaction Xsec    15.5+/15 @ 4 =   0.809 , Out:   0.000#   0.005#   0.809f
- Reaction Xsec    15.5+/17 @ 5 =   0.160 , Out:   0.000#   0.000#   0.160f
+ Reaction Xsec    15.5+/13 @ 1 =   3.778 , Out:   0.000#   7.330#   3.778f
+ Reaction Xsec    15.5+/15 @ 2 =   0.809 , Out:   0.000#   0.178#   0.809f
+ Reaction Xsec    15.5+/15 @ 3 =   0.809 , Out:   0.000#   0.100#   0.809f
+ Reaction Xsec    15.5+/15 @ 4 =   0.809 , Out:   0.000#   0.047#   0.809f
+ Reaction Xsec    15.5+/17 @ 5 =   0.160 , Out:   0.000#   0.001#   0.160f
  Reaction Xsec    15.5+/17 @ 6 =   0.160 , Out:   0.000#   0.000#   0.160f
 
  Total SPIN, PARITY =    15.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    2.4    9.0
- Reaction Xsec    15.5-/14 @ 1 =   1.778 , Out:   0.000#   0.118#   1.778f
- Reaction Xsec    15.5-/14 @ 2 =   1.778 , Out:   0.000#   0.067#   1.778f
- Reaction Xsec    15.5-/16 @ 3 =   0.361 , Out:   0.000#   0.002#   0.361f
- Reaction Xsec    15.5-/16 @ 4 =   0.361 , Out:   0.000#   0.001#   0.361f
- Reaction Xsec    15.5-/16 @ 5 =   0.361 , Out:   0.000#   0.000#   0.361f
+ Reaction Xsec    15.5-/14 @ 1 =   1.778 , Out:   0.000#   1.151#   1.778f
+ Reaction Xsec    15.5-/14 @ 2 =   1.778 , Out:   0.000#   0.648#   1.778f
+ Reaction Xsec    15.5-/16 @ 3 =   0.361 , Out:   0.000#   0.015#   0.361f
+ Reaction Xsec    15.5-/16 @ 4 =   0.361 , Out:   0.000#   0.007#   0.361f
+ Reaction Xsec    15.5-/16 @ 5 =   0.361 , Out:   0.000#   0.002#   0.361f
  Reaction Xsec    15.5-/18 @ 6 =   0.071 , Out:   0.000#   0.000#   0.071f
 
  Total SPIN, PARITY =    16.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    2.5    9.5
- Reaction Xsec    16.5+/15 @ 1 =   0.859 , Out:   0.000#   0.019#   0.859f
- Reaction Xsec    16.5+/15 @ 2 =   0.859 , Out:   0.000#   0.011#   0.859f
- Reaction Xsec    16.5+/17 @ 3 =   0.170 , Out:   0.000#   0.000#   0.170f
- Reaction Xsec    16.5+/17 @ 4 =   0.170 , Out:   0.000#   0.000#   0.170f
+ Reaction Xsec    16.5+/15 @ 1 =   0.859 , Out:   0.000#   0.189#   0.859f
+ Reaction Xsec    16.5+/15 @ 2 =   0.859 , Out:   0.000#   0.107#   0.859f
+ Reaction Xsec    16.5+/17 @ 3 =   0.170 , Out:   0.000#   0.003#   0.170f
+ Reaction Xsec    16.5+/17 @ 4 =   0.170 , Out:   0.000#   0.001#   0.170f
  Reaction Xsec    16.5+/17 @ 5 =   0.170 , Out:   0.000#   0.000#   0.170f
  Reaction Xsec    16.5+/19 @ 6 =   0.033 , Out:   0.000#   0.000#   0.033f
 
  Total SPIN, PARITY =    16.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    2.5    9.5
- Reaction Xsec    16.5-/14 @ 1 =   1.889 , Out:   0.000#   0.126#   1.889f
- Reaction Xsec    16.5-/16 @ 2 =   0.384 , Out:   0.000#   0.003#   0.384f
- Reaction Xsec    16.5-/16 @ 3 =   0.384 , Out:   0.000#   0.002#   0.384f
- Reaction Xsec    16.5-/16 @ 4 =   0.384 , Out:   0.000#   0.001#   0.384f
+ Reaction Xsec    16.5-/14 @ 1 =   1.889 , Out:   0.000#   1.226#   1.889f
+ Reaction Xsec    16.5-/16 @ 2 =   0.384 , Out:   0.000#   0.029#   0.384f
+ Reaction Xsec    16.5-/16 @ 3 =   0.384 , Out:   0.000#   0.016#   0.384f
+ Reaction Xsec    16.5-/16 @ 4 =   0.384 , Out:   0.000#   0.008#   0.384f
  Reaction Xsec    16.5-/18 @ 5 =   0.075 , Out:   0.000#   0.000#   0.075f
  Reaction Xsec    16.5-/18 @ 6 =   0.075 , Out:   0.000#   0.000#   0.075f
 
  Total SPIN, PARITY =    17.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    2.7   10.1
- Reaction Xsec    17.5+/15 @ 1 =   0.910 , Out:   0.000#   0.021#   0.910f
- Reaction Xsec    17.5+/17 @ 2 =   0.180 , Out:   0.000#   0.000#   0.180f
- Reaction Xsec    17.5+/17 @ 3 =   0.180 , Out:   0.000#   0.000#   0.180f
- Reaction Xsec    17.5+/17 @ 4 =   0.180 , Out:   0.000#   0.000#   0.180f
+ Reaction Xsec    17.5+/15 @ 1 =   0.910 , Out:   0.000#   0.200#   0.910f
+ Reaction Xsec    17.5+/17 @ 2 =   0.180 , Out:   0.000#   0.005#   0.180f
+ Reaction Xsec    17.5+/17 @ 3 =   0.180 , Out:   0.000#   0.003#   0.180f
+ Reaction Xsec    17.5+/17 @ 4 =   0.180 , Out:   0.000#   0.001#   0.180f
  Reaction Xsec    17.5+/19 @ 5 =   0.035 , Out:   0.000#   0.000#   0.035f
  Reaction Xsec    17.5+/19 @ 6 =   0.035 , Out:   0.000#   0.000#   0.035f
 
  Total SPIN, PARITY =    17.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    2.7   10.1
- Reaction Xsec    17.5-/16 @ 1 =   0.407 , Out:   0.000#   0.003#   0.407f
- Reaction Xsec    17.5-/16 @ 2 =   0.407 , Out:   0.000#   0.002#   0.407f
+ Reaction Xsec    17.5-/16 @ 1 =   0.407 , Out:   0.000#   0.031#   0.407f
+ Reaction Xsec    17.5-/16 @ 2 =   0.407 , Out:   0.000#   0.017#   0.407f
  Reaction Xsec    17.5-/18 @ 3 =   0.079 , Out:   0.000#   0.000#   0.079f
  Reaction Xsec    17.5-/18 @ 4 =   0.079 , Out:   0.000#   0.000#   0.079f
  Reaction Xsec    17.5-/18 @ 5 =   0.079 , Out:   0.000#   0.000#   0.079f
  Reaction Xsec    17.5-/20 @ 6 =   0.015 , Out:   0.000#   0.000#   0.015f
 
  Total SPIN, PARITY =    18.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    2.8   10.6
- Reaction Xsec    18.5+/17 @ 1 =   0.190 , Out:   0.000#   0.001#   0.190f
- Reaction Xsec    18.5+/17 @ 2 =   0.190 , Out:   0.000#   0.000#   0.190f
+ Reaction Xsec    18.5+/17 @ 1 =   0.190 , Out:   0.000#   0.005#   0.190f
+ Reaction Xsec    18.5+/17 @ 2 =   0.190 , Out:   0.000#   0.003#   0.190f
  Reaction Xsec    18.5+/19 @ 3 =   0.037 , Out:   0.000#   0.000#   0.037f
  Reaction Xsec    18.5+/19 @ 4 =   0.037 , Out:   0.000#   0.000#   0.037f
  Reaction Xsec    18.5+/19 @ 5 =   0.037 , Out:   0.000#   0.000#   0.037f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
  Reaction Xsec    18.5+/21 @ 6 =   7.085/, Out:   0.000#   0.000#   0.007f
 
  Total SPIN, PARITY =    18.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    2.8   10.6
- Reaction Xsec    18.5-/16 @ 1 =   0.429 , Out:   0.000#   0.003#   0.429f
- Reaction Xsec    18.5-/18 @ 2 =   0.084 , Out:   0.000#   0.000#   0.084f
+ Reaction Xsec    18.5-/16 @ 1 =   0.429 , Out:   0.000#   0.033#   0.429f
+ Reaction Xsec    18.5-/18 @ 2 =   0.084 , Out:   0.000#   0.001#   0.084f
  Reaction Xsec    18.5-/18 @ 3 =   0.084 , Out:   0.000#   0.000#   0.084f
  Reaction Xsec    18.5-/18 @ 4 =   0.084 , Out:   0.000#   0.000#   0.084f
  Reaction Xsec    18.5-/20 @ 5 =   0.016 , Out:   0.000#   0.000#   0.016f
  Reaction Xsec    18.5-/20 @ 6 =   0.016 , Out:   0.000#   0.000#   0.016f
 
  Total SPIN, PARITY =    19.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    3.0   11.2
- Reaction Xsec    19.5+/17 @ 1 =   0.200 , Out:   0.000#   0.001#   0.200f
+ Reaction Xsec    19.5+/17 @ 1 =   0.200 , Out:   0.000#   0.005#   0.200f
  Reaction Xsec    19.5+/19 @ 2 =   0.039 , Out:   0.000#   0.000#   0.039f
  Reaction Xsec    19.5+/19 @ 3 =   0.039 , Out:   0.000#   0.000#   0.039f
  Reaction Xsec    19.5+/19 @ 4 =   0.039 , Out:   0.000#   0.000#   0.039f
@@ -506,7 +504,7 @@
  Reaction Xsec    19.5+/21 @ 6 =   7.458/, Out:   0.000#   0.000#   0.007f
 
  Total SPIN, PARITY =    19.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    3.0   11.2
- Reaction Xsec    19.5-/18 @ 1 =   0.088 , Out:   0.000#   0.000#   0.088f
+ Reaction Xsec    19.5-/18 @ 1 =   0.088 , Out:   0.000#   0.001#   0.088f
  Reaction Xsec    19.5-/18 @ 2 =   0.088 , Out:   0.000#   0.000#   0.088f
  Reaction Xsec    19.5-/20 @ 3 =   0.017 , Out:   0.000#   0.000#   0.017f
  Reaction Xsec    19.5-/20 @ 4 =   0.017 , Out:   0.000#   0.000#   0.017f
@@ -522,7 +520,7 @@
  Reaction Xsec    20.5+/23 @ 6 =   1.500/, Out:   0.000#   0.000#   0.002f
 
  Total SPIN, PARITY =    20.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    3.2   11.7
- Reaction Xsec    20.5-/18 @ 1 =   0.093 , Out:   0.000#   0.000#   0.093f
+ Reaction Xsec    20.5-/18 @ 1 =   0.093 , Out:   0.000#   0.001#   0.093f
  Reaction Xsec    20.5-/20 @ 2 =   0.018 , Out:   0.000#   0.000#   0.018f
  Reaction Xsec    20.5-/20 @ 3 =   0.018 , Out:   0.000#   0.000#   0.018f
  Reaction Xsec    20.5-/20 @ 4 =   0.018 , Out:   0.000#   0.000#   0.018f
@@ -543,6 +541,8 @@
  Reaction Xsec    21.5-/22 @ 3 =   3.592/, Out:   0.000#   0.000#   0.004f
  Reaction Xsec    21.5-/22 @ 4 =   3.592/, Out:   0.000#   0.000#   0.004f
  Reaction Xsec    21.5-/22 @ 5 =   3.592/, Out:   0.000#   0.000#   0.004f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    21.5-/24 @ 6 =   0.687/, Out:   0.000#   0.000#   0.001f
 
  Total SPIN, PARITY =    22.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    3.5   12.8
@@ -559,6 +559,8 @@
  Reaction Xsec    22.5-/22 @ 3 =   3.755/, Out:   0.000#   0.000#   0.004f
  Reaction Xsec    22.5-/22 @ 4 =   3.755/, Out:   0.000#   0.000#   0.004f
  Reaction Xsec    22.5-/24 @ 5 =   0.718/, Out:   0.000#   0.000#   0.001f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    22.5-/24 @ 6 =   0.718/, Out:   0.000#   0.000#   0.001f
 
  Total SPIN, PARITY =    23.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    3.6   13.4
@@ -575,7 +577,7 @@
  Reaction Xsec    23.5-/24 @ 3 =   0.749/, Out:   0.000#   0.000#   0.001f
  Reaction Xsec    23.5-/24 @ 4 =   0.749/, Out:   0.000#   0.000#   0.001f
  Reaction Xsec    23.5-/24 @ 5 =   0.749/, Out:   0.000#   0.000#   0.001f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    23.5-/26 @ 6 =   0.143/, Out:   0.000#   0.000#   0.000f
 
@@ -585,6 +587,8 @@
  Reaction Xsec    24.5+/25 @ 3 =   0.341/, Out:   0.000#   0.000#   0.000f
  Reaction Xsec    24.5+/25 @ 4 =   0.341/, Out:   0.000#   0.000#   0.000f
  Reaction Xsec    24.5+/25 @ 5 =   0.341/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    24.5+/27 @ 6 =   0.065/, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    24.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    3.8   13.9
@@ -592,10 +596,10 @@
  Reaction Xsec    24.5-/24 @ 2 =   0.781/, Out:   0.000#   0.000#   0.001f
  Reaction Xsec    24.5-/24 @ 3 =   0.781/, Out:   0.000#   0.000#   0.001f
  Reaction Xsec    24.5-/24 @ 4 =   0.781/, Out:   0.000#   0.000#   0.001f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    24.5-/26 @ 5 =   0.149/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    24.5-/26 @ 6 =   0.149/, Out:   0.000#   0.000#   0.000f
 
@@ -604,129 +608,145 @@
  Reaction Xsec    25.5+/25 @ 2 =   0.355/, Out:   0.000#   0.000#   0.000f
  Reaction Xsec    25.5+/25 @ 3 =   0.355/, Out:   0.000#   0.000#   0.000f
  Reaction Xsec    25.5+/25 @ 4 =   0.355/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
  Reaction Xsec    25.5+/27 @ 5 =   0.068/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    25.5+/27 @ 6 =   0.068/, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    25.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    4.0   14.5
  Reaction Xsec    25.5-/24 @ 1 =   0.812/, Out:   0.000#   0.000#   0.001f
  Reaction Xsec    25.5-/24 @ 2 =   0.812/, Out:   0.000#   0.000#   0.001f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    25.5-/26 @ 3 =   0.155/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    25.5-/26 @ 4 =   0.155/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    25.5-/26 @ 5 =   0.155/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    25.5-/28 @ 6 =   0.029/, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    26.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    4.1   15.0
  Reaction Xsec    26.5+/25 @ 1 =   0.368/, Out:   0.000#   0.000#   0.000f
  Reaction Xsec    26.5+/25 @ 2 =   0.368/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5+/27 @ 3 =   0.070/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5+/27 @ 4 =   0.070/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
  Reaction Xsec    26.5+/27 @ 5 =   0.070/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5+/29 @ 6 =   0.013/, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    26.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    4.1   15.0
  Reaction Xsec    26.5-/24 @ 1 =   0.843/, Out:   0.000#   0.000#   0.001f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5-/26 @ 2 =   0.161/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    26.5-/26 @ 3 =   0.161/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.1 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5-/26 @ 4 =   0.161/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5-/28 @ 5 =   0.031/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    26.5-/28 @ 6 =   0.031/, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    27.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    4.3   15.6
  Reaction Xsec    27.5+/25 @ 1 =   0.382/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.8 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    27.5+/27 @ 2 =   0.073/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    27.5+/27 @ 3 =   0.073/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.8 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    27.5+/27 @ 4 =   0.073/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 15.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    27.5+/29 @ 5 =   0.014/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    27.5+/29 @ 6 =   0.014/, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    27.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    4.3   15.6
  Reaction Xsec    27.5-/26 @ 1 =   0.167/, Out:   0.000#   0.000#   0.000f
  Reaction Xsec    27.5-/26 @ 2 =   0.167/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    27.5-/28 @ 3 =   0.032/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    27.5-/28 @ 4 =   0.032/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    27.5-/28 @ 5 =   0.032/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.8 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    27.5-/30 @ 6 =   6.022#, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    28.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    4.4   16.1
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.2 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    28.5+/27 @ 1 =   0.075/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.8 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5+/27 @ 2 =   0.075/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5+/29 @ 3 =   0.014/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5+/29 @ 4 =   0.014/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5+/29 @ 5 =   0.014/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5+/31 @ 6 =   2.716#, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    28.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    4.4   16.1
  Reaction Xsec    28.5-/26 @ 1 =   0.173/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
- Reaction Xsec    28.5-/28 @ 2 =   0.033/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
- Reaction Xsec    28.5-/28 @ 3 =   0.033/, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
+ Reaction Xsec    28.5-/28 @ 2 =   0.033/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
+ Reaction Xsec    28.5-/28 @ 3 =   0.033/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    28.5-/28 @ 4 =   0.033/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5-/30 @ 5 =   6.237#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    28.5-/30 @ 6 =   6.237#, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    29.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    4.6   16.7
- Reaction Xsec    29.5+/27 @ 1 =   0.078/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
- Reaction Xsec    29.5+/29 @ 2 =   0.015/, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
+ Reaction Xsec    29.5+/27 @ 1 =   0.078/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
+ Reaction Xsec    29.5+/29 @ 2 =   0.015/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    29.5+/29 @ 3 =   0.015/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    29.5+/29 @ 4 =   0.015/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5+/31 @ 5 =   2.809#, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
@@ -734,69 +754,69 @@
  Reaction Xsec    29.5+/31 @ 6 =   2.809#, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    29.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    4.6   16.7
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5-/28 @ 1 =   0.034/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5-/28 @ 2 =   0.034/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.1 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5-/30 @ 3 =   6.452#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 15.1 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5-/30 @ 4 =   6.452#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5-/30 @ 5 =   6.452#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.3 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    29.5-/32 @ 6 =   1.223#, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    30.5 +,     15 chs,      6 cc.  Rmin & Coul turning =    4.8   17.2
-0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
- Reaction Xsec    30.5+/29 @ 1 =   0.015/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 15.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
-
- Reaction Xsec    30.5+/29 @ 2 =   0.015/, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 14.8 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
- Reaction Xsec    30.5+/31 @ 3 =   2.903#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+ Reaction Xsec    30.5+/29 @ 1 =   0.015/, Out:   0.000#   0.000#   0.000f
+ Reaction Xsec    30.5+/29 @ 2 =   0.015/, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
- Reaction Xsec    30.5+/31 @ 4 =   2.903#, Out:   0.000#   0.000#   0.000f
+ Reaction Xsec    30.5+/31 @ 3 =   2.903#, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
- Reaction Xsec    30.5+/31 @ 5 =   2.903#, Out:   0.000#   0.000#   0.000f
+ Reaction Xsec    30.5+/31 @ 4 =   2.903#, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
+ Reaction Xsec    30.5+/31 @ 5 =   2.903#, Out:   0.000#   0.000#   0.000f
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    30.5+/33 @ 6 =   0.550#, Out:   0.000#   0.000#   0.000f
 
  Total SPIN, PARITY =    30.5 -,     15 chs,      6 cc.  Rmin & Coul turning =    4.8   17.2
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.4 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+
  Reaction Xsec    30.5-/28 @ 1 =   0.035/, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.5 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    30.5-/30 @ 2 =   6.667#, Out:   0.000#   0.000#   0.000f
 0****** WARNING : ACCURACY LOSS IN ERWIN = 15.0 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    30.5-/30 @ 3 =   6.667#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.9 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    30.5-/30 @ 4 =   6.667#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.7 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    30.5-/32 @ 5 =   1.263#, Out:   0.000#   0.000#   0.000f
-0****** WARNING : ACCURACY LOSS IN ERWIN = 14.8 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
+0****** WARNING : ACCURACY LOSS IN ERWIN = 14.6 DIGITS, SO EXPECT ERRORS OF   0.0000 % OF UNITARITY
 
  Reaction Xsec    30.5-/32 @ 6 =   1.263#, Out:   0.000#   0.000#   0.000f
- Finished all CC sets @    3.86505890    
+ Finished all CC sets @    2.17354512    
 0CUMULATIVE REACTION cross section                 = 1353.57423  <L> =     8.05  <L**2> =     75.8
 0CUMULATIVE outgoing cross sections in partition 1 :    0.00000
-0CUMULATIVE outgoing cross sections in partition 2 :    0.01660
-0Cumulative ABSORBTION by Imaginary Potentials     = 1353.55763  <L> =     8.05  <L**2> =     75.8
-   Fusion for specific 6Li      M-states : 1353.755600 1363.042002 1353.755600
-0CUMULATIVE OUTGOING cross section                 =    0.01660
+0CUMULATIVE outgoing cross sections in partition 2 :    0.16136
+0Cumulative ABSORBTION by Imaginary Potentials     = 1353.41287  <L> =     8.05  <L**2> =     75.8
+   Fusion for specific 6Li      M-states : 1353.614726 1362.894344 1353.614726
+0CUMULATIVE OUTGOING cross section                 =    0.16136
  To convert to S-factors (MeV.mb = keV.b),  multiply by  3.3029E+03
 
 
@@ -830,7 +850,7 @@
      3.00 deg.:                                                         TTk0 = -0.4584E-08 -0.2745E-09
 +                                         /R =   8.7283E-01
 
-     3.50 deg.: X-S =   4.7284E+05 mb/sr,                       & pols = 0. -0.00000    -0.00000  0.00000  0.00000
+     3.50 deg.: X-S =   4.7284E+05 mb/sr,                       & pols =-0. -0.00000    -0.00000  0.00000  0.00000
      3.50 deg.:                                                         TTk0 = -0.1028E-07 -0.8164E-09
 +                                         /R =   8.1163E-01
 
@@ -890,19 +910,19 @@
     10.50 deg.:                                                         TTk0 =  0.1000E-07 -0.3106E-08
 +                                         /R =   8.9493E-01
 
-    11.00 deg.: X-S =  5563.060183 mb/sr,                       & pols = 0.  0.00000     0.00000  0.00000  0.00000
+    11.00 deg.: X-S =  5563.060183 mb/sr,                       & pols =-0.  0.00000     0.00000  0.00000  0.00000
     11.00 deg.:                                                         TTk0 =  0.3489E-08 -0.8291E-08
 +                                         /R =   9.2652E-01
 
-    11.50 deg.: X-S =  4769.335590 mb/sr,                       & pols = 0. -0.00000     0.00000  0.00000  0.00000
+    11.50 deg.: X-S =  4769.335590 mb/sr,                       & pols =-0. -0.00000     0.00000  0.00000  0.00000
     11.50 deg.:                                                         TTk0 = -0.1997E-08 -0.1358E-07
 +                                         /R =   9.4836E-01
 
-    12.00 deg.: X-S =  4069.255649 mb/sr,                       & pols = 0. -0.00000     0.00000  0.00000  0.00000
+    12.00 deg.: X-S =  4069.255649 mb/sr,                       & pols =-0. -0.00000     0.00000  0.00000  0.00000
     12.00 deg.:                                                         TTk0 = -0.5308E-08 -0.1858E-07
 +                                         /R =   9.5874E-01
 
-    12.50 deg.: X-S =  3450.462942 mb/sr,                       & pols =-0. -0.00000     0.00000  0.00000  0.00000
+    12.50 deg.: X-S =  3450.462942 mb/sr,                       & pols = 0. -0.00000     0.00000  0.00000  0.00000
     12.50 deg.:                                                         TTk0 = -0.5484E-08 -0.2292E-07
 +                                         /R =   9.5655E-01
 
@@ -986,7 +1006,7 @@
     22.50 deg.:                                                         TTk0 = -0.2398E-06 -0.9882E-08
 +                                         /R =   2.4107E-01
 
-    23.00 deg.: X-S =    91.569746 mb/sr,                       & pols = 0. -0.00000    -0.00000 -0.00000 -0.00000
+    23.00 deg.: X-S =    91.569746 mb/sr,                       & pols =-0. -0.00000    -0.00000 -0.00000 -0.00000
     23.00 deg.:                                                         TTk0 = -0.1670E-06  0.1566E-07
 +                                         /R =   2.8551E-01
 
@@ -1122,7 +1142,7 @@
     39.50 deg.:                                                         TTk0 = -0.2762E-06 -0.1812E-06
 +                                         /R =   2.7339E-01
 
-    40.00 deg.: X-S =    12.198624 mb/sr,                       & pols = 0. -0.00000     0.00000 -0.00000  0.00000
+    40.00 deg.: X-S =    12.198624 mb/sr,                       & pols =-0. -0.00000     0.00000 -0.00000  0.00000
     40.00 deg.:                                                         TTk0 = -0.2307E-06 -0.1274E-06
 +                                         /R =   3.2943E-01
 
@@ -1290,372 +1310,372 @@
 
  CROSS SECTIONS FOR OUTGOING 2H       & 13C      in state #   1 with spins & parities 1.0  + &  2.5  +;  0
 
-     0.00 deg.: X-S =     0.010787 mb/sr,                       & pols =-0.  0.00000     0.00668  0.00000  0.00000
+     0.00 deg.: X-S =     0.104838 mb/sr,                       & pols =-0.  0.00000     0.00668  0.00000  0.00000
      0.00 deg.:                                                         TTk0 =   0.000     -0.3338E-02
-+                                         REAC   1.6603E-02 mb
++                                         REAC   1.6136E-01 mb
 
-     0.50 deg.: X-S =     0.010780 mb/sr,                       & pols =-0.  0.00008     0.00666  0.00022  0.00000
-     0.50 deg.:                                                         TTk0 =  0.1115E-03 -0.3338E-02
+     0.50 deg.: X-S =     0.104771 mb/sr,                       & pols =-0.  0.00008     0.00666  0.00022  0.00000
+     0.50 deg.:                                                         TTk0 =  0.1166E-03 -0.3338E-02
 
-     1.00 deg.: X-S =     0.010759 mb/sr,                       & pols =-0.  0.00016     0.00663  0.00043  0.00002
-     1.00 deg.:                                                         TTk0 =  0.2243E-03 -0.3337E-02
+     1.00 deg.: X-S =     0.104569 mb/sr,                       & pols =-0.  0.00017     0.00663  0.00043  0.00002
+     1.00 deg.:                                                         TTk0 =  0.2339E-03 -0.3337E-02
 
-     1.50 deg.: X-S =     0.010724 mb/sr,                       & pols =-0.  0.00024     0.00657  0.00065  0.00004
-     1.50 deg.:                                                         TTk0 =  0.3393E-03 -0.3336E-02
+     1.50 deg.: X-S =     0.104233 mb/sr,                       & pols =-0.  0.00025     0.00657  0.00065  0.00004
+     1.50 deg.:                                                         TTk0 =  0.3526E-03 -0.3336E-02
 
-     2.00 deg.: X-S =     0.010676 mb/sr,                       & pols =-0.  0.00032     0.00649  0.00086  0.00007
-     2.00 deg.:                                                         TTk0 =  0.4577E-03 -0.3334E-02
+     2.00 deg.: X-S =     0.103763 mb/sr,                       & pols =-0.  0.00033     0.00649  0.00086  0.00007
+     2.00 deg.:                                                         TTk0 =  0.4734E-03 -0.3335E-02
 
-     2.50 deg.: X-S =     0.010614 mb/sr,                       & pols =-0.  0.00041     0.00639  0.00108  0.00011
-     2.50 deg.:                                                         TTk0 =  0.5805E-03 -0.3331E-02
+     2.50 deg.: X-S =     0.103160 mb/sr,                       & pols =-0.  0.00042     0.00639  0.00108  0.00011
+     2.50 deg.:                                                         TTk0 =  0.5970E-03 -0.3332E-02
 
-     3.00 deg.: X-S =     0.010539 mb/sr,                       & pols =-0.  0.00050     0.00626  0.00130  0.00016
-     3.00 deg.:                                                         TTk0 =  0.7085E-03 -0.3328E-02
+     3.00 deg.: X-S =     0.102423 mb/sr,                       & pols =-0.  0.00051     0.00626  0.00130  0.00016
+     3.00 deg.:                                                         TTk0 =  0.7242E-03 -0.3329E-02
 
-     3.50 deg.: X-S =     0.010449 mb/sr,                       & pols =-0.  0.00060     0.00611  0.00152  0.00022
-     3.50 deg.:                                                         TTk0 =  0.8424E-03 -0.3323E-02
+     3.50 deg.: X-S =     0.101555 mb/sr,                       & pols =-0.  0.00061     0.00611  0.00152  0.00022
+     3.50 deg.:                                                         TTk0 =  0.8557E-03 -0.3325E-02
 
-     4.00 deg.: X-S =     0.010347 mb/sr,                       & pols =-0.  0.00069     0.00594  0.00174  0.00029
-     4.00 deg.:                                                         TTk0 =  0.9828E-03 -0.3318E-02
+     4.00 deg.: X-S =     0.100556 mb/sr,                       & pols =-0.  0.00070     0.00594  0.00174  0.00029
+     4.00 deg.:                                                         TTk0 =  0.9924E-03 -0.3320E-02
 
-     4.50 deg.: X-S =     0.010231 mb/sr,                       & pols =-0.  0.00080     0.00574  0.00196  0.00036
-     4.50 deg.:                                                         TTk0 =  0.1130E-02 -0.3312E-02
+     4.50 deg.: X-S =     0.099430 mb/sr,                       & pols =-0.  0.00080     0.00574  0.00196  0.00036
+     4.50 deg.:                                                         TTk0 =  0.1135E-02 -0.3313E-02
 
-     5.00 deg.: X-S =     0.010102 mb/sr,                       & pols =-0.  0.00091     0.00551  0.00219  0.00045
-     5.00 deg.:                                                         TTk0 =  0.1285E-02 -0.3303E-02
+     5.00 deg.: X-S =     0.098178 mb/sr,                       & pols =-0.  0.00091     0.00552  0.00219  0.00045
+     5.00 deg.:                                                         TTk0 =  0.1285E-02 -0.3305E-02
 
-     5.50 deg.: X-S =     0.009961 mb/sr,                       & pols =-0.  0.00102     0.00526  0.00241  0.00054
-     5.50 deg.:                                                         TTk0 =  0.1449E-02 -0.3293E-02
+     5.50 deg.: X-S =     0.096805 mb/sr,                       & pols =-0.  0.00102     0.00527  0.00241  0.00054
+     5.50 deg.:                                                         TTk0 =  0.1443E-02 -0.3293E-02
 
-     6.00 deg.: X-S =     0.009808 mb/sr,                       & pols =-0.  0.00115     0.00499  0.00264  0.00064
-     6.00 deg.:                                                         TTk0 =  0.1621E-02 -0.3280E-02
+     6.00 deg.: X-S =     0.095316 mb/sr,                       & pols =-0.  0.00114     0.00499  0.00264  0.00064
+     6.00 deg.:                                                         TTk0 =  0.1610E-02 -0.3279E-02
 
-     6.50 deg.: X-S =     0.009643 mb/sr,                       & pols =-0.  0.00127     0.00468  0.00287  0.00075
-     6.50 deg.:                                                         TTk0 =  0.1802E-02 -0.3263E-02
+     6.50 deg.: X-S =     0.093716 mb/sr,                       & pols =-0.  0.00126     0.00468  0.00287  0.00075
+     6.50 deg.:                                                         TTk0 =  0.1787E-02 -0.3261E-02
 
-     7.00 deg.: X-S =     0.009468 mb/sr,                       & pols =-0.  0.00141     0.00434  0.00310  0.00087
-     7.00 deg.:                                                         TTk0 =  0.1995E-02 -0.3241E-02
+     7.00 deg.: X-S =     0.092013 mb/sr,                       & pols =-0.  0.00140     0.00434  0.00310  0.00087
+     7.00 deg.:                                                         TTk0 =  0.1976E-02 -0.3238E-02
 
-     7.50 deg.: X-S =     0.009283 mb/sr,                       & pols =-0.  0.00155     0.00398  0.00334  0.00100
-     7.50 deg.:                                                         TTk0 =  0.2199E-02 -0.3213E-02
+     7.50 deg.: X-S =     0.090215 mb/sr,                       & pols =-0.  0.00154     0.00397  0.00334  0.00100
+     7.50 deg.:                                                         TTk0 =  0.2179E-02 -0.3209E-02
 
-     8.00 deg.: X-S =     0.009089 mb/sr,                       & pols =-0.  0.00171     0.00357  0.00358  0.00114
-     8.00 deg.:                                                         TTk0 =  0.2417E-02 -0.3179E-02
+     8.00 deg.: X-S =     0.088331 mb/sr,                       & pols =-0.  0.00170     0.00357  0.00358  0.00113
+     8.00 deg.:                                                         TTk0 =  0.2398E-02 -0.3173E-02
 
-     8.50 deg.: X-S =     0.008888 mb/sr,                       & pols =-0.  0.00187     0.00314  0.00383  0.00128
-     8.50 deg.:                                                         TTk0 =  0.2650E-02 -0.3135E-02
+     8.50 deg.: X-S =     0.086372 mb/sr,                       & pols =-0.  0.00186     0.00313  0.00383  0.00128
+     8.50 deg.:                                                         TTk0 =  0.2633E-02 -0.3129E-02
 
-     9.00 deg.: X-S =     0.008680 mb/sr,                       & pols =-0.  0.00205     0.00266  0.00407  0.00143
-     9.00 deg.:                                                         TTk0 =  0.2901E-02 -0.3082E-02
+     9.00 deg.: X-S =     0.084351 mb/sr,                       & pols =-0.  0.00204     0.00266  0.00407  0.00143
+     9.00 deg.:                                                         TTk0 =  0.2889E-02 -0.3076E-02
 
-     9.50 deg.: X-S =     0.008466 mb/sr,                       & pols =-0.  0.00224     0.00215  0.00432  0.00159
-     9.50 deg.:                                                         TTk0 =  0.3173E-02 -0.3016E-02
+     9.50 deg.: X-S =     0.082280 mb/sr,                       & pols =-0.  0.00224     0.00214  0.00432  0.00158
+     9.50 deg.:                                                         TTk0 =  0.3166E-02 -0.3010E-02
 
-    10.00 deg.: X-S =     0.008250 mb/sr,                       & pols =-0.  0.00245     0.00159  0.00457  0.00175
-    10.00 deg.:                                                         TTk0 =  0.3468E-02 -0.2937E-02
+    10.00 deg.: X-S =     0.080173 mb/sr,                       & pols =-0.  0.00245     0.00159  0.00457  0.00175
+    10.00 deg.:                                                         TTk0 =  0.3467E-02 -0.2931E-02
 
-    10.50 deg.: X-S =     0.008031 mb/sr,                       & pols =-0.  0.00268     0.00099  0.00483  0.00192
-    10.50 deg.:                                                         TTk0 =  0.3789E-02 -0.2842E-02
+    10.50 deg.: X-S =     0.078046 mb/sr,                       & pols =-0.  0.00268     0.00098  0.00483  0.00192
+    10.50 deg.:                                                         TTk0 =  0.3795E-02 -0.2837E-02
 
-    11.00 deg.: X-S =     0.007811 mb/sr,                       & pols =-0.  0.00293     0.00034  0.00509  0.00209
-    11.00 deg.:                                                         TTk0 =  0.4140E-02 -0.2728E-02
+    11.00 deg.: X-S =     0.075914 mb/sr,                       & pols =-0.  0.00294     0.00034  0.00509  0.00209
+    11.00 deg.:                                                         TTk0 =  0.4152E-02 -0.2725E-02
 
-    11.50 deg.: X-S =     0.007593 mb/sr,                       & pols =-0.  0.00320    -0.00036  0.00534  0.00226
-    11.50 deg.:                                                         TTk0 =  0.4524E-02 -0.2594E-02
+    11.50 deg.: X-S =     0.073793 mb/sr,                       & pols =-0.  0.00321    -0.00036  0.00534  0.00226
+    11.50 deg.:                                                         TTk0 =  0.4542E-02 -0.2593E-02
 
-    12.00 deg.: X-S =     0.007378 mb/sr,                       & pols =-0.  0.00350    -0.00110  0.00560  0.00244
-    12.00 deg.:                                                         TTk0 =  0.4943E-02 -0.2438E-02
+    12.00 deg.: X-S =     0.071701 mb/sr,                       & pols =-0.  0.00351    -0.00111  0.00560  0.00244
+    12.00 deg.:                                                         TTk0 =  0.4965E-02 -0.2438E-02
 
-    12.50 deg.: X-S =     0.007167 mb/sr,                       & pols =-0.  0.00382    -0.00190  0.00585  0.00262
-    12.50 deg.:                                                         TTk0 =  0.5401E-02 -0.2256E-02
+    12.50 deg.: X-S =     0.069653 mb/sr,                       & pols =-0.  0.00384    -0.00190  0.00585  0.00262
+    12.50 deg.:                                                         TTk0 =  0.5425E-02 -0.2259E-02
 
-    13.00 deg.: X-S =     0.006962 mb/sr,                       & pols =-0.  0.00417    -0.00275  0.00610  0.00279
-    13.00 deg.:                                                         TTk0 =  0.5899E-02 -0.2047E-02
+    13.00 deg.: X-S =     0.067666 mb/sr,                       & pols =-0.  0.00419    -0.00274  0.00610  0.00280
+    13.00 deg.:                                                         TTk0 =  0.5923E-02 -0.2052E-02
 
-    13.50 deg.: X-S =     0.006766 mb/sr,                       & pols =-0.  0.00455    -0.00364  0.00634  0.00296
-    13.50 deg.:                                                         TTk0 =  0.6438E-02 -0.1809E-02
+    13.50 deg.: X-S =     0.065755 mb/sr,                       & pols =-0.  0.00457    -0.00364  0.00634  0.00297
+    13.50 deg.:                                                         TTk0 =  0.6461E-02 -0.1815E-02
 
-    14.00 deg.: X-S =     0.006579 mb/sr,                       & pols =-0.  0.00496    -0.00458  0.00658  0.00313
-    14.00 deg.:                                                         TTk0 =  0.7019E-02 -0.1540E-02
+    14.00 deg.: X-S =     0.063937 mb/sr,                       & pols =-0.  0.00498    -0.00457  0.00658  0.00313
+    14.00 deg.:                                                         TTk0 =  0.7037E-02 -0.1547E-02
 
-    14.50 deg.: X-S =     0.006403 mb/sr,                       & pols =-0.  0.00540    -0.00555  0.00679  0.00328
-    14.50 deg.:                                                         TTk0 =  0.7640E-02 -0.1238E-02
+    14.50 deg.: X-S =     0.062224 mb/sr,                       & pols =-0.  0.00541    -0.00555  0.00679  0.00328
+    14.50 deg.:                                                         TTk0 =  0.7652E-02 -0.1246E-02
 
-    15.00 deg.: X-S =     0.006239 mb/sr,                       & pols =-0.  0.00587    -0.00657  0.00700  0.00342
-    15.00 deg.:                                                         TTk0 =  0.8300E-02 -0.9033E-03
+    15.00 deg.: X-S =     0.060631 mb/sr,                       & pols =-0.  0.00587    -0.00656  0.00700  0.00342
+    15.00 deg.:                                                         TTk0 =  0.8305E-02 -0.9110E-03
 
-    15.50 deg.: X-S =     0.006088 mb/sr,                       & pols =-0.  0.00636    -0.00761  0.00718  0.00354
-    15.50 deg.:                                                         TTk0 =  0.8995E-02 -0.5346E-03
+    15.50 deg.: X-S =     0.059167 mb/sr,                       & pols =-0.  0.00636    -0.00760  0.00718  0.00355
+    15.50 deg.:                                                         TTk0 =  0.8991E-02 -0.5415E-03
 
-    16.00 deg.: X-S =     0.005952 mb/sr,                       & pols =-0.  0.00687    -0.00867  0.00734  0.00365
-    16.00 deg.:                                                         TTk0 =  0.9720E-02 -0.1326E-03
+    16.00 deg.: X-S =     0.057843 mb/sr,                       & pols =-0.  0.00686    -0.00866  0.00734  0.00365
+    16.00 deg.:                                                         TTk0 =  0.9708E-02 -0.1382E-03
 
-    16.50 deg.: X-S =     0.005831 mb/sr,                       & pols =-0.  0.00740    -0.00973  0.00747  0.00373
-    16.50 deg.:                                                         TTk0 =  0.1047E-01  0.3011E-03
+    16.50 deg.: X-S =     0.056667 mb/sr,                       & pols =-0.  0.00739    -0.00973  0.00747  0.00373
+    16.50 deg.:                                                         TTk0 =  0.1045E-01  0.2974E-03
 
-    17.00 deg.: X-S =     0.005726 mb/sr,                       & pols =-0.  0.00794    -0.01080  0.00757  0.00378
-    17.00 deg.:                                                         TTk0 =  0.1124E-01  0.7645E-03
+    17.00 deg.: X-S =     0.055644 mb/sr,                       & pols =-0.  0.00793    -0.01079  0.00757  0.00378
+    17.00 deg.:                                                         TTk0 =  0.1121E-01  0.7629E-03
 
-    17.50 deg.: X-S =     0.005637 mb/sr,                       & pols =-0.  0.00849    -0.01184  0.00765  0.00381
-    17.50 deg.:                                                         TTk0 =  0.1201E-01  0.1254E-02
+    17.50 deg.: X-S =     0.054778 mb/sr,                       & pols =-0.  0.00848    -0.01184  0.00765  0.00381
+    17.50 deg.:                                                         TTk0 =  0.1199E-01  0.1255E-02
 
-    18.00 deg.: X-S =     0.005564 mb/sr,                       & pols =-0.  0.00904    -0.01286  0.00768  0.00381
-    18.00 deg.:                                                         TTk0 =  0.1279E-01  0.1766E-02
+    18.00 deg.: X-S =     0.054070 mb/sr,                       & pols =-0.  0.00903    -0.01286  0.00768  0.00381
+    18.00 deg.:                                                         TTk0 =  0.1276E-01  0.1769E-02
 
-    18.50 deg.: X-S =     0.005507 mb/sr,                       & pols =-0.  0.00959    -0.01384  0.00769  0.00377
-    18.50 deg.:                                                         TTk0 =  0.1356E-01  0.2296E-02
+    18.50 deg.: X-S =     0.053518 mb/sr,                       & pols =-0.  0.00957    -0.01384  0.00769  0.00377
+    18.50 deg.:                                                         TTk0 =  0.1354E-01  0.2301E-02
 
-    19.00 deg.: X-S =     0.005466 mb/sr,                       & pols =-0.  0.01013    -0.01477  0.00766  0.00371
-    19.00 deg.:                                                         TTk0 =  0.1432E-01  0.2839E-02
+    19.00 deg.: X-S =     0.053120 mb/sr,                       & pols =-0.  0.01011    -0.01477  0.00766  0.00371
+    19.00 deg.:                                                         TTk0 =  0.1430E-01  0.2845E-02
 
-    19.50 deg.: X-S =     0.005440 mb/sr,                       & pols =-0.  0.01065    -0.01563  0.00760  0.00361
-    19.50 deg.:                                                         TTk0 =  0.1506E-01  0.3388E-02
+    19.50 deg.: X-S =     0.052871 mb/sr,                       & pols =-0.  0.01064    -0.01563  0.00760  0.00361
+    19.50 deg.:                                                         TTk0 =  0.1504E-01  0.3395E-02
 
-    20.00 deg.: X-S =     0.005429 mb/sr,                       & pols =-0.  0.01115    -0.01643  0.00751  0.00349
-    20.00 deg.:                                                         TTk0 =  0.1577E-01  0.3939E-02
+    20.00 deg.: X-S =     0.052762 mb/sr,                       & pols =-0.  0.01115    -0.01643  0.00751  0.00349
+    20.00 deg.:                                                         TTk0 =  0.1576E-01  0.3946E-02
 
-    20.50 deg.: X-S =     0.005431 mb/sr,                       & pols =-0.  0.01163    -0.01715  0.00739  0.00334
-    20.50 deg.:                                                         TTk0 =  0.1645E-01  0.4487E-02
+    20.50 deg.: X-S =     0.052784 mb/sr,                       & pols =-0.  0.01164    -0.01715  0.00739  0.00333
+    20.50 deg.:                                                         TTk0 =  0.1645E-01  0.4493E-02
 
-    21.00 deg.: X-S =     0.005446 mb/sr,                       & pols =-0.  0.01209    -0.01779  0.00725  0.00316
-    21.00 deg.:                                                         TTk0 =  0.1710E-01  0.5025E-02
+    21.00 deg.: X-S =     0.052926 mb/sr,                       & pols =-0.  0.01210    -0.01780  0.00725  0.00316
+    21.00 deg.:                                                         TTk0 =  0.1711E-01  0.5030E-02
 
-    21.50 deg.: X-S =     0.005471 mb/sr,                       & pols =-0.  0.01253    -0.01836  0.00708  0.00296
-    21.50 deg.:                                                         TTk0 =  0.1772E-01  0.5552E-02
+    21.50 deg.: X-S =     0.053173 mb/sr,                       & pols =-0.  0.01254    -0.01836  0.00708  0.00296
+    21.50 deg.:                                                         TTk0 =  0.1773E-01  0.5555E-02
 
-    22.00 deg.: X-S =     0.005506 mb/sr,                       & pols =-0.  0.01294    -0.01885  0.00690  0.00275
-    22.00 deg.:                                                         TTk0 =  0.1830E-01  0.6062E-02
+    22.00 deg.: X-S =     0.053513 mb/sr,                       & pols =-0.  0.01295    -0.01885  0.00690  0.00275
+    22.00 deg.:                                                         TTk0 =  0.1832E-01  0.6064E-02
 
-    22.50 deg.: X-S =     0.005549 mb/sr,                       & pols =-0.  0.01333    -0.01927  0.00671  0.00252
-    22.50 deg.:                                                         TTk0 =  0.1884E-01  0.6554E-02
+    22.50 deg.: X-S =     0.053930 mb/sr,                       & pols =-0.  0.01334    -0.01927  0.00671  0.00252
+    22.50 deg.:                                                         TTk0 =  0.1887E-01  0.6554E-02
 
-    23.00 deg.: X-S =     0.005598 mb/sr,                       & pols =-0.  0.01369    -0.01962  0.00651  0.00227
-    23.00 deg.:                                                         TTk0 =  0.1936E-01  0.7026E-02
+    23.00 deg.: X-S =     0.054406 mb/sr,                       & pols =-0.  0.01371    -0.01962  0.00651  0.00227
+    23.00 deg.:                                                         TTk0 =  0.1938E-01  0.7025E-02
 
-    23.50 deg.: X-S =     0.005652 mb/sr,                       & pols =-0.  0.01403    -0.01991  0.00631  0.00202
-    23.50 deg.:                                                         TTk0 =  0.1984E-01  0.7478E-02
+    23.50 deg.: X-S =     0.054925 mb/sr,                       & pols =-0.  0.01405    -0.01990  0.00631  0.00202
+    23.50 deg.:                                                         TTk0 =  0.1987E-01  0.7475E-02
 
-    24.00 deg.: X-S =     0.005708 mb/sr,                       & pols =-0.  0.01436    -0.02014  0.00610  0.00176
-    24.00 deg.:                                                         TTk0 =  0.2030E-01  0.7909E-02
+    24.00 deg.: X-S =     0.055469 mb/sr,                       & pols =-0.  0.01437    -0.02014  0.00610  0.00177
+    24.00 deg.:                                                         TTk0 =  0.2032E-01  0.7906E-02
 
-    24.50 deg.: X-S =     0.005764 mb/sr,                       & pols =-0.  0.01466    -0.02032  0.00589  0.00150
-    24.50 deg.:                                                         TTk0 =  0.2074E-01  0.8321E-02
+    24.50 deg.: X-S =     0.056021 mb/sr,                       & pols =-0.  0.01467    -0.02032  0.00589  0.00150
+    24.50 deg.:                                                         TTk0 =  0.2075E-01  0.8317E-02
 
-    25.00 deg.: X-S =     0.005820 mb/sr,                       & pols =-0.  0.01495    -0.02046  0.00569  0.00124
-    25.00 deg.:                                                         TTk0 =  0.2115E-01  0.8714E-02
+    25.00 deg.: X-S =     0.056564 mb/sr,                       & pols =-0.  0.01496    -0.02046  0.00569  0.00124
+    25.00 deg.:                                                         TTk0 =  0.2116E-01  0.8710E-02
 
-    25.50 deg.: X-S =     0.005873 mb/sr,                       & pols =-0.  0.01524    -0.02057  0.00550  0.00098
-    25.50 deg.:                                                         TTk0 =  0.2155E-01  0.9091E-02
+    25.50 deg.: X-S =     0.057081 mb/sr,                       & pols =-0.  0.01524    -0.02057  0.00550  0.00098
+    25.50 deg.:                                                         TTk0 =  0.2155E-01  0.9087E-02
 
-    26.00 deg.: X-S =     0.005922 mb/sr,                       & pols =-0.  0.01551    -0.02066  0.00531  0.00072
-    26.00 deg.:                                                         TTk0 =  0.2193E-01  0.9452E-02
+    26.00 deg.: X-S =     0.057555 mb/sr,                       & pols =-0.  0.01550    -0.02066  0.00531  0.00072
+    26.00 deg.:                                                         TTk0 =  0.2193E-01  0.9449E-02
 
-    26.50 deg.: X-S =     0.005965 mb/sr,                       & pols =-0.  0.01577    -0.02072  0.00513  0.00046
-    26.50 deg.:                                                         TTk0 =  0.2231E-01  0.9801E-02
+    26.50 deg.: X-S =     0.057973 mb/sr,                       & pols =-0.  0.01577    -0.02072  0.00513  0.00046
+    26.50 deg.:                                                         TTk0 =  0.2230E-01  0.9798E-02
 
-    27.00 deg.: X-S =     0.006001 mb/sr,                       & pols =-0.  0.01603    -0.02077  0.00497  0.00020
-    27.00 deg.:                                                         TTk0 =  0.2268E-01  0.1014E-01
+    27.00 deg.: X-S =     0.058319 mb/sr,                       & pols =-0.  0.01602    -0.02077  0.00497  0.00020
+    27.00 deg.:                                                         TTk0 =  0.2266E-01  0.1014E-01
 
-    27.50 deg.: X-S =     0.006028 mb/sr,                       & pols =-0.  0.01629    -0.02081  0.00481 -0.00005
-    27.50 deg.:                                                         TTk0 =  0.2304E-01  0.1047E-01
+    27.50 deg.: X-S =     0.058582 mb/sr,                       & pols =-0.  0.01628    -0.02081  0.00481 -0.00005
+    27.50 deg.:                                                         TTk0 =  0.2302E-01  0.1047E-01
 
-    28.00 deg.: X-S =     0.006045 mb/sr,                       & pols =-0.  0.01655    -0.02084  0.00467 -0.00030
-    28.00 deg.:                                                         TTk0 =  0.2341E-01  0.1079E-01
+    28.00 deg.: X-S =     0.058751 mb/sr,                       & pols =-0.  0.01654    -0.02084  0.00467 -0.00030
+    28.00 deg.:                                                         TTk0 =  0.2339E-01  0.1079E-01
 
-    28.50 deg.: X-S =     0.006052 mb/sr,                       & pols =-0.  0.01681    -0.02087  0.00453 -0.00055
-    28.50 deg.:                                                         TTk0 =  0.2378E-01  0.1111E-01
+    28.50 deg.: X-S =     0.058816 mb/sr,                       & pols =-0.  0.01680    -0.02087  0.00453 -0.00055
+    28.50 deg.:                                                         TTk0 =  0.2376E-01  0.1111E-01
 
-    29.00 deg.: X-S =     0.006047 mb/sr,                       & pols =-0.  0.01708    -0.02091  0.00441 -0.00079
-    29.00 deg.:                                                         TTk0 =  0.2415E-01  0.1143E-01
+    29.00 deg.: X-S =     0.058770 mb/sr,                       & pols =-0.  0.01707    -0.02091  0.00441 -0.00080
+    29.00 deg.:                                                         TTk0 =  0.2413E-01  0.1143E-01
 
-    29.50 deg.: X-S =     0.006030 mb/sr,                       & pols =-0.  0.01735    -0.02095  0.00431 -0.00103
-    29.50 deg.:                                                         TTk0 =  0.2454E-01  0.1174E-01
+    29.50 deg.: X-S =     0.058607 mb/sr,                       & pols =-0.  0.01734    -0.02095  0.00431 -0.00104
+    29.50 deg.:                                                         TTk0 =  0.2452E-01  0.1175E-01
 
-    30.00 deg.: X-S =     0.006001 mb/sr,                       & pols =-0.  0.01763    -0.02100  0.00421 -0.00127
-    30.00 deg.:                                                         TTk0 =  0.2493E-01  0.1206E-01
+    30.00 deg.: X-S =     0.058323 mb/sr,                       & pols =-0.  0.01762    -0.02101  0.00421 -0.00128
+    30.00 deg.:                                                         TTk0 =  0.2492E-01  0.1206E-01
 
-    30.50 deg.: X-S =     0.005959 mb/sr,                       & pols =-0.  0.01792    -0.02107  0.00413 -0.00151
-    30.50 deg.:                                                         TTk0 =  0.2534E-01  0.1238E-01
+    30.50 deg.: X-S =     0.057915 mb/sr,                       & pols =-0.  0.01792    -0.02107  0.00413 -0.00151
+    30.50 deg.:                                                         TTk0 =  0.2534E-01  0.1239E-01
 
-    31.00 deg.: X-S =     0.005905 mb/sr,                       & pols =-0.  0.01822    -0.02114  0.00406 -0.00174
+    31.00 deg.: X-S =     0.057384 mb/sr,                       & pols =-0.  0.01822    -0.02115  0.00406 -0.00174
     31.00 deg.:                                                         TTk0 =  0.2577E-01  0.1271E-01
 
-    31.50 deg.: X-S =     0.005837 mb/sr,                       & pols =-0.  0.01854    -0.02124  0.00400 -0.00198
+    31.50 deg.: X-S =     0.056730 mb/sr,                       & pols =-0.  0.01854    -0.02124  0.00400 -0.00198
     31.50 deg.:                                                         TTk0 =  0.2622E-01  0.1304E-01
 
-    32.00 deg.: X-S =     0.005758 mb/sr,                       & pols =-0.  0.01887    -0.02134  0.00395 -0.00221
-    32.00 deg.:                                                         TTk0 =  0.2668E-01  0.1337E-01
+    32.00 deg.: X-S =     0.055955 mb/sr,                       & pols =-0.  0.01887    -0.02134  0.00395 -0.00221
+    32.00 deg.:                                                         TTk0 =  0.2669E-01  0.1337E-01
 
-    32.50 deg.: X-S =     0.005666 mb/sr,                       & pols = 0.  0.01921    -0.02147  0.00392 -0.00244
-    32.50 deg.:                                                         TTk0 =  0.2717E-01  0.1372E-01
+    32.50 deg.: X-S =     0.055065 mb/sr,                       & pols =-0.  0.01922    -0.02147  0.00392 -0.00244
+    32.50 deg.:                                                         TTk0 =  0.2719E-01  0.1372E-01
 
-    33.00 deg.: X-S =     0.005563 mb/sr,                       & pols =-0.  0.01958    -0.02161  0.00390 -0.00266
-    33.00 deg.:                                                         TTk0 =  0.2769E-01  0.1407E-01
+    33.00 deg.: X-S =     0.054065 mb/sr,                       & pols =-0.  0.01959    -0.02161  0.00390 -0.00266
+    33.00 deg.:                                                         TTk0 =  0.2770E-01  0.1407E-01
 
-    33.50 deg.: X-S =     0.005449 mb/sr,                       & pols =-0.  0.01996    -0.02177  0.00390 -0.00289
-    33.50 deg.:                                                         TTk0 =  0.2823E-01  0.1443E-01
+    33.50 deg.: X-S =     0.052962 mb/sr,                       & pols =-0.  0.01997    -0.02177  0.00390 -0.00289
+    33.50 deg.:                                                         TTk0 =  0.2825E-01  0.1443E-01
 
-    34.00 deg.: X-S =     0.005326 mb/sr,                       & pols = 0.  0.02036    -0.02195  0.00390 -0.00312
-    34.00 deg.:                                                         TTk0 =  0.2880E-01  0.1480E-01
+    34.00 deg.: X-S =     0.051763 mb/sr,                       & pols =-0.  0.02038    -0.02195  0.00390 -0.00312
+    34.00 deg.:                                                         TTk0 =  0.2882E-01  0.1479E-01
 
-    34.50 deg.: X-S =     0.005194 mb/sr,                       & pols =-0.  0.02079    -0.02215  0.00392 -0.00335
-    34.50 deg.:                                                         TTk0 =  0.2940E-01  0.1517E-01
+    34.50 deg.: X-S =     0.050477 mb/sr,                       & pols = 0.  0.02080    -0.02214  0.00392 -0.00335
+    34.50 deg.:                                                         TTk0 =  0.2941E-01  0.1517E-01
 
-    35.00 deg.: X-S =     0.005054 mb/sr,                       & pols =-0.  0.02123    -0.02236  0.00396 -0.00357
-    35.00 deg.:                                                         TTk0 =  0.3003E-01  0.1556E-01
+    35.00 deg.: X-S =     0.049114 mb/sr,                       & pols = 0.  0.02124    -0.02236  0.00396 -0.00357
+    35.00 deg.:                                                         TTk0 =  0.3004E-01  0.1556E-01
 
-    35.50 deg.: X-S =     0.004906 mb/sr,                       & pols =-0.  0.02170    -0.02260  0.00400 -0.00380
-    35.50 deg.:                                                         TTk0 =  0.3069E-01  0.1595E-01
+    35.50 deg.: X-S =     0.047683 mb/sr,                       & pols = 0.  0.02171    -0.02260  0.00400 -0.00380
+    35.50 deg.:                                                         TTk0 =  0.3070E-01  0.1595E-01
 
-    36.00 deg.: X-S =     0.004753 mb/sr,                       & pols =-0.  0.02219    -0.02285  0.00407 -0.00403
-    36.00 deg.:                                                         TTk0 =  0.3138E-01  0.1636E-01
+    36.00 deg.: X-S =     0.046195 mb/sr,                       & pols = 0.  0.02219    -0.02285  0.00407 -0.00402
+    36.00 deg.:                                                         TTk0 =  0.3139E-01  0.1635E-01
 
-    36.50 deg.: X-S =     0.004595 mb/sr,                       & pols = 0.  0.02270    -0.02312  0.00414 -0.00425
-    36.50 deg.:                                                         TTk0 =  0.3211E-01  0.1677E-01
+    36.50 deg.: X-S =     0.044661 mb/sr,                       & pols =-0.  0.02270    -0.02312  0.00414 -0.00425
+    36.50 deg.:                                                         TTk0 =  0.3211E-01  0.1676E-01
 
-    37.00 deg.: X-S =     0.004434 mb/sr,                       & pols = 0.  0.02324    -0.02341  0.00424 -0.00447
-    37.00 deg.:                                                         TTk0 =  0.3287E-01  0.1718E-01
+    37.00 deg.: X-S =     0.043090 mb/sr,                       & pols = 0.  0.02324    -0.02341  0.00423 -0.00447
+    37.00 deg.:                                                         TTk0 =  0.3286E-01  0.1718E-01
 
-    37.50 deg.: X-S =     0.004270 mb/sr,                       & pols = 0.  0.02380    -0.02372  0.00434 -0.00469
-    37.50 deg.:                                                         TTk0 =  0.3366E-01  0.1760E-01
+    37.50 deg.: X-S =     0.041495 mb/sr,                       & pols = 0.  0.02380    -0.02371  0.00434 -0.00469
+    37.50 deg.:                                                         TTk0 =  0.3365E-01  0.1760E-01
 
-    38.00 deg.: X-S =     0.004104 mb/sr,                       & pols = 0.  0.02439    -0.02403  0.00447 -0.00491
-    38.00 deg.:                                                         TTk0 =  0.3449E-01  0.1803E-01
+    38.00 deg.: X-S =     0.039884 mb/sr,                       & pols = 0.  0.02438    -0.02403  0.00447 -0.00490
+    38.00 deg.:                                                         TTk0 =  0.3448E-01  0.1802E-01
 
-    38.50 deg.: X-S =     0.003938 mb/sr,                       & pols = 0.  0.02500    -0.02436  0.00461 -0.00512
-    38.50 deg.:                                                         TTk0 =  0.3535E-01  0.1845E-01
+    38.50 deg.: X-S =     0.038268 mb/sr,                       & pols = 0.  0.02499    -0.02436  0.00461 -0.00512
+    38.50 deg.:                                                         TTk0 =  0.3534E-01  0.1845E-01
 
-    39.00 deg.: X-S =     0.003772 mb/sr,                       & pols = 0.  0.02564    -0.02470  0.00477 -0.00532
-    39.00 deg.:                                                         TTk0 =  0.3625E-01  0.1887E-01
+    39.00 deg.: X-S =     0.036656 mb/sr,                       & pols = 0.  0.02562    -0.02470  0.00477 -0.00532
+    39.00 deg.:                                                         TTk0 =  0.3623E-01  0.1887E-01
 
-    39.50 deg.: X-S =     0.003607 mb/sr,                       & pols = 0.  0.02630    -0.02505  0.00496 -0.00552
-    39.50 deg.:                                                         TTk0 =  0.3719E-01  0.1928E-01
+    39.50 deg.: X-S =     0.035057 mb/sr,                       & pols = 0.  0.02628    -0.02505  0.00496 -0.00552
+    39.50 deg.:                                                         TTk0 =  0.3717E-01  0.1929E-01
 
-    40.00 deg.: X-S =     0.003445 mb/sr,                       & pols = 0.  0.02699    -0.02540  0.00516 -0.00571
-    40.00 deg.:                                                         TTk0 =  0.3816E-01  0.1969E-01
+    40.00 deg.: X-S =     0.033480 mb/sr,                       & pols = 0.  0.02697    -0.02541  0.00516 -0.00571
+    40.00 deg.:                                                         TTk0 =  0.3814E-01  0.1969E-01
 
-    40.50 deg.: X-S =     0.003286 mb/sr,                       & pols = 0.  0.02770    -0.02576  0.00538 -0.00588
-    40.50 deg.:                                                         TTk0 =  0.3917E-01  0.2008E-01
+    40.50 deg.: X-S =     0.031931 mb/sr,                       & pols = 0.  0.02768    -0.02576  0.00538 -0.00588
+    40.50 deg.:                                                         TTk0 =  0.3915E-01  0.2009E-01
 
-    41.00 deg.: X-S =     0.003130 mb/sr,                       & pols = 0.  0.02844    -0.02611  0.00562 -0.00604
-    41.00 deg.:                                                         TTk0 =  0.4022E-01  0.2045E-01
+    41.00 deg.: X-S =     0.030419 mb/sr,                       & pols = 0.  0.02843    -0.02611  0.00562 -0.00604
+    41.00 deg.:                                                         TTk0 =  0.4020E-01  0.2046E-01
 
-    41.50 deg.: X-S =     0.002979 mb/sr,                       & pols = 0.  0.02921    -0.02645  0.00588 -0.00619
-    41.50 deg.:                                                         TTk0 =  0.4131E-01  0.2080E-01
+    41.50 deg.: X-S =     0.028948 mb/sr,                       & pols = 0.  0.02920    -0.02645  0.00588 -0.00619
+    41.50 deg.:                                                         TTk0 =  0.4129E-01  0.2081E-01
 
-    42.00 deg.: X-S =     0.002832 mb/sr,                       & pols = 0.  0.03001    -0.02678  0.00617 -0.00631
-    42.00 deg.:                                                         TTk0 =  0.4244E-01  0.2112E-01
+    42.00 deg.: X-S =     0.027525 mb/sr,                       & pols = 0.  0.03000    -0.02678  0.00617 -0.00631
+    42.00 deg.:                                                         TTk0 =  0.4243E-01  0.2112E-01
 
-    42.50 deg.: X-S =     0.002691 mb/sr,                       & pols = 0.  0.03084    -0.02709  0.00648 -0.00641
+    42.50 deg.: X-S =     0.026154 mb/sr,                       & pols = 0.  0.03083    -0.02709  0.00648 -0.00641
     42.50 deg.:                                                         TTk0 =  0.4361E-01  0.2140E-01
 
-    43.00 deg.: X-S =     0.002556 mb/sr,                       & pols = 0.  0.03170    -0.02738  0.00681 -0.00648
+    43.00 deg.: X-S =     0.024838 mb/sr,                       & pols = 0.  0.03170    -0.02738  0.00681 -0.00649
     43.00 deg.:                                                         TTk0 =  0.4483E-01  0.2163E-01
 
-    43.50 deg.: X-S =     0.002426 mb/sr,                       & pols = 0.  0.03259    -0.02763  0.00717 -0.00653
-    43.50 deg.:                                                         TTk0 =  0.4609E-01  0.2181E-01
+    43.50 deg.: X-S =     0.023581 mb/sr,                       & pols = 0.  0.03260    -0.02763  0.00717 -0.00653
+    43.50 deg.:                                                         TTk0 =  0.4610E-01  0.2181E-01
 
-    44.00 deg.: X-S =     0.002303 mb/sr,                       & pols = 0.  0.03352    -0.02784  0.00755 -0.00653
-    44.00 deg.:                                                         TTk0 =  0.4741E-01  0.2192E-01
+    44.00 deg.: X-S =     0.022385 mb/sr,                       & pols = 0.  0.03354    -0.02784  0.00755 -0.00653
+    44.00 deg.:                                                         TTk0 =  0.4743E-01  0.2193E-01
 
-    44.50 deg.: X-S =     0.002187 mb/sr,                       & pols = 0.  0.03449    -0.02801  0.00795 -0.00650
-    44.50 deg.:                                                         TTk0 =  0.4878E-01  0.2197E-01
+    44.50 deg.: X-S =     0.021252 mb/sr,                       & pols = 0.  0.03451    -0.02801  0.00795 -0.00650
+    44.50 deg.:                                                         TTk0 =  0.4880E-01  0.2197E-01
 
-    45.00 deg.: X-S =     0.002077 mb/sr,                       & pols = 0.  0.03550    -0.02812  0.00836 -0.00643
-    45.00 deg.:                                                         TTk0 =  0.5021E-01  0.2193E-01
+    45.00 deg.: X-S =     0.020182 mb/sr,                       & pols = 0.  0.03553    -0.02812  0.00836 -0.00643
+    45.00 deg.:                                                         TTk0 =  0.5024E-01  0.2193E-01
 
-    45.50 deg.: X-S =     0.001973 mb/sr,                       & pols = 0.  0.03656    -0.02817  0.00880 -0.00630
-    45.50 deg.:                                                         TTk0 =  0.5171E-01  0.2181E-01
+    45.50 deg.: X-S =     0.019176 mb/sr,                       & pols = 0.  0.03658    -0.02817  0.00880 -0.00630
+    45.50 deg.:                                                         TTk0 =  0.5174E-01  0.2181E-01
 
-    46.00 deg.: X-S =     0.001876 mb/sr,                       & pols = 0.  0.03767    -0.02815  0.00925 -0.00613
-    46.00 deg.:                                                         TTk0 =  0.5327E-01  0.2159E-01
+    46.00 deg.: X-S =     0.018234 mb/sr,                       & pols = 0.  0.03769    -0.02815  0.00925 -0.00613
+    46.00 deg.:                                                         TTk0 =  0.5330E-01  0.2158E-01
 
-    46.50 deg.: X-S =     0.001786 mb/sr,                       & pols = 0.  0.03882    -0.02806  0.00972 -0.00591
-    46.50 deg.:                                                         TTk0 =  0.5491E-01  0.2126E-01
+    46.50 deg.: X-S =     0.017356 mb/sr,                       & pols = 0.  0.03885    -0.02806  0.00972 -0.00590
+    46.50 deg.:                                                         TTk0 =  0.5494E-01  0.2126E-01
 
-    47.00 deg.: X-S =     0.001702 mb/sr,                       & pols = 0.  0.04004    -0.02788  0.01020 -0.00562
-    47.00 deg.:                                                         TTk0 =  0.5662E-01  0.2083E-01
+    47.00 deg.: X-S =     0.016540 mb/sr,                       & pols = 0.  0.04006    -0.02787  0.01020 -0.00562
+    47.00 deg.:                                                         TTk0 =  0.5665E-01  0.2082E-01
 
-    47.50 deg.: X-S =     0.001624 mb/sr,                       & pols = 0.  0.04131    -0.02760  0.01068 -0.00529
-    47.50 deg.:                                                         TTk0 =  0.5842E-01  0.2028E-01
+    47.50 deg.: X-S =     0.015785 mb/sr,                       & pols = 0.  0.04133    -0.02760  0.01068 -0.00528
+    47.50 deg.:                                                         TTk0 =  0.5845E-01  0.2027E-01
 
-    48.00 deg.: X-S =     0.001553 mb/sr,                       & pols = 0.  0.04265    -0.02724  0.01116 -0.00489
-    48.00 deg.:                                                         TTk0 =  0.6031E-01  0.1961E-01
+    48.00 deg.: X-S =     0.015090 mb/sr,                       & pols = 0.  0.04266    -0.02724  0.01116 -0.00489
+    48.00 deg.:                                                         TTk0 =  0.6033E-01  0.1960E-01
 
-    48.50 deg.: X-S =     0.001487 mb/sr,                       & pols = 0.  0.04405    -0.02677  0.01164 -0.00444
-    48.50 deg.:                                                         TTk0 =  0.6230E-01  0.1883E-01
+    48.50 deg.: X-S =     0.014453 mb/sr,                       & pols = 0.  0.04406    -0.02677  0.01164 -0.00444
+    48.50 deg.:                                                         TTk0 =  0.6231E-01  0.1882E-01
 
-    49.00 deg.: X-S =     0.001427 mb/sr,                       & pols = 0.  0.04553    -0.02621  0.01211 -0.00393
+    49.00 deg.: X-S =     0.013871 mb/sr,                       & pols = 0.  0.04553    -0.02621  0.01211 -0.00393
     49.00 deg.:                                                         TTk0 =  0.6439E-01  0.1792E-01
 
-    49.50 deg.: X-S =     0.001373 mb/sr,                       & pols = 0.  0.04707    -0.02555  0.01256 -0.00338
-    49.50 deg.:                                                         TTk0 =  0.6657E-01  0.1691E-01
+    49.50 deg.: X-S =     0.013343 mb/sr,                       & pols = 0.  0.04707    -0.02555  0.01256 -0.00338
+    49.50 deg.:                                                         TTk0 =  0.6656E-01  0.1691E-01
 
-    50.00 deg.: X-S =     0.001324 mb/sr,                       & pols = 0.  0.04870    -0.02479  0.01299 -0.00278
-    50.00 deg.:                                                         TTk0 =  0.6887E-01  0.1580E-01
+    50.00 deg.: X-S =     0.012865 mb/sr,                       & pols = 0.  0.04868    -0.02479  0.01299 -0.00277
+    50.00 deg.:                                                         TTk0 =  0.6885E-01  0.1579E-01
 
-    50.50 deg.: X-S =     0.001280 mb/sr,                       & pols = 0.  0.05039    -0.02395  0.01340 -0.00214
-    50.50 deg.:                                                         TTk0 =  0.7126E-01  0.1459E-01
+    50.50 deg.: X-S =     0.012437 mb/sr,                       & pols = 0.  0.05037    -0.02394  0.01340 -0.00213
+    50.50 deg.:                                                         TTk0 =  0.7124E-01  0.1459E-01
 
-    51.00 deg.: X-S =     0.001240 mb/sr,                       & pols = 0.  0.05216    -0.02301  0.01377 -0.00146
-    51.00 deg.:                                                         TTk0 =  0.7376E-01  0.1330E-01
+    51.00 deg.: X-S =     0.012055 mb/sr,                       & pols = 0.  0.05214    -0.02301  0.01377 -0.00146
+    51.00 deg.:                                                         TTk0 =  0.7373E-01  0.1330E-01
 
-    51.50 deg.: X-S =     0.001206 mb/sr,                       & pols = 0.  0.05400    -0.02201  0.01411 -0.00077
-    51.50 deg.:                                                         TTk0 =  0.7636E-01  0.1195E-01
+    51.50 deg.: X-S =     0.011717 mb/sr,                       & pols = 0.  0.05397    -0.02201  0.01411 -0.00077
+    51.50 deg.:                                                         TTk0 =  0.7633E-01  0.1194E-01
 
-    52.00 deg.: X-S =     0.001175 mb/sr,                       & pols = 0.  0.05590    -0.02094  0.01440 -0.00006
-    52.00 deg.:                                                         TTk0 =  0.7905E-01  0.1054E-01
+    52.00 deg.: X-S =     0.011422 mb/sr,                       & pols = 0.  0.05588    -0.02094  0.01440 -0.00006
+    52.00 deg.:                                                         TTk0 =  0.7902E-01  0.1054E-01
 
-    52.50 deg.: X-S =     0.001149 mb/sr,                       & pols = 0.  0.05787    -0.01981  0.01465  0.00065
-    52.50 deg.:                                                         TTk0 =  0.8184E-01  0.9104E-02
+    52.50 deg.: X-S =     0.011165 mb/sr,                       & pols = 0.  0.05784    -0.01981  0.01465  0.00065
+    52.50 deg.:                                                         TTk0 =  0.8180E-01  0.9105E-02
 
-    53.00 deg.: X-S =     0.001126 mb/sr,                       & pols = 0.  0.05989    -0.01865  0.01485  0.00136
-    53.00 deg.:                                                         TTk0 =  0.8469E-01  0.7656E-02
+    53.00 deg.: X-S =     0.010946 mb/sr,                       & pols = 0.  0.05987    -0.01865  0.01485  0.00136
+    53.00 deg.:                                                         TTk0 =  0.8466E-01  0.7659E-02
 
-    53.50 deg.: X-S =     0.001107 mb/sr,                       & pols = 0.  0.06195    -0.01746  0.01500  0.00205
-    53.50 deg.:                                                         TTk0 =  0.8761E-01  0.6215E-02
+    53.50 deg.: X-S =     0.010761 mb/sr,                       & pols = 0.  0.06194    -0.01746  0.01500  0.00205
+    53.50 deg.:                                                         TTk0 =  0.8759E-01  0.6219E-02
 
-    54.00 deg.: X-S =     0.001092 mb/sr,                       & pols = 0.  0.06406    -0.01626  0.01509  0.00272
-    54.00 deg.:                                                         TTk0 =  0.9059E-01  0.4800E-02
+    54.00 deg.: X-S =     0.010610 mb/sr,                       & pols = 0.  0.06404    -0.01626  0.01509  0.00272
+    54.00 deg.:                                                         TTk0 =  0.9057E-01  0.4805E-02
 
-    54.50 deg.: X-S =     0.001079 mb/sr,                       & pols = 0.  0.06618    -0.01506  0.01513  0.00335
-    54.50 deg.:                                                         TTk0 =  0.9360E-01  0.3428E-02
+    54.50 deg.: X-S =     0.010490 mb/sr,                       & pols = 0.  0.06618    -0.01506  0.01513  0.00335
+    54.50 deg.:                                                         TTk0 =  0.9359E-01  0.3434E-02
 
-    55.00 deg.: X-S =     0.001070 mb/sr,                       & pols = 0.  0.06832    -0.01388  0.01512  0.00394
-    55.00 deg.:                                                         TTk0 =  0.9663E-01  0.2117E-02
+    55.00 deg.: X-S =     0.010399 mb/sr,                       & pols = 0.  0.06832    -0.01388  0.01513  0.00393
+    55.00 deg.:                                                         TTk0 =  0.9662E-01  0.2124E-02
 
-    55.50 deg.: X-S =     0.001063 mb/sr,                       & pols = 0.  0.07047    -0.01272  0.01506  0.00447
-    55.50 deg.:                                                         TTk0 =  0.9966E-01  0.8811E-03
+    55.50 deg.: X-S =     0.010335 mb/sr,                       & pols = 0.  0.07047    -0.01272  0.01506  0.00447
+    55.50 deg.:                                                         TTk0 =  0.9966E-01  0.8880E-03
 
-    56.00 deg.: X-S =     0.001059 mb/sr,                       & pols = 0.  0.07260    -0.01160  0.01496  0.00495
-    56.00 deg.:                                                         TTk0 =  0.1027     -0.2672E-03
+    56.00 deg.: X-S =     0.010296 mb/sr,                       & pols = 0.  0.07261    -0.01161  0.01496  0.00495
+    56.00 deg.:                                                         TTk0 =  0.1027     -0.2605E-03
 
-    56.50 deg.: X-S =     0.001058 mb/sr,                       & pols = 0.  0.07471    -0.01053  0.01480  0.00537
-    56.50 deg.:                                                         TTk0 =  0.1057     -0.1317E-02
+    56.50 deg.: X-S =     0.010282 mb/sr,                       & pols = 0.  0.07472    -0.01053  0.01480  0.00537
+    56.50 deg.:                                                         TTk0 =  0.1057     -0.1311E-02
 
-    57.00 deg.: X-S =     0.001059 mb/sr,                       & pols = 0.  0.07678    -0.00952  0.01461  0.00573
-    57.00 deg.:                                                         TTk0 =  0.1086     -0.2261E-02
+    57.00 deg.: X-S =     0.010289 mb/sr,                       & pols = 0.  0.07680    -0.00952  0.01461  0.00573
+    57.00 deg.:                                                         TTk0 =  0.1086     -0.2256E-02
 
-    57.50 deg.: X-S =     0.001062 mb/sr,                       & pols = 0.  0.07881    -0.00856  0.01437  0.00602
-    57.50 deg.:                                                         TTk0 =  0.1115     -0.3094E-02
+    57.50 deg.: X-S =     0.010317 mb/sr,                       & pols = 0.  0.07882    -0.00856  0.01437  0.00602
+    57.50 deg.:                                                         TTk0 =  0.1115     -0.3090E-02
 
-    58.00 deg.: X-S =     0.001066 mb/sr,                       & pols = 0.  0.08078    -0.00767  0.01411  0.00625
-    58.00 deg.:                                                         TTk0 =  0.1142     -0.3811E-02
+    58.00 deg.: X-S =     0.010365 mb/sr,                       & pols = 0.  0.08079    -0.00768  0.01410  0.00624
+    58.00 deg.:                                                         TTk0 =  0.1143     -0.3809E-02
 
-    58.50 deg.: X-S =     0.001073 mb/sr,                       & pols = 0.  0.08268    -0.00686  0.01381  0.00640
-    58.50 deg.:                                                         TTk0 =  0.1169     -0.4413E-02
+    58.50 deg.: X-S =     0.010430 mb/sr,                       & pols = 0.  0.08270    -0.00686  0.01381  0.00640
+    58.50 deg.:                                                         TTk0 =  0.1169     -0.4412E-02
 
-    59.00 deg.: X-S =     0.001081 mb/sr,                       & pols = 0.  0.08451    -0.00611  0.01348  0.00650
-    59.00 deg.:                                                         TTk0 =  0.1195     -0.4899E-02
+    59.00 deg.: X-S =     0.010511 mb/sr,                       & pols = 0.  0.08452    -0.00611  0.01348  0.00650
+    59.00 deg.:                                                         TTk0 =  0.1195     -0.4900E-02
 
-    59.50 deg.: X-S =     0.001091 mb/sr,                       & pols = 0.  0.08626    -0.00544  0.01314  0.00653
-    59.50 deg.:                                                         TTk0 =  0.1220     -0.5273E-02
+    59.50 deg.: X-S =     0.010607 mb/sr,                       & pols = 0.  0.08627    -0.00544  0.01314  0.00653
+    59.50 deg.:                                                         TTk0 =  0.1220     -0.5275E-02
 
-    60.00 deg.: X-S =     0.001103 mb/sr,                       & pols =-0.  0.08792    -0.00484  0.01278  0.00650
-    60.00 deg.:                                                         TTk0 =  0.1243     -0.5537E-02
+    60.00 deg.: X-S =     0.010717 mb/sr,                       & pols = 0.  0.08793    -0.00484  0.01278  0.00650
+    60.00 deg.:                                                         TTk0 =  0.1243     -0.5541E-02
 
-                                           Integrated    0.0111 mb, over [   0.000,  60.000] at    32.0000 MeV 
- Finished all xsecs @    3.93170595    
+                                           Integrated    0.1082 mb, over [   0.000,  60.000] at    32.0000 MeV 
+ Finished all xsecs @    2.21305609    
 
 
 
@@ -1953,7 +1973,7 @@
  L = 12, Barrier = 16.08 20.08, Turn @  0.00  7.20, Tl = 0.0002: Xsec-F =   0.049 mb
  L = 13, Barrier = 16.08 29.99, Turn @  0.00  7.80, Tl = 0.0000: Xsec-F =   0.003 mb
 0Cumulative FUSION cross section by BPM (case 2)   =  0.873E+03  <L> =     5.94  <L**2> =     40.7
-0Fusion at  32.000 MeV: Bare =  8.734E+02, Actual =  1.354E+03, BPM-equiv =  8.734E+02 mb
+0Fusion at  32.000 MeV: Bare =  8.734E+02, Actual =  1.353E+03, BPM-equiv =  8.734E+02 mb
 
   The following files have been created:
    3:local copy of User input.            6:standard output.                   
@@ -1989,4 +2009,4 @@
  1: Recommended RNL: non-local width >   9.80 cf:  15.00 fm: OK      
     Recommended CENTRE: centration   ~  -0.10 cf:   1.00 fm
 
- Total CPU  0 time =       3.94 seconds
+ Total CPU  0 time =       2.22 seconds
