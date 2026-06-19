@@ -1,102 +1,108 @@
-state0 | line#: 30667
+state0 | line#: 35973
 6Li      &   9Be    in state #   1 with spins & parities 1.0  + &  1.5  -;  0
 
-state1 | line#: 31395
+state1 | line#: 36701
 6Li      &   9Be    in state #   2 with spins & parities 3.0  + &  1.5  -;  0
 
-state2 | line#: 31943
-6Li      &   9Be    in state #   3 with spins & parities 1.0  + &  1.5  -;  0
+state2 | line#: 37249
+6Li      &   9Be    in state #   3 with spins & parities 2.0  + &  1.5  -;  0
 
-state3 | line#: 32491
+state3 | line#: 37797
 6Li      &   9Be    in state #   4 with spins & parities 1.0  + &  1.5  -;  0
 
-state4 | line#: 33039
+state4 | line#: 38345
 6Li      &   9Be    in state #   5 with spins & parities 1.0  + &  1.5  -;  0
 
-state5 | line#: 33587
+state5 | line#: 38893
 6Li      &   9Be    in state #   6 with spins & parities 1.0  + &  1.5  -;  0
 
-state6 | line#: 34135
-6Li      &   9Be    in state #   7 with spins & parities 0.0  - &  1.5  -;  0
+state6 | line#: 39441
+6Li      &   9Be    in state #   7 with spins & parities 1.0  + &  1.5  -;  0
 
-state7 | line#: 34683
-6Li      &   9Be    in state #   8 with spins & parities 1.0  - &  1.5  -;  0
+state7 | line#: 39989
+6Li      &   9Be    in state #   8 with spins & parities 1.0  + &  1.5  -;  0
 
-state8 | line#: 35231
-6Li      &   9Be    in state #   9 with spins & parities 2.0  - &  1.5  -;  0
+state8 | line#: 40537
+6Li      &   9Be    in state #   9 with spins & parities 0.0  - &  1.5  -;  0
 
-state9 | line#: 35779
-6Li      &   9Be    in state #  10 with spins & parities 0.0  - &  1.5  -;  0
+state9 | line#: 41085
+6Li      &   9Be    in state #  10 with spins & parities 1.0  - &  1.5  -;  0
 
-state10 | line#: 36327
-6Li      &   9Be    in state #  11 with spins & parities 1.0  - &  1.5  -;  0
+state10 | line#: 41633
+6Li      &   9Be    in state #  11 with spins & parities 2.0  - &  1.5  -;  0
 
-state11 | line#: 36875
-6Li      &   9Be    in state #  12 with spins & parities 2.0  - &  1.5  -;  0
+state11 | line#: 42181
+6Li      &   9Be    in state #  12 with spins & parities 0.0  - &  1.5  -;  0
 
-state12 | line#: 37423
-6Li      &   9Be    in state #  13 with spins & parities 0.0  - &  1.5  -;  0
+state12 | line#: 42729
+6Li      &   9Be    in state #  13 with spins & parities 1.0  - &  1.5  -;  0
 
-state13 | line#: 37971
-6Li      &   9Be    in state #  14 with spins & parities 1.0  - &  1.5  -;  0
+state13 | line#: 43277
+6Li      &   9Be    in state #  14 with spins & parities 2.0  - &  1.5  -;  0
 
-state14 | line#: 38519
-6Li      &   9Be    in state #  15 with spins & parities 2.0  - &  1.5  -;  0
+state14 | line#: 43825
+6Li      &   9Be    in state #  15 with spins & parities 0.0  - &  1.5  -;  0
 
-state15 | line#: 39067
-6Li      &   9Be    in state #  16 with spins & parities 0.0  - &  1.5  -;  0
+state15 | line#: 44373
+6Li      &   9Be    in state #  16 with spins & parities 1.0  - &  1.5  -;  0
 
-state16 | line#: 39615
-6Li      &   9Be    in state #  17 with spins & parities 1.0  - &  1.5  -;  0
+state16 | line#: 44921
+6Li      &   9Be    in state #  17 with spins & parities 2.0  - &  1.5  -;  0
 
-state17 | line#: 40163
-6Li      &   9Be    in state #  18 with spins & parities 2.0  - &  1.5  -;  0
+state17 | line#: 45469
+6Li      &   9Be    in state #  18 with spins & parities 0.0  - &  1.5  -;  0
 
-state18 | line#: 40711
-6Li      &   9Be    in state #  19 with spins & parities 3.0  + &  1.5  -;  0
+state18 | line#: 46017
+6Li      &   9Be    in state #  19 with spins & parities 1.0  - &  1.5  -;  0
 
-state19 | line#: 41259
+state19 | line#: 46565
 6Li      &   9Be    in state #  20 with spins & parities 2.0  - &  1.5  -;  0
 
-state20 | line#: 41807
-6Li      &   9Be    in state #  21 with spins & parities 3.0  - &  1.5  -;  0
+state20 | line#: 47113
+6Li      &   9Be    in state #  21 with spins & parities 3.0  + &  1.5  -;  0
 
-state21 | line#: 42355
-6Li      &   9Be    in state #  22 with spins & parities 4.0  - &  1.5  -;  0
+state21 | line#: 47661
+6Li      &   9Be    in state #  22 with spins & parities 2.0  - &  1.5  -;  0
 
-state22 | line#: 42903
-6Li      &   9Be    in state #  23 with spins & parities 2.0  - &  1.5  -;  0
+state22 | line#: 48209
+6Li      &   9Be    in state #  23 with spins & parities 3.0  - &  1.5  -;  0
 
-state23 | line#: 43451
-6Li      &   9Be    in state #  24 with spins & parities 3.0  - &  1.5  -;  0
+state23 | line#: 48757
+6Li      &   9Be    in state #  24 with spins & parities 4.0  - &  1.5  -;  0
 
-state24 | line#: 43999
-6Li      &   9Be    in state #  25 with spins & parities 4.0  - &  1.5  -;  0
+state24 | line#: 49305
+6Li      &   9Be    in state #  25 with spins & parities 2.0  - &  1.5  -;  0
 
-state25 | line#: 44547
-6Li      &   9Be    in state #  26 with spins & parities 2.0  - &  1.5  -;  0
+state25 | line#: 49853
+6Li      &   9Be    in state #  26 with spins & parities 3.0  - &  1.5  -;  0
 
-state26 | line#: 45095
-6Li      &   9Be    in state #  27 with spins & parities 3.0  - &  1.5  -;  0
+state26 | line#: 50401
+6Li      &   9Be    in state #  27 with spins & parities 4.0  - &  1.5  -;  0
 
-state27 | line#: 45643
-6Li      &   9Be    in state #  28 with spins & parities 4.0  - &  1.5  -;  0
+state27 | line#: 50949
+6Li      &   9Be    in state #  28 with spins & parities 2.0  - &  1.5  -;  0
 
-state28 | line#: 46191
-6Li      &   9Be    in state #  29 with spins & parities 2.0  - &  1.5  -;  0
+state28 | line#: 51497
+6Li      &   9Be    in state #  29 with spins & parities 3.0  - &  1.5  -;  0
 
-state29 | line#: 46739
-6Li      &   9Be    in state #  30 with spins & parities 3.0  - &  1.5  -;  0
+state29 | line#: 52045
+6Li      &   9Be    in state #  30 with spins & parities 4.0  - &  1.5  -;  0
 
-state30 | line#: 47287
-6Li      &   9Be    in state #  31 with spins & parities 4.0  - &  1.5  -;  0
+state30 | line#: 52593
+6Li      &   9Be    in state #  31 with spins & parities 2.0  - &  1.5  -;  0
 
-state31 | line#: 47835
+state31 | line#: 53141
+6Li      &   9Be    in state #  32 with spins & parities 3.0  - &  1.5  -;  0
+
+state32 | line#: 53689
+6Li      &   9Be    in state #  33 with spins & parities 4.0  - &  1.5  -;  0
+
+state33 | line#: 54237
 4He      &  11B     in state #   1 with spins & parities 0.0  + &  1.5  -;  0
 
-state32 | line#: 47838
+state34 | line#: 54240
 2H       &  13C     in state #   1 with spins & parities 1.0  + &  0.5  -;  0
 
-state33 | line#: 48386
+state35 | line#: 54788
 2H       &  13C     in state #   2 with spins & parities 1.0  + &  2.5  +;  0
 

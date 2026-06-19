@@ -21,7 +21,7 @@ ang_dists = [
     # "/home/jce/Esparza_SPS/13CCampaign/6Lid/output_peak_files/9Be6Lid_8866keV_ang_dist.csv",
     # "/home/jce/Esparza_SPS/13CCampaign/6Lid/output_peak_files/9Be6Lid_9499keV_ang_dist.csv",
     # "/home/jce/Esparza_SPS/13CCampaign/6Lid/output_peak_files/9Be6Lid_9894keV_ang_dist.csv",
-    # "/home/jce/Esparza_SPS/13CCampaign/6Lid/output_peak_files/9Be6Lid_10753keV_ang_dist.csv",
+    "/home/jce/Esparza_SPS/13CCampaign/6Lid/output_peak_files/9Be6Lid_10753keV_ang_dist.csv",
     # "/home/jce18b/Esparza_SPS/2025_06_13C_campaign/dp/output_peak_files/12Cdp_9500keV_ang_dist.csv",
 ]
 
@@ -55,8 +55,62 @@ states = [
     (
         # (6Li,d) 6.860 MeV CDCC
         "/home/jce/Programs/JCEfresco/jce/9Be6Lid_cdcc/6860keV/fresco_dists/state32.txt",
-        1.0,
+        0.048,
         "CDCC 6860 keV",
+    ),
+
+# ~~~~~~~~~~~ #
+
+    # (
+    #     # (6Li,d) 7.688 MeV DWBA
+    #     "/home/jce/Programs/JCEfresco/jce/9Be6Lid_dwba/7688keV/fresco_dists/state1.txt",
+    #     1.0,
+    #     "DWBA 7688 keV",
+    # ),
+    # (
+    #     # (6Li,d) 7.688 MeV CRC
+    #     "/home/jce/Programs/JCEfresco/jce/9Be6Lid_crc/6860keV/fresco_dists/state1.txt",
+    #     1.0,
+    #     "CRC 7688 keV",
+    # ),
+    # (
+    #     # (6Li,d) 7.688 MeV CCBA
+    #     "/home/jce/Programs/JCEfresco/jce/9Be6Lid_ccba/6860keV/fresco_dists/state1.txt",
+    #     1.0,
+    #     "CCBA 7688 keV",
+    # ),
+    # (
+    #     # (6Li,d) 7.688 MeV CDCC
+    #     "/home/jce/Programs/JCEfresco/jce/9Be6Lid_cdcc/7688keV/fresco_dists/state32.txt",
+    #     1.55,
+    #     "CDCC 7688 keV (x1.55)",
+    # ),
+
+# ~~~~~~~~~~~ #
+
+    (
+        # (6Li,d) 10.75 MeV DWBA
+        "/home/jce/Programs/JCEfresco/jce/9Be6Lid_dwba/10753keV/fresco_dists/state1.txt",
+        1.0,
+        "DWBA 10753 keV",
+    ),
+    # (
+    #     # (6Li,d) 10.75 MeV CRC
+    #     "/home/jce/Programs/JCEfresco/jce/9Be6Lid_crc/6860keV/fresco_dists/state1.txt",
+    #     1.0,
+    #     "CRC 6860 keV",
+    # ),
+    # (
+    #     # (6Li,d) 10.75 MeV CCBA
+    #     "/home/jce/Programs/JCEfresco/jce/9Be6Lid_ccba/6860keV/fresco_dists/state1.txt",
+    #     1.0,
+    #     "CCBA 6860 keV",
+    # ),
+    (
+        # (6Li,d) 10.75 MeV CDCC
+        "/home/jce/Programs/JCEfresco/jce/9Be6Lid_cdcc/10753keV/fresco_dists/state32.txt",
+        0.5,
+        "CDCC 10753 keV (x0.5)",
     ),
     
 ]
