@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jcefresco"
+version = "0.1.0"
+description = "Reusable tools for parsing and plotting FRESCO calculations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+split-fresco = "jcefresco.cli_split:main"
+plot-fresco = "jcefresco.cli_plot:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

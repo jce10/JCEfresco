@@ -1,0 +1,63 @@
+paths:
+  workdir: workdir
+  data: data
+  figures: figures
+
+parsing:
+  state_directory_glob: "*keV"
+  fort16_name: fort.16
+  fro_glob: "*.fro"
+  output_directory: fresco_dists
+
+models:
+  aliases:
+    coupled: cc
+    ccba_dp: cc
+
+reactions:
+  6lid:
+    display: '$^{9}$Be($^{6}$Li,d)$^{13}$C'
+    aliases:
+      - 6lid
+      - 6li,d
+      - 9be6lid
+      - 9be(6li,d)
+    experimental:
+      subdirectory: 6Lid
+      prefix: 9Be6Lid
+      filename: "{prefix}_{state_keV}keV_ang_dist.csv"
+    models:
+      dwba:
+        directory: 9Be6Lid_dwba
+        default_state_file: state1.txt
+      ccba:
+        directory: 9Be6Lid_ccba
+        default_state_file: state1.txt
+      crc:
+        directory: 9Be6Lid_crc
+        default_state_file: state1.txt
+      cdcc:
+        directory: 9Be6Lid_cdcc
+        default_state_file: state32.txt
+      cdcc2:
+        directory: 9Be6Lid_cdcc2
+        default_state_file: state34.txt
+
+  dp:
+    display: '$^{12}$C(d,p)$^{13}$C'
+    aliases:
+      - dp
+      - d,p
+      - 12cdp
+      - 12c(d,p)
+    experimental:
+      subdirectory: dp
+      prefix: 12Cdp
+      filename: "{prefix}_{state_keV}keV_ang_dist.csv"
+    models:
+      dwba:
+        directory: 12Cdp_dwba
+        default_state_file: state1.txt
+      cc:
+        directory: 12Cdp_cc
+        default_state_file: state1.txt

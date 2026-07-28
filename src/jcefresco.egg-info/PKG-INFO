@@ -1,3 +1,14 @@
+Metadata-Version: 2.4
+Name: jcefresco
+Version: 0.1.0
+Summary: Reusable tools for parsing and plotting FRESCO calculations
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: PyYAML>=6.0
+
 # JCEfresco
 
 Reusable Python infrastructure for parsing and plotting FRESCO calculations.

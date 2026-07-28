@@ -1,0 +1,3 @@
+[console_scripts]
+plot-fresco = jcefresco.cli_plot:main
+split-fresco = jcefresco.cli_split:main

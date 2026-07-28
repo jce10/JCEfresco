@@ -17,6 +17,10 @@ source/keep
 # Experimental data
 data/
 
+# Experiment specific files/directories
+13C_Campaign/
+NK_exercises/
+
 # optionally ignore other local files
 *.parquet
 *.root
