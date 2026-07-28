@@ -1,3 +1,4 @@
+# random crap
 i386-*
 i686-*
 x86_64-*
@@ -8,5 +9,14 @@ source/keep
 *.log
 *.aux
 *.synctex.gz
+
+# virtual environments
 *.frescovenv/
 *.venv/
+
+# Experimental data
+data/
+
+# optionally ignore other local files
+*.parquet
+*.root

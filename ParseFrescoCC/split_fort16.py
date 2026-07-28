@@ -4,7 +4,7 @@ from read_fro import extract_cross_section_map
 
 """
 
-Description : A Python program that reads the Fresco DWBA output file
+Description : A Python program that reads the Fresco output file
              "fort.16" and converts it into a text file for use with
               xmgrace, ROOT, or matplotlib. Setup only to read differential cross
              sections and not the analyzing powers.
