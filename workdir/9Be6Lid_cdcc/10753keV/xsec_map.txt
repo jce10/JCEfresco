@@ -1,0 +1,631 @@
+================================================================================
+FRESCO CROSS-SECTION MAP
+================================================================================
+
+SOURCES
+-------
+physics bookkeeping : fort.3
+curve/state map      : fort.16
+integrated xsecs     : fort.13
+
+CALCULATION
+-----------
+Title           : 9Be(6Li,d)13C CDCC+CRC, adapted from 58Ni(6Li,d) 31-channel card
+Beam energy     : 32.0000 MeV lab
+Theta range     : 0.00 - 180.00 deg
+Theta step      : 1.000 deg
+Jmax            : 30
+Iterations max  : 60
+
+REACTION PARTITIONS
+-------------------
+Partition 1: 6Li + 9Be    Q = +0.0000 MeV
+    state 1: 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 2: 6Li(3+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 3: 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 4: 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 5: 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 6: 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 7: 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 8: 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 9: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 10: 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 11: 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 12: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 13: 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 14: 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 15: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 16: 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 17: 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 18: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 19: 6Li(3+) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 20: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 21: 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 22: 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 23: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 24: 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 25: 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 26: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 27: 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 28: 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 29: 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 30: 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+    state 31: 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+
+Partition 2: 4He + 11B    Q = +14.3430 MeV
+    state 1: 4He(0+) + 11B(3/2-, Ex=0.0000 MeV)
+
+Partition 3: 2H + 13C    Q = +9.1746 MeV
+    state 1: 2H(1+) + 13C(1/2-, Ex=0.0000 MeV)
+    state 2: 2H(1+) + 13C(7/2-, Ex=10.7500 MeV)
+
+TRANSFER / REACTION COUPLINGS
+-----------------------------
+Coupling #1
+    KIND            : 3
+    partitions      : 1 <- 2
+    IP1             : 3
+    IP2             : 0
+
+Coupling #2
+    KIND            : 7
+    partitions      : 3 <- 1
+    type            : finite-range transfer
+    form            : POST
+    IP1             : 0
+    IP2             : -2 (NONO+COMPLEX)
+
+OVERLAP DEFINITIONS
+-------------------
+Overlap KN=1
+    partition       : 1
+    quantum numbers : NN=2, s=1, l=0, j=1
+    l-transfer      : 0
+    binding energy  : 1.4737 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=2
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=2, j=3
+    l-transfer      : 2
+    binding energy  : -0.4950 MeV
+    overlap KIND    : 0
+    binding pot     : 7
+
+Overlap KN=5
+    partition       : 1
+    quantum numbers : NN=2, s=1, l=0, j=1
+    l-transfer      : 0
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=6
+    partition       : 1
+    quantum numbers : NN=2, s=1, l=0, j=1
+    l-transfer      : 0
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=7
+    partition       : 1
+    quantum numbers : NN=2, s=1, l=0, j=1
+    l-transfer      : 0
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=8
+    partition       : 1
+    quantum numbers : NN=2, s=1, l=0, j=1
+    l-transfer      : 0
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=12
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=0
+    l-transfer      : 1
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=13
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=1
+    l-transfer      : 1
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=14
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=2
+    l-transfer      : 1
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=15
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=0
+    l-transfer      : 1
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=16
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=1
+    l-transfer      : 1
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=17
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=2
+    l-transfer      : 1
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=18
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=0
+    l-transfer      : 1
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=19
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=1
+    l-transfer      : 1
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=20
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=2
+    l-transfer      : 1
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=21
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=0
+    l-transfer      : 1
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=22
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=1
+    l-transfer      : 1
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=23
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=1, j=2
+    l-transfer      : 1
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=33
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=2, j=3
+    l-transfer      : 2
+    binding energy  : -1.7445 MeV
+    overlap KIND    : 0
+    binding pot     : 7
+
+Overlap KN=39
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=2
+    l-transfer      : 3
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=40
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=3
+    l-transfer      : 3
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=41
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=4
+    l-transfer      : 3
+    binding energy  : -0.0834 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=42
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=2
+    l-transfer      : 3
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=43
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=3
+    l-transfer      : 3
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=44
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=4
+    l-transfer      : 3
+    binding energy  : -0.3920 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=45
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=2
+    l-transfer      : 3
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=46
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=3
+    l-transfer      : 3
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=47
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=4
+    l-transfer      : 3
+    binding energy  : -1.0193 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=48
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=2
+    l-transfer      : 3
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=49
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=3
+    l-transfer      : 3
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=50
+    partition       : 1
+    quantum numbers : NN=1, s=1, l=3, j=4
+    l-transfer      : 3
+    binding energy  : -1.9601 MeV
+    overlap KIND    : 0
+    binding pot     : 3
+
+Overlap KN=71
+    partition       : 1
+    quantum numbers : NN=2, s=0, l=0, j=0
+    l-transfer      : 0
+    binding energy  : 1.4737 MeV
+    overlap KIND    : 0
+    binding pot     : 13
+
+Overlap KN=72
+    partition       : 2
+    quantum numbers : NN=2, s=0, l=2, j=2
+    l-transfer      : 2
+    binding energy  : 10.6484 MeV
+    overlap KIND    : 0
+    binding pot     : 14
+
+Overlap KN=73
+    partition       : 2
+    quantum numbers : NN=2, s=0, l=2, j=2
+    l-transfer      : 2
+    binding energy  : 0.1016 MeV
+    overlap KIND    : 0
+    binding pot     : 14
+
+Overlap KN=77
+    partition       : 1
+    quantum numbers : NN=1, s=0, l=2, j=2
+    l-transfer      : 2
+    binding energy  : -0.4950 MeV
+    overlap KIND    : 3
+    binding pot     : 17
+
+INTEGRATED CHANNEL CROSS SECTIONS (fort.13)
+-------------------------------------------
+partition 1, state 1: 1707.7 mb
+partition 1, state 2: 21.552 mb
+partition 1, state 3: 0.10497 mb
+partition 1, state 4: 2.4182 mb
+partition 1, state 5: 2.0366 mb
+partition 1, state 6: 6.9672 mb
+partition 1, state 7: 0.0053664 mb
+partition 1, state 8: 0.015978 mb
+partition 1, state 9: 0.047375 mb
+partition 1, state 10: 0.26141 mb
+partition 1, state 11: 0.70452 mb
+partition 1, state 12: 1.4504 mb
+partition 1, state 13: 0.86614 mb
+partition 1, state 14: 2.5542 mb
+partition 1, state 15: 2.7525 mb
+partition 1, state 16: 1.0824 mb
+partition 1, state 17: 4.3271 mb
+partition 1, state 18: 3.4348 mb
+partition 1, state 19: 4.8721 mb
+partition 1, state 20: 0.0030086 mb
+partition 1, state 21: 0.0036501 mb
+partition 1, state 22: 0.0060905 mb
+partition 1, state 23: 0.84927 mb
+partition 1, state 24: 0.96373 mb
+partition 1, state 25: 1.3578 mb
+partition 1, state 26: 1.4507 mb
+partition 1, state 27: 1.8273 mb
+partition 1, state 28: 3.2873 mb
+partition 1, state 29: 0.61536 mb
+partition 1, state 30: 1.0705 mb
+partition 1, state 31: 2.748 mb
+partition 2, state 1: 0 mb
+partition 3, state 1: 0.12204 mb
+partition 3, state 2: 0.12219 mb
+
+================================================================================
+PARSED CROSS-SECTIONS
+================================================================================
+
+elastic.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 1, near/far=1
+Channel        : 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1707.7 mb (fort.13)
+
+state1.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 2, near/far=1
+Channel        : 6Li(3+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 21.552 mb (fort.13)
+
+state2.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 3, near/far=1
+Channel        : 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.10497 mb (fort.13)
+
+state3.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 4, near/far=1
+Channel        : 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 2.4182 mb (fort.13)
+
+state4.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 5, near/far=1
+Channel        : 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 2.0366 mb (fort.13)
+
+state5.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 6, near/far=1
+Channel        : 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 6.9672 mb (fort.13)
+
+state6.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 7, near/far=1
+Channel        : 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.0053664 mb (fort.13)
+
+state7.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 8, near/far=1
+Channel        : 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.015978 mb (fort.13)
+
+state8.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 9, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.047375 mb (fort.13)
+
+state9.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 10, near/far=1
+Channel        : 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.26141 mb (fort.13)
+
+state10.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 11, near/far=1
+Channel        : 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.70452 mb (fort.13)
+
+state11.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 12, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1.4504 mb (fort.13)
+
+state12.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 13, near/far=1
+Channel        : 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.86614 mb (fort.13)
+
+state13.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 14, near/far=1
+Channel        : 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 2.5542 mb (fort.13)
+
+state14.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 15, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 2.7525 mb (fort.13)
+
+state15.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 16, near/far=1
+Channel        : 6Li(0-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1.0824 mb (fort.13)
+
+state16.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 17, near/far=1
+Channel        : 6Li(1-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 4.3271 mb (fort.13)
+
+state17.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 18, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 3.4348 mb (fort.13)
+
+state18.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 19, near/far=1
+Channel        : 6Li(3+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 4.8721 mb (fort.13)
+
+state19.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 20, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.0030086 mb (fort.13)
+
+state20.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 21, near/far=1
+Channel        : 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.0036501 mb (fort.13)
+
+state21.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 22, near/far=1
+Channel        : 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.0060905 mb (fort.13)
+
+state22.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 23, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.84927 mb (fort.13)
+
+state23.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 24, near/far=1
+Channel        : 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.96373 mb (fort.13)
+
+state24.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 25, near/far=1
+Channel        : 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1.3578 mb (fort.13)
+
+state25.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 26, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1.4507 mb (fort.13)
+
+state26.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 27, near/far=1
+Channel        : 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1.8273 mb (fort.13)
+
+state27.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 28, near/far=1
+Channel        : 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 3.2873 mb (fort.13)
+
+state28.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 29, near/far=1
+Channel        : 6Li(2-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.61536 mb (fort.13)
+
+state29.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 30, near/far=1
+Channel        : 6Li(3-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1.0705 mb (fort.13)
+
+state30.txt
+----------------------------------------
+FRESCO mapping : partition 1, state 31, near/far=1
+Channel        : 6Li(4-) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 2.748 mb (fort.13)
+
+state31.txt
+----------------------------------------
+FRESCO mapping : partition 3, state 1, near/far=1
+Channel        : 2H(1+) + 13C(1/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.12204 mb (fort.13)
+
+state32.txt
+----------------------------------------
+FRESCO mapping : partition 3, state 2, near/far=1
+Channel        : 2H(1+) + 13C(7/2-, Ex=10.7500 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.12219 mb (fort.13)
+

@@ -3,6 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 
 
+SECTION_END = {"END", "&"}
+
+
 def split_fort16(
     input_file: str | Path = "fort.16",
     output_dir: str | Path = "fresco_dists",
@@ -37,7 +40,7 @@ def split_fort16(
                 theta = tokens[index]
                 index += 1
 
-                if theta == "END":
+                if theta.upper() in SECTION_END:
                     break
                 if index >= len(tokens):
                     raise ValueError(

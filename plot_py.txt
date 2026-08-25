@@ -1,0 +1,1 @@
+python scripts/plot.py --reaction dp  --state 7688 --exp-label "This Work" --curve cc:state2.txt:1.0:total:solid --curve cc:state3.txt:1.0:0d3/2 --curve cc:state4.txt:1.0:2s1/2 --curve cc:state5.txt:1.0:2d5/2 --curve cc:state6.txt:1.0:2d3/2 --theta-max 60

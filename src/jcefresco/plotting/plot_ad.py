@@ -17,6 +17,7 @@ class FrescoCurve:
     scale: float = 1.0
     label: str | None = None
     state_file: str | None = None
+    linestyle: str = "--"
 
     def path(self, config: ProjectConfig, reaction: ReactionConfig) -> Path:
         return parsed_state_path(
@@ -39,6 +40,7 @@ def plot_angular_distribution(
     curves: list[FrescoCurve],
     exp_paths: list[Path],
     *,
+    exp_labels: list[str] | None = None,
     output: Path | None = None,
     title: str | None = None,
     logy: bool = True,
@@ -51,7 +53,7 @@ def plot_angular_distribution(
 ) -> None:
     fig, ax = plt.subplots(figsize=(10, 8))
 
-    for exp_path in exp_paths:
+    for i, exp_path in enumerate(exp_paths):
         if not exp_path.is_file():
             print(f"[skip] missing experimental file: {exp_path}")
             continue
@@ -64,7 +66,7 @@ def plot_angular_distribution(
             capsize=4,
             markersize=6,
             linestyle="none",
-            label=exp_path.stem,
+            label=exp_labels[i] if exp_labels and i < len(exp_labels) else exp_path.stem,
         )
 
     for curve in curves:
@@ -73,7 +75,13 @@ def plot_angular_distribution(
             print(f"[skip] missing {curve.model.upper()} file: {path}")
             continue
         theta_cm, xsec = load_fresco_curve(path, thin=thin, theta_max=theta_max)
-        ax.plot(theta_cm, xsec * curve.scale, linewidth=2, label=curve.plot_label())
+        ax.plot(
+            theta_cm,
+            xsec * curve.scale,
+            linewidth=2,
+            linestyle=curve.linestyle,
+            label=curve.plot_label(),
+        )
 
     ax.set_xlabel(r"$\theta_{CM}$ (deg)", fontsize=14)
     ax.set_ylabel(r"$d\sigma/d\Omega$", fontsize=14)

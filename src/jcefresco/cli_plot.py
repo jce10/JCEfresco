@@ -33,12 +33,12 @@ def parse_curve_spec(
     reaction,
     state_keV: int,
 ) -> FrescoCurve:
-    """Parse MODEL:STATE_FILE[:SCALE[:LABEL]] into one FRESCO curve."""
-    parts = spec.split(":", maxsplit=3)
+    """Parse MODEL:STATE_FILE[:SCALE[:LABEL[:LINESTYLE]]] into one FRESCO curve."""
+    parts = spec.split(":", maxsplit=4)
     if len(parts) < 2:
         raise ValueError(
             f"Invalid --curve value {spec!r}. Expected "
-            "MODEL:STATE_FILE[:SCALE[:LABEL]]."
+            "MODEL:STATE_FILE[:SCALE[:LABEL[:LINESTYLE]]]."
         )
 
     model = normalize_model(config, reaction, parts[0])
@@ -51,8 +51,27 @@ def parse_curve_spec(
         scale = float(parts[2])
 
     label = None
-    if len(parts) == 4 and parts[3].strip():
+    if len(parts) >= 4 and parts[3].strip():
         label = parts[3].strip()
+
+    linestyle = "--"
+    if len(parts) == 5 and parts[4].strip():
+        style_name = parts[4].strip().lower()
+        linestyle_map = {
+            "solid": "-",
+            "dashed": "--",
+            "dash": "--",
+            "dotted": ":",
+            "dot": ":",
+            "dashdot": "-.",
+        }
+        if style_name not in linestyle_map:
+            valid = ", ".join(sorted(linestyle_map))
+            raise ValueError(
+                f"Invalid line style {parts[4]!r} in --curve {spec!r}. "
+                f"Choose one of: {valid}."
+            )
+        linestyle = linestyle_map[style_name]
 
     return FrescoCurve(
         model=model,
@@ -60,6 +79,7 @@ def parse_curve_spec(
         state_file=state_file,
         scale=scale,
         label=label,
+        linestyle=linestyle,
     )
 
 
@@ -76,17 +96,28 @@ def build_parser() -> argparse.ArgumentParser:
         "--curve",
         action="append",
         default=None,
-        metavar="MODEL:STATE_FILE[:SCALE[:LABEL]]",
+        metavar="MODEL:STATE_FILE[:SCALE[:LABEL[:LINESTYLE]]]",
         help=(
             "Add one explicit FRESCO curve. Repeat this option to plot multiple "
-            "state*.txt files from the same model calculation. Example: "
-            "--curve 'cc:state1.txt:1.0:0d5/2'."
+            "state*.txt files from the same model calculation. The optional "
+            "line style may be solid, dashed, dotted, or dashdot. Example: "
+            "--curve 'cc:state1.txt:1.0:total:solid'."
         ),
     )
     parser.add_argument("--scales", nargs="*", default=None)
     parser.add_argument("--labels", nargs="*", default=None)
     parser.add_argument("--state-files", nargs="*", default=None)
     parser.add_argument("--exp", nargs="*", default=None)
+    parser.add_argument(
+        "--exp-label",
+        action="append",
+        default=None,
+        dest="exp_labels",
+        help=(
+            "Custom legend label for an experimental dataset. Repeat this option "
+            "for multiple experimental datasets, in the same order as --exp."
+        ),
+    )
     parser.add_argument("--no-exp", action="store_true")
     parser.add_argument("--out", type=Path, default=None)
     parser.add_argument("--title", default=None)
@@ -164,7 +195,8 @@ def main() -> None:
     for curve in curves:
         print(
             f"[curve] model={curve.model} file={curve.state_file or '(default)'} "
-            f"scale={curve.scale:g} label={curve.label or '(default)'}"
+            f"scale={curve.scale:g} label={curve.label or '(default)'} "
+            f"linestyle={curve.linestyle}"
         )
 
     plot_angular_distribution(
@@ -173,6 +205,7 @@ def main() -> None:
         args.state,
         curves,
         exp_paths,
+        exp_labels=args.exp_labels,
         output=output,
         title=args.title,
         logy=not args.linear_y,

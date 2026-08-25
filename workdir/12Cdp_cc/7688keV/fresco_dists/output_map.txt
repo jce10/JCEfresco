@@ -1,0 +1,40 @@
+================================================================================
+FRESCO OUTPUT SUMMARY
+================================================================================
+
+This file summarizes information taken from the human-readable FRESCO .fro/.out report.
+State bookkeeping, overlaps, spectroscopic amplitudes, and per-state integrated cross sections are intentionally handled by xsec_map.txt using fort.3, fort.13, and fort.16.
+
+CALCULATION
+-----------
+Title           : 12C(d,p)13C(7.686 MeV,3/2+) CCBA -- Ohnuma case-II mixing-ratio amplitudes
+Beam energy     : 16.0000 MeV lab
+Theta range     : 0.00 - 180.00 deg
+Theta step      : 0.5000 deg
+Total-J range  : 0 - 18
+Iterations      : 1 - 100 (tolerance 0.01%)
+
+COUPLING / TRANSFER OUTPUT
+--------------------------
+Coupling #1
+    direction       : TWO-way
+    KIND            : 7
+    partitions      : 2 <- 1
+
+Coupling #2
+    direction       : TWO-way
+    KIND            : 8
+    partitions      : 2 <- 1
+
+Finite-range transfer
+    type            : finite-range
+    form            : POST
+    IP1             : 0
+    IP2             : -2 (NONO+COMPLEX)
+
+GLOBAL CROSS SECTIONS
+---------------------
+Cumulative outgoing : 171.793 mb
+Cumulative reaction : 986.274 mb
+Absorption          : 814.481 mb
+

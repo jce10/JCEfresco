@@ -9,6 +9,7 @@ from ..config import ProjectConfig
 from ..reactions import ReactionConfig, model_directory, normalize_model
 from .fort16 import split_fort16
 from .fro import extract_cross_section_map
+from .xsec_map_parser import build_cross_section_map
 
 
 STATE_DIRECTORY_PATTERN = re.compile(r"^(?P<energy>\d+)keV$", re.IGNORECASE)
@@ -31,7 +32,7 @@ def state_energy(path: Path) -> int | None:
     return int(match.group("energy")) if match else None
 
 
-def choose_fro_file(state_dir: Path, pattern: str) -> Path | None:
+def choose_output_file(state_dir: Path, pattern: str) -> Path | None:
     matches = sorted(path for path in state_dir.glob(pattern) if path.is_file())
     if not matches:
         return None
@@ -47,13 +48,22 @@ def process_state_directory(
     state_dir: Path,
     config: ProjectConfig,
     *,
+    output_glob: str | None = None,
     overwrite: bool,
     skip_map: bool,
     dry_run: bool,
 ) -> bool:
     parsing = config.parsing
+    fort3_name = str(parsing.get("fort3_name", "fort.3"))
+    fort13_name = str(parsing.get("fort13_name", "fort.13"))
     fort16_name = str(parsing.get("fort16_name", "fort.16"))
-    fro_glob = str(parsing.get("fro_glob", "*.fro"))
+
+    if output_glob is None:
+        # Backward-compatible fallback: prefer the new generic name, then the
+        # old fro_glob setting, then default to standard FRESCO .fro output.
+        output_glob = str(
+            parsing.get("output_glob", parsing.get("fro_glob", "*.fro"))
+        )
     output_name = str(parsing.get("output_directory", "fresco_dists"))
 
     fort16 = state_dir / fort16_name
@@ -67,23 +77,57 @@ def process_state_directory(
         print(f"[skip] {state_dir}: {output_name}/ already exists; use --overwrite")
         return False
 
-    fro_file = None if skip_map else choose_fro_file(state_dir, fro_glob)
+    output_file = None if skip_map else choose_output_file(state_dir, output_glob)
 
     if dry_run:
-        print(f"[dry-run] split {fort16} -> {output_dir}")
+        print(f"[dry-run] split      {fort16} -> {output_dir}")
         if not skip_map:
-            print(f"[dry-run] map   {fro_file or '[no .fro found]'}")
+            print(
+                f"[dry-run] xsec map   {state_dir / fort3_name}, "
+                f"{state_dir / fort13_name}, {fort16}"
+            )
+            print(
+                f"[dry-run] output map "
+                f"{output_file or f'[no file matched {output_glob!r}]'}"
+            )
         return True
 
     if output_dir.exists():
         shutil.rmtree(output_dir)
 
     split_fort16(fort16, output_dir)
+
     if not skip_map:
-        if fro_file is None:
-            print(f"[warn] {state_dir}: no file matched {fro_glob!r}; map not written")
+        # Primary physics-focused map:
+        #   fort.3  -> input/bookkeeping
+        #   fort.13 -> integrated cross sections
+        #   fort.16 -> curve/state mapping
+        try:
+            build_cross_section_map(
+                state_dir,
+                (output_dir / "xsec_map.txt").resolve(),
+                fort3_name=fort3_name,
+                fort13_name=fort13_name,
+                fort16_name=fort16_name,
+            )
+        except (FileNotFoundError, ValueError) as exc:
+            print(f"[warn] {state_dir}: xsec_map.txt not written: {exc}")
+
+        # Keep the original .fro/.out-driven summary as a secondary diagnostic
+        # while the new mapper is being validated.
+        if output_file is None:
+            print(
+                f"[warn] {state_dir}: no file matched {output_glob!r}; "
+                "output_map.txt not written"
+            )
         else:
-            extract_cross_section_map(fro_file, output_dir / "cross_section_map.txt")
+            try:
+                extract_cross_section_map(
+                    output_file,
+                    output_dir / "output_map.txt",
+                )
+            except (FileNotFoundError, ValueError) as exc:
+                print(f"[warn] {state_dir}: output_map.txt not written: {exc}")
 
     return True
 
@@ -106,8 +150,25 @@ def split_reaction(
     summary = BatchSummary()
 
     for model_key in selected:
-        root = model_directory(config, reaction.models[model_key])
+        model = reaction.models[model_key]
+        root = model_directory(config, model)
+
+        # Allow an individual model to override the output-file pattern, e.g.
+        # output_glob: "*.out" for namelist Frescox calculations.  Reading the
+        # raw model mapping here keeps this feature local to the batch parser and
+        # avoids requiring output_glob to become part of ModelConfig.
+        raw_model = config.reactions[reaction.key]["models"][model_key]
+        output_glob = str(
+            raw_model.get(
+                "output_glob",
+                config.parsing.get(
+                    "output_glob", config.parsing.get("fro_glob", "*.fro")
+                ),
+            )
+        )
+
         print(f"\n[model] {reaction.key}/{model_key}: {root}")
+        print(f"[output] {output_glob}")
 
         if not root.is_dir():
             print("[skip] model directory does not exist")
@@ -131,6 +192,7 @@ def split_reaction(
                 changed = process_state_directory(
                     state_dir,
                     config,
+                    output_glob=output_glob,
                     overwrite=overwrite,
                     skip_map=skip_map,
                     dry_run=dry_run,

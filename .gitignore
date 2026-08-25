@@ -15,12 +15,14 @@ source/keep
 *.venv/
 
 # Experimental data
-data/
+6Lid/*
+dp/*
 
 # Experiment specific files/directories
-13C_Campaign/
-NK_exercises/
+13C_Campaign/*
+
 
 # optionally ignore other local files
 *.parquet
 *.root
+# *.csv

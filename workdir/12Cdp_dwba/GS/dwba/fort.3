@@ -303,7 +303,7 @@
  ER=  0.00000000    ,
  E=  0.0000000000000000     ,
  RSMIN=  0.0000000000000000     ,
- RSMAX=  55.000000000000000     ,
+ RSMAX=  30.000000000000000     ,
  RSALPHA=  0.0000000000000000     ,
  NLAG=0          ,
  PHASE=  0.0000000000000000     ,
@@ -338,7 +338,7 @@
  ER=  0.00000000    ,
  E=  0.0000000000000000     ,
  RSMIN=  0.0000000000000000     ,
- RSMAX=  55.000000000000000     ,
+ RSMAX=  30.000000000000000     ,
  RSALPHA=  0.0000000000000000     ,
  NLAG=0          ,
  PHASE=  0.0000000000000000     ,
@@ -384,10 +384,10 @@
 
 
  parameters:    mxx    mxp  mxpex  maxit maxcpl maxnnu 
-   required:      1      2      3      1      1     48
+   required:      1      2      3      0      1     48
 
  parameters:   maxn  mint  maxnln maxnlo    msp  lmax1  mpair
-   required:    552    551    276    151      3     40      1
+   required:    302    301    151     51      3     40      1
 
  parameters:     mloc   mclist   maxqrn
    required:       16        7        6
@@ -397,21 +397,21 @@
    required:       16        7        6
 
 
-12C(d,p)13C | E_beam = 16MeV | DWBA | Ex = 0.0MeV                               
+12C(d,p)13C at 30 MeV DWBA                                                      
 NAMELIST
 &FRESCO
  HCM= 0.10000000000000001     ,
- RMATCH=  55.000000000000000     ,
+ RMATCH=  30.000000000000000     ,
  RINTP= 0.20000000000000001     ,
  HNL= 0.20000000000000001     ,
- RNL=  30.000000000000000     ,
- CENTRE= -6.0000000000000000     ,
+ RNL=  10.000000000000000     ,
+ CENTRE=-0.80000000000000004     ,
  HNN= 0.20000000000000001     ,
  HORT=  0.0000000000000000     ,
  RMORT=  0.0000000000000000     ,
  RNN=  0.0000000000000000     ,
  RMIN=  0.0000000000000000     ,
- RSP=  55.000000000000000     ,
+ RSP=  30.000000000000000     ,
  RASYM=  0.0000000000000000     ,
  ACCRCY=  1.0000000474974513E-003,
  SWITCH=  0.0000000000000000     ,
@@ -429,10 +429,10 @@ NAMELIST
  PSET=0          ,
  JSET=0          ,
  JLEAST=  0.0000000000000000     ,
- KQMAX=0          ,
+ KQMAX=2          ,
  PP=0          ,
  THMIN=  0.0000000000000000     ,
- THMAX=  60.000000000000000     ,
+ THMAX=  180.00000000000000     ,
  THINC= 0.50000000000000000     ,
  KOORDS=1          ,
  CUTL= -1.6000000238418579     ,
@@ -440,12 +440,12 @@ NAMELIST
  CUTC=  0.0000000000000000     ,
  COMPLEXBINS=F,
  IPS=  0.0000000000000000     ,
- IT0=0          ,
+ IT0=1          ,
  ITER=1          ,
  FATAL=T,
  IBLOCK=1          ,
- PADE=1          ,
- PSIREN=T,
+ PADE=0          ,
+ PSIREN=F,
  ISO=' ',
  NNU=48         ,
  MAXL=26         ,
@@ -453,13 +453,13 @@ NAMELIST
  MTMIN=6          ,
  EPC= 0.39062500000000000     ,
  ERANGE=  0.0000000000000000     ,
- DK=  1.0000000000000000E-003,
+ DK=  0.0000000000000000     ,
  NOSOL=F,
  NRBASES=0          ,
  NRBMIN=0          ,
  PRALPHA=F,
  PCON=0          ,
- RMATR=  55.000000000000000     ,
+ RMATR=  30.000000000000000     ,
  EBETA= 2*0.0000000000000000       ,
  MEIGS=0          ,
  BUTTLE=0          ,
@@ -475,11 +475,11 @@ NAMELIST
  LISTCC=1          ,
  TRENEG=0          ,
  CDETR=0          ,
- SMATS=2          ,
+ SMATS=1          ,
  XSTABL=3          ,
  NLPL=0          ,
  WAVES=0          ,
- LAMPL=-3         ,
+ LAMPL=0          ,
  VEFF=1          ,
  KFUS=0          ,
  WDISK=0          ,
@@ -504,6 +504,6 @@ NAMELIST
  LAB=1          ,
  LIN=1          ,
  LEX=1          ,
- ELAB=  16.000000000000000     , 4*0.0000000000000000       ,
+ ELAB=  30.000000000000000     , 4*0.0000000000000000       ,
  NLAB= 4*0          ,
  /

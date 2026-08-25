@@ -30,18 +30,9 @@ reactions:
       dwba:
         directory: 9Be6Lid_dwba
         default_state_file: state1.txt
-      ccba:
-        directory: 9Be6Lid_ccba
-        default_state_file: state1.txt
-      crc:
-        directory: 9Be6Lid_crc
-        default_state_file: state1.txt
       cdcc:
         directory: 9Be6Lid_cdcc
-        default_state_file: state32.txt
-      cdcc2:
-        directory: 9Be6Lid_cdcc2
-        default_state_file: state34.txt
+        default_state_file: state1.txt
 
   dp:
     display: '$^{12}$C(d,p)$^{13}$C'
@@ -61,3 +52,4 @@ reactions:
       cc:
         directory: 12Cdp_cc
         default_state_file: state1.txt
+        output_glob: "*.out"
