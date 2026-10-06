@@ -1,0 +1,35 @@
+================================================================================
+FRESCO OUTPUT SUMMARY
+================================================================================
+
+This file summarizes information taken from the human-readable FRESCO .fro/.out report.
+State bookkeeping, overlaps, spectroscopic amplitudes, and per-state integrated cross sections are intentionally handled by xsec_map.txt using fort.3, fort.13, and fort.16.
+
+CALCULATION
+-----------
+Title           : Using unit mass = 1.000000 amu and 1/fine-structure constant = 137.03599 ( 1.000000 * true ) with hc = 197.32705 MeV.fm,
+Beam energy     : 32.0000 MeV lab
+Theta range     : 0.00 - 180.00 deg
+Theta step      : 0.5000 deg
+Total-J range  : 0 - 30
+Iterations      : 1 - 1 (tolerance 0%)
+
+COUPLING / TRANSFER OUTPUT
+--------------------------
+Coupling #1
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -2 <- 1
+
+Finite-range transfer
+    type            : finite-range
+    form            : POST
+    IP1             : 0
+    IP2             : -1 (COMPLEX)
+
+GLOBAL CROSS SECTIONS
+---------------------
+Cumulative outgoing : 0.13675 mb
+Cumulative reaction : 1353.57 mb
+Absorption          : 1353.44 mb
+

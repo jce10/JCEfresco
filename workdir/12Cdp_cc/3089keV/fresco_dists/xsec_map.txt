@@ -2,13 +2,20 @@
 FRESCO CROSS-SECTION MAP
 ================================================================================
 
+SOURCES
+-------
+physics bookkeeping : fort.3
+curve/state map      : fort.16
+integrated xsecs     : fort.13
+
 CALCULATION
 -----------
 Title           : 12C(d,p)13C(3.089 MeV,1/2+) CCBA
-Beam energy     : 16.000 MeV lab
-Theta range     : 0.0 - 180.0 deg
-Theta step      : 0.5 deg
-Jmax            : 18.0
+Beam energy     : 16.0000 MeV lab
+Theta range     : 0.00 - 180.00 deg
+Theta step      : 0.500 deg
+Jmax            : 18
+Iterations max  : 100
 
 REACTION PARTITIONS
 -------------------
@@ -20,101 +27,197 @@ Partition 2: 1H + 13C    Q = +2.7220 MeV
     state 1: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
     state 2: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
     state 3: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+    state 4: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
 
-TRANSFER COUPLING
------------------
-Direction       : TWO-way
-KIND            : 7, 8
-Type            : finite-range
-Form            : POST
-IP1             : 0
-IP2             : -2 (NONO+COMPLEX)
+TRANSFER / REACTION COUPLINGS
+-----------------------------
+Coupling #1
+    KIND            : 7
+    partitions      : 2 <- 1
+    type            : finite-range transfer
+    form            : POST
+    IP1             : 0
+    IP2             : -2 (NONO+COMPLEX)
 
-INTEGRATED CHANNEL CROSS SECTIONS
----------------------------------
-2H + 12C state 1          :      0.00025 mb
-2H + 12C state 2          :     22.92945 mb
-1H + 13C state 1          :     36.72187 mb
-1H + 13C state 2          :     33.73312 mb
-1H + 13C state 3          :      0.65508 mb
+OVERLAP DEFINITIONS
+-------------------
+Overlap KN=1
+    partition       : -1
+    quantum numbers : NN=1, s=1/2, l=0, j=3/2
+    l-transfer      : 0
+    binding energy  : 2.2246 MeV
+    overlap KIND    : 3
+    binding pot     : 3
 
-Total outgoing         :     94.03978 mb
-Reaction cross section :   1002.11770 mb
-Absorption             :    908.07793 mb
+Overlap KN=2
+    partition       : 2
+    quantum numbers : NN=2, s=1/2, l=0, j=1/2
+    l-transfer      : 0
+    binding energy  : 1.8570 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=3
+    partition       : 2
+    quantum numbers : NN=1, s=1/2, l=2, j=5/2
+    l-transfer      : 2
+    binding energy  : 6.2959 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+Overlap KN=4
+    partition       : 2
+    quantum numbers : NN=1, s=1/2, l=2, j=3/2
+    l-transfer      : 2
+    binding energy  : 6.2959 MeV
+    overlap KIND    : 0
+    binding pot     : 4
+
+INTEGRATED CHANNEL CROSS SECTIONS (fort.13)
+-------------------------------------------
+partition 1, state 1: 997.37 mb
+partition 1, state 2: 25.13 mb
+partition 2, state 1: 35.933 mb
+partition 2, state 2: 0 mb
+partition 2, state 3: 0.38187 mb
+partition 2, state 4: 0.0035392 mb
 
 ================================================================================
 PARSED CROSS-SECTIONS
 ================================================================================
 
+elastic.txt
 ----------------------------------------
-state0.txt | output line 8748
-----------------------------------------
-Channel:
-    2H(1+) + 12C(0+, Ex=0.0000 MeV)
-Integrated cross section:
-    41014000000.0000 mb
-    angular range: 0.0 - 180.0 deg
+FRESCO mapping : partition 1, state 1, near/far=1
+Channel        : 2H(1+) + 12C(0+, Ex=0.0000 MeV)
+Lab energy      : 16.0000 MeV
+Integrated xsec : 997.37 mb (fort.13)
 
+state1.txt
 ----------------------------------------
-state1.txt | output line 9835
-----------------------------------------
-Channel:
-    2H(1+) + 12C(2+, Ex=4.4389 MeV)
-Integrated cross section:
-    22.9290 mb
-    angular range: 0.0 - 180.0 deg
+FRESCO mapping : partition 1, state 2, near/far=1
+Channel        : 2H(1+) + 12C(2+, Ex=4.4389 MeV)
+Lab energy      : 16.0000 MeV
+Integrated xsec : 25.13 mb (fort.13)
 
+state2.txt
 ----------------------------------------
-state2.txt | output line 10562
-----------------------------------------
-Channel:
-    1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+FRESCO mapping : partition 2, state 1, near/far=1
+Channel        : 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
 
 Transfer configurations:
 
-    12C(0+) + n -> 13C(1/2+)
-        SpecAmp         : -0.8974
+    12C(0+, Ex=0.0000 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 2
+        quantum numbers : NN=2, s=1/2, l=0, j=1/2
+        l-transfer      : 0
+        binding energy  : 1.8570 MeV
+        SpecAmp (CFP A) : -0.9328
 
-    12C(2+) + n -> 13C(1/2+)
-        SpecAmp         : +0.3124
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 3
+        quantum numbers : NN=1, s=1/2, l=2, j=5/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : +0.2768
 
-Integrated cross section:
-    36.7180 mb
-    angular range: 0.0 - 180.0 deg
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 4
+        quantum numbers : NN=1, s=1/2, l=2, j=3/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : -0.035
 
+    12C(0+, Ex=0.0000 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 2
+        quantum numbers : NN=2, s=1/2, l=0, j=1/2
+        l-transfer      : 0
+        binding energy  : 1.8570 MeV
+        SpecAmp (CFP A) : -0.9328
+
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 3
+        quantum numbers : NN=1, s=1/2, l=2, j=5/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : +0
+
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 4
+        quantum numbers : NN=1, s=1/2, l=2, j=3/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : +0
+
+Lab energy      : 16.0000 MeV
+Integrated xsec : 35.933 mb (fort.13)
+
+state3.txt
 ----------------------------------------
-state3.txt | output line 11289
+FRESCO mapping : partition 2, state 2, near/far=1
+Channel        : 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+Lab energy      : 16.0000 MeV
+Integrated xsec : 0 mb (fort.13)
+
+state4.txt
 ----------------------------------------
-Channel:
-    1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+FRESCO mapping : partition 2, state 3, near/far=1
+Channel        : 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
 
 Transfer configurations:
 
-    12C(0+) + n -> 13C(1/2+)
-        SpecAmp         : -0.8974
+    12C(0+, Ex=0.0000 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 2
+        quantum numbers : NN=2, s=1/2, l=0, j=1/2
+        l-transfer      : 0
+        binding energy  : 1.8570 MeV
+        SpecAmp (CFP A) : +0
 
-    12C(2+) + n -> 13C(1/2+)
-        SpecAmp         : +0.0000
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 3
+        quantum numbers : NN=1, s=1/2, l=2, j=5/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : +0.2768
 
-Integrated cross section:
-    33.7290 mb
-    angular range: 0.0 - 180.0 deg
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 4
+        quantum numbers : NN=1, s=1/2, l=2, j=3/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : +0
 
+Lab energy      : 16.0000 MeV
+Integrated xsec : 0.38187 mb (fort.13)
+
+state5.txt
 ----------------------------------------
-state4.txt | output line 12016
-----------------------------------------
-Channel:
-    1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+FRESCO mapping : partition 2, state 4, near/far=1
+Channel        : 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
 
 Transfer configurations:
 
-    12C(0+) + n -> 13C(1/2+)
-        SpecAmp         : +0.0000
+    12C(0+, Ex=0.0000 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 2
+        quantum numbers : NN=2, s=1/2, l=0, j=1/2
+        l-transfer      : 0
+        binding energy  : 1.8570 MeV
+        SpecAmp (CFP A) : +0
 
-    12C(2+) + n -> 13C(1/2+)
-        SpecAmp         : +0.3124
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 3
+        quantum numbers : NN=1, s=1/2, l=2, j=5/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : +0
 
-Integrated cross section:
-    0.6551 mb
-    angular range: 0.0 - 180.0 deg
+    12C(2+, Ex=4.4389 MeV) + transferred particle -> 13C(1/2+, Ex=3.0890 MeV)
+        overlap KN      : 4
+        quantum numbers : NN=1, s=1/2, l=2, j=3/2
+        l-transfer      : 2
+        binding energy  : 6.2959 MeV
+        SpecAmp (CFP A) : -0.035
+
+Lab energy      : 16.0000 MeV
+Integrated xsec : 0.0035392 mb (fort.13)
 

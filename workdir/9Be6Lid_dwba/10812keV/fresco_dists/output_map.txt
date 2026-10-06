@@ -1,0 +1,60 @@
+================================================================================
+FRESCO OUTPUT SUMMARY
+================================================================================
+
+This file summarizes information taken from the human-readable FRESCO .fro/.out report.
+State bookkeeping, overlaps, spectroscopic amplitudes, and per-state integrated cross sections are intentionally handled by xsec_map.txt using fort.3, fort.13, and fort.16.
+
+CALCULATION
+-----------
+Title           : 9Be(6Li,d)13C at 32 MeV -- 10.812 MeV L=2/L=4 mixing-ratio scan
+Beam energy     : 32.0000 MeV lab
+Theta range     : 0.00 - 180.00 deg
+Theta step      : 0.5000 deg
+Total-J range  : 0 - 30
+Iterations      : 1 - 1 (tolerance 0%)
+
+COUPLING / TRANSFER OUTPUT
+--------------------------
+Coupling #1
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -2 <- 1
+
+Coupling #2
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -3 <- 1
+
+Coupling #3
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -4 <- 1
+
+Coupling #4
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -5 <- 1
+
+Coupling #5
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -6 <- 1
+
+Coupling #6
+    direction       : ONE-way
+    KIND            : 7
+    partitions      : -7 <- 1
+
+Finite-range transfer
+    type            : finite-range
+    form            : POST
+    IP1             : 0
+    IP2             : -1 (COMPLEX)
+
+GLOBAL CROSS SECTIONS
+---------------------
+Cumulative outgoing : 1.97726 mb
+Cumulative reaction : 1353.57 mb
+Absorption          : 1351.6 mb
+

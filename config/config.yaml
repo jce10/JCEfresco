@@ -30,6 +30,7 @@ reactions:
       dwba:
         directory: 9Be6Lid_dwba
         default_state_file: state1.txt
+        output_glob: "*.out"
       cdcc:
         directory: 9Be6Lid_cdcc
         default_state_file: state1.txt
@@ -49,7 +50,23 @@ reactions:
       dwba:
         directory: 12Cdp_dwba
         default_state_file: state1.txt
+        output_glob: "*.out"
       cc:
         directory: 12Cdp_cc
         default_state_file: state1.txt
         output_glob: "*.out"
+
+  3Hea:
+    display: '$^{10}$B($^{3}$He,$\alpha$)$^{9}$B'
+    aliases:
+      - 3Hea
+      - 3he,alpha
+      - 10b3ha
+      - 10b(3he,alpha)
+    models:
+      dwba:
+        directory: 10B3Hea_dwba
+        default_state_file: state1.txt
+        output_glob: "*.out"
+      
+

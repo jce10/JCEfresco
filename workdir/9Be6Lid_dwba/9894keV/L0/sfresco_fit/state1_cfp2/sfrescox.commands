@@ -1,0 +1,7 @@
+search.in
+set 1 7
+q
+chi
+show
+plot search.plot
+ex

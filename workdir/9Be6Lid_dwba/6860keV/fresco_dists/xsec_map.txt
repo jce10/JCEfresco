@@ -2,14 +2,20 @@
 FRESCO CROSS-SECTION MAP
 ================================================================================
 
+SOURCES
+-------
+physics bookkeeping : fort.3
+curve/state map      : fort.16
+integrated xsecs     : fort.13
+
 CALCULATION
 -----------
 Title           : 9Be(6Li,d)13C
-FRESCO version  : FRES 3.4:
-Beam energy     : 32.000 MeV lab
-Theta range     : 0.0 - 180.0 deg
-Theta step      : 0.5 deg
-Jmax            : 30.0
+Beam energy     : 32.0000 MeV lab
+Theta range     : 0.00 - 180.00 deg
+Theta step      : 0.500 deg
+Jmax            : 30
+Iterations max  : 1
 
 REACTION PARTITIONS
 -------------------
@@ -19,63 +25,64 @@ Partition 1: 6Li + 9Be    Q = +0.0000 MeV
 Partition 2: 2H + 13C    Q = +9.1730 MeV
     state 1: 2H(1+) + 13C(5/2+, Ex=6.8600 MeV)
 
-TRANSFER COUPLING
------------------
-Direction       : ONE-way
-KIND            : 7
-Type            : finite-range
-Form            : POST
-IP1             : 0
-IP2             : -1 (COMPLEX)
+TRANSFER / REACTION COUPLINGS
+-----------------------------
+Coupling #1
+    KIND            : 7
+    partitions      : -2 <- 1
+    type            : finite-range transfer
+    form            : POST
+    IP1             : 0
+    IP2             : -1 (COMPLEX)
 
-SINGLE-PARTICLE FORM FACTORS
-----------------------------
-Eigen-form #1
-    quantum numbers : N=2, s=0, l=0, j=0
+OVERLAP DEFINITIONS
+-------------------
+Overlap KN=1
+    partition       : 1
+    quantum numbers : NN=2, s=0, l=0, j=0
     l-transfer      : 0
     binding energy  : 1.4740 MeV
+    overlap KIND    : 0
+    binding pot     : 3
 
-Eigen-form #2
-    quantum numbers : N=3, s=0, l=1, j=1
+Overlap KN=2
+    partition       : 2
+    quantum numbers : NN=3, s=0, l=1, j=1
     l-transfer      : 1
     binding energy  : 3.7880 MeV
+    overlap KIND    : 0
+    binding pot     : 4
 
-INTEGRATED CHANNEL CROSS SECTIONS
----------------------------------
-6Li + 9Be state 1         :      0.00000 mb
-2H + 13C state 1          :      0.16136 mb
-
-Total outgoing         :      0.16136 mb
-Reaction cross section :   1353.57423 mb
-Absorption             :   1353.41287 mb
+INTEGRATED CHANNEL CROSS SECTIONS (fort.13)
+-------------------------------------------
+partition 1, state 1: 1353.6 mb
+partition 2, state 1: 0.13675 mb
 
 ================================================================================
 PARSED CROSS-SECTIONS
 ================================================================================
 
+elastic.txt
 ----------------------------------------
-state0.txt | output line 823
-----------------------------------------
-Channel:
-    6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
-Integrated cross section:
-    overflow/unavailable
-    angular range: 0.0 - 180.0 deg
+FRESCO mapping : partition 1, state 1, near/far=1
+Channel        : 6Li(1+) + 9Be(3/2-, Ex=0.0000 MeV)
+Lab energy      : 32.0000 MeV
+Integrated xsec : 1353.6 mb (fort.13)
 
+state1.txt
 ----------------------------------------
-state1.txt | output line 2271
-----------------------------------------
-Channel:
-    2H(1+) + 13C(5/2+, Ex=6.8600 MeV)
+FRESCO mapping : partition 2, state 1, near/far=1
+Channel        : 2H(1+) + 13C(5/2+, Ex=6.8600 MeV)
 
 Transfer configurations:
 
-    9Be(3/2-) + n -> 13C(5/2+)
-        quantum numbers : N=3, s=0, l=1, j=1
+    9Be(3/2-, Ex=0.0000 MeV) + transferred particle -> 13C(5/2+, Ex=6.8600 MeV)
+        overlap KN      : 2
+        quantum numbers : NN=3, s=0, l=1, j=1
         l-transfer      : 1
-        SpecAmp         : +1.3589
+        binding energy  : 3.7880 MeV
+        SpecAmp (CFP A) : +1.251
 
-Integrated cross section:
-    0.1614 mb
-    angular range: 0.0 - 180.0 deg
+Lab energy      : 32.0000 MeV
+Integrated xsec : 0.13675 mb (fort.13)
 

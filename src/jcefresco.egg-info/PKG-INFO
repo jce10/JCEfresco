@@ -156,3 +156,34 @@ The fourth `--curve` field is used directly as the legend label:
 Quote the complete argument when the label contains spaces, parentheses, or
 shell-sensitive characters. A non-unit scale is also shown automatically in the
 legend, so a label of `2d3/2` with scale `10` is displayed as `2d3/2 × 10`.
+
+## Configuration file
+If using namelist version of Fresco (for example if one is using Frescox) the output files are named ".out". In the configuration file, add `output_glob: "*.out"` to the reaction model specification. Example: 
+```bash
+    models:
+      dwba:
+        directory: 12Cdp_dwba
+        default_state_file: state1.txt
+      cc:
+        directory: 12Cdp_cc
+        default_state_file: state1.txt
+        output_glob: "*.out"
+```
+
+## Cool Fresco Things (in my opinion)
+Fresco old-school input file to namelist converter:
+```bash
+frnl.f
+```
+To see the output live while saving:
+```bash
+~/fresco < input.in | tee output.out
+```
+For debugging:
+```bash
+fresco < input.in > output.out 2>&1
+```
+
+
+split.py explicitly depends on output file only containing cross sections. NO ANALYZING POWERS as of now. (i.e. the control parameter "kqmax" should be set to zero --> kqmax=0)
+

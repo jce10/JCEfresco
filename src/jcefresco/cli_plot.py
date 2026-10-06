@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .config import load_config
-from .plotting import FrescoCurve, plot_angular_distribution
+from .plotting import FrescoBand, FrescoCurve, plot_angular_distribution
 from .reactions import experimental_path, get_reaction, normalize_model
 from .utils.repo import resolve_repo_path
 
@@ -83,6 +83,34 @@ def parse_curve_spec(
     )
 
 
+def parse_band_spec(
+    spec: str,
+    *,
+    config,
+    reaction,
+    state_keV: int,
+) -> FrescoBand:
+    """Parse MODEL:LOW_FILE:HIGH_FILE[:LABEL] into an uncertainty band."""
+    parts = spec.split(":", maxsplit=3)
+    if len(parts) < 3:
+        raise ValueError(
+            f"Invalid --band value {spec!r}. Expected MODEL:LOW_FILE:HIGH_FILE[:LABEL]."
+        )
+    model = normalize_model(config, reaction, parts[0])
+    low_file = parts[1].strip()
+    high_file = parts[2].strip()
+    if not low_file or not high_file:
+        raise ValueError(f"Invalid --band value {spec!r}: band filenames cannot be empty")
+    label = parts[3].strip() if len(parts) == 4 and parts[3].strip() else r"$1\sigma$"
+    return FrescoBand(
+        model=model,
+        state_keV=state_keV,
+        low_file=low_file,
+        high_file=high_file,
+        label=label,
+    )
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Plot experimental angular distributions with parsed FRESCO curves."
@@ -102,6 +130,18 @@ def build_parser() -> argparse.ArgumentParser:
             "state*.txt files from the same model calculation. The optional "
             "line style may be solid, dashed, dotted, or dashdot. Example: "
             "--curve 'cc:state1.txt:1.0:total:solid'."
+        ),
+    )
+    parser.add_argument(
+        "--band",
+        action="append",
+        default=None,
+        metavar="MODEL:LOW_FILE:HIGH_FILE[:LABEL]",
+        help=(
+            "Shade an uncertainty envelope between two parsed FRESCO curves. "
+            "Repeat for multiple bands. Example: "
+            "--band 'dwba:state1_sfresco_1sigma_low.txt:"
+            "state1_sfresco_1sigma_high.txt:SFRESCOX 1sigma'."
         ),
     )
     parser.add_argument("--scales", nargs="*", default=None)
@@ -178,6 +218,13 @@ def main() -> None:
             for model in models
         ]
 
+    bands = [
+        parse_band_spec(
+            spec, config=config, reaction=reaction, state_keV=args.state
+        )
+        for spec in (args.band or [])
+    ]
+
     if args.no_exp:
         exp_paths: list[Path] = []
     elif args.exp is None:
@@ -198,6 +245,11 @@ def main() -> None:
             f"scale={curve.scale:g} label={curve.label or '(default)'} "
             f"linestyle={curve.linestyle}"
         )
+    for band in bands:
+        print(
+            f"[band] model={band.model} low={band.low_file} "
+            f"high={band.high_file} label={band.label}"
+        )
 
     plot_angular_distribution(
         config,
@@ -205,6 +257,7 @@ def main() -> None:
         args.state,
         curves,
         exp_paths,
+        bands=bands,
         exp_labels=args.exp_labels,
         output=output,
         title=args.title,

@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 from ..config import ProjectConfig
 from ..reactions import ReactionConfig, parsed_state_path
@@ -33,6 +34,21 @@ class FrescoCurve:
         return f"{label} × {self.scale:g}" if self.scale != 1.0 else label
 
 
+@dataclass(frozen=True)
+class FrescoBand:
+    model: str
+    state_keV: int
+    low_file: str
+    high_file: str
+    label: str = r"$1\sigma$"
+    alpha: float = 0.22
+
+    def paths(self, config: ProjectConfig, reaction: ReactionConfig) -> tuple[Path, Path]:
+        low = parsed_state_path(config, reaction, self.model, self.state_keV, self.low_file)
+        high = parsed_state_path(config, reaction, self.model, self.state_keV, self.high_file)
+        return low, high
+
+
 def plot_angular_distribution(
     config: ProjectConfig,
     reaction: ReactionConfig,
@@ -40,6 +56,7 @@ def plot_angular_distribution(
     curves: list[FrescoCurve],
     exp_paths: list[Path],
     *,
+    bands: list[FrescoBand] | None = None,
     exp_labels: list[str] | None = None,
     output: Path | None = None,
     title: str | None = None,
@@ -69,6 +86,32 @@ def plot_angular_distribution(
             label=exp_labels[i] if exp_labels and i < len(exp_labels) else exp_path.stem,
         )
 
+    for band in bands or []:
+        low_path, high_path = band.paths(config, reaction)
+        if not low_path.is_file() or not high_path.is_file():
+            print(
+                f"[skip] missing uncertainty band file(s): {low_path}, {high_path}"
+            )
+            continue
+        theta_low, xsec_low = load_fresco_curve(
+            low_path, thin=thin, theta_max=theta_max
+        )
+        theta_high, xsec_high = load_fresco_curve(
+            high_path, thin=thin, theta_max=theta_max
+        )
+        if theta_low.shape != theta_high.shape or not np.allclose(theta_low, theta_high):
+            # FRESCOX normally writes identical angular grids.  Interpolate the
+            # high boundary onto the low grid if a future calculation differs.
+            xsec_high = np.interp(theta_low, theta_high, xsec_high)
+            theta = theta_low
+        else:
+            theta = theta_low
+        lower = np.minimum(xsec_low, xsec_high)
+        upper = np.maximum(xsec_low, xsec_high)
+        ax.fill_between(
+            theta, lower, upper, alpha=band.alpha, linewidth=0, label=band.label
+        )
+
     for curve in curves:
         path = curve.path(config, reaction)
         if not path.is_file():
@@ -83,9 +126,11 @@ def plot_angular_distribution(
             label=curve.plot_label(),
         )
 
-    ax.set_xlabel(r"$\theta_{CM}$ (deg)", fontsize=14)
-    ax.set_ylabel(r"$d\sigma/d\Omega$", fontsize=14)
-    ax.set_title(title or f"{reaction.display}  {state_keV} keV")
+    ax.set_xlabel(r"$\theta_{CM}$ (deg)", fontsize=17)
+    ax.set_ylabel(r"$d\sigma/d\Omega$ (mb/sr)", fontsize=17)
+    ax.tick_params(axis="both", which="major", labelsize=15)
+    # ax.set_title(title or f"{reaction.display}  {state_keV} keV")
+    
 
     if logy:
         ax.set_yscale("log")
@@ -96,7 +141,7 @@ def plot_angular_distribution(
     if y_min is not None or y_max is not None:
         ax.set_ylim(bottom=y_min, top=y_max)
 
-    ax.legend()
+    ax.legend(fontsize=17)
     ax.grid(True)
     fig.tight_layout()
 

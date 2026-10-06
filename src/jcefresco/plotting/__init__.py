@@ -1,3 +1,3 @@
-from .plot_ad import FrescoCurve, plot_angular_distribution
+from .plot_ad import FrescoBand, FrescoCurve, plot_angular_distribution
 
-__all__ = ["FrescoCurve", "plot_angular_distribution"]
+__all__ = ["FrescoBand", "FrescoCurve", "plot_angular_distribution"]
