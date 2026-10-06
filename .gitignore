@@ -25,4 +25,5 @@ dp/*
 # optionally ignore other local files
 *.parquet
 *.root
-# *.csv
+*.csv
+***/fort.*
