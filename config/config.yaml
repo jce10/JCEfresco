@@ -15,6 +15,7 @@ models:
     ccba_dp: cc
 
 reactions:
+  
   6lid:
     display: '$^{9}$Be($^{6}$Li,d)$^{13}$C'
     aliases:
@@ -31,10 +32,12 @@ reactions:
         directory: 9Be6Lid_dwba
         default_state_file: state1.txt
         output_glob: "*.out"
-      cdcc:
-        directory: 9Be6Lid_cdcc
+      crc:
+        directory: 9Be6Lid_crc
         default_state_file: state1.txt
+        output_glob: "*.out"
 
+  
   dp:
     display: '$^{12}$C(d,p)$^{13}$C'
     aliases:
@@ -51,11 +54,16 @@ reactions:
         directory: 12Cdp_dwba
         default_state_file: state1.txt
         output_glob: "*.out"
-      cc:
-        directory: 12Cdp_cc
+      ccba:
+        directory: 12Cdp_ccba
+        default_state_file: state1.txt
+        output_glob: "*.out"
+      cdcc:
+        directory: 12Cdp_cdcc
         default_state_file: state1.txt
         output_glob: "*.out"
 
+  
   3Hea:
     display: '$^{10}$B($^{3}$He,$\alpha$)$^{9}$B'
     aliases:
