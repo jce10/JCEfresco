@@ -1,0 +1,190 @@
+12C(d,p)13C | Ed=16 MeV | CCBA DIAGNOSTIC | Ex=6.864 MeV | trial core amplitudes
+NAMELIST
+
+! ======================================================================
+! DIAGNOSTIC CARD -- NOT A QUANTITATIVE OHNUMA REPRODUCTION
+! ======================================================================
+! New core-transfer SAs are +1.0000 trial/unit amplitudes, not literature
+! values. Ohnuma Table 2 gives mixing probabilities, NOT signed FRESCO
+! amplitudes; neither their phases nor these radial functions follow from
+! taking square roots of that table. Do not extract SFs from this trial.
+!
+! KN=3 deliberately retains the original POSITIVE BE=1.9141 MeV to isolate
+! core coupling against the previous DWBA baseline. This is an artificial
+! bound overlap for a physically OPEN n+12C(0+) resonance channel.
+! Consequently this is not a self-consistent continuum-state calculation.
+! KN=4,5 are physically closed relative to 12C(2+) and use BE=2.5248 MeV.
+! A proper resonance/continuum treatment of KN=3 remains the next test.
+!
+! No 4+ core, 2+ reorientation, exit excitation, or deuteron continuum bins.
+! Component exit copies are diagnostic outputs, not four physical levels.
+! Compare TOTAL to the three components; component CROSS SECTIONS cannot
+! simply be added to obtain the coherent total.
+!
+! Phase diagnostic: change the two trial TOTAL CFP amplitudes independently
+! to +/-1.0000 to explore all four relative-sign choices. The unit basis
+! outputs can stay +1.0000. A failure of one trial does not rule out CCBA.
+!
+! Null-coupling check: set STR=0 in BOTH entrance STEP entries, keeping
+! their P(2) values nonzero as required by the pairwise coupling input. Exit #1 should then reduce to corrected-OMP DWBA
+! and #3,4 should vanish. Keep IBLOCK=2, ITER=1, and ICTO=-2.
+! Core-transfer-off check: set only the two trial TOTAL CFP amplitudes to
+! zero. #1 then equals #2, but #2 still includes entrance-wave distortion.
+!
+! Numerical settings retained from DWBA; check JTMAX/HCM/RMATCH convergence
+! before quantitative use. No local FRESCO/FrescoX executable was available
+! when preparing this card; validation was structural, not a solver run.
+! References: Ohnuma et al., Nucl. Phys. A448 (1986) 205-220, Tables 1-2;
+! https://www.fresco.org.uk/input3.4/fresco-namelist-manual/node6.html
+! https://www.fresco.org.uk/input3.4/fresco-namelist-manual/node8.html
+! https://www.fresco.org.uk/input3.4/fresco-namelist-manual/node10.html
+! ======================================================================
+
+! ================================================
+! FRESCO CONTROL PARAMETERS
+! ================================================
+ &FRESCO  hcm= 0.100 rmatch=  55.000 rintp=  0.20
+     hnl= 0.200 rnl= 30.00 centre= -6.00
+     jtmin=  0.0 jtmax=    20.0 absend=  0.0000 dry=F rela=' ' nearfa= 0
+     thmin=  0.00 thmax= 60.00 thinc=  0.50 koords=1 kqmax=0 pp=0
+     cutl=  0.00 cutr=  0.00 cutc=  0.00
+     ips= 0.0000  it0=1 iter=  1 fatal=T iblock= 2 pade=0 nosol=F psiren=T
+     iso=' ' nnu= 48 maxl=   0 minl=  0 mtmin= 0 epc= 0.0000
+     erange=  0.0000  dk=  0.0010
+     chans= 1 listcc= 1 treneg= 0 cdetr= 0 smats= 2 xstabl= 3 nlpl= 0
+     waves= 0 lampl=-3 veff= 1 kfus= 0 wdisk= 0 bpm= 1 melfil= 0
+     unitmass= 1.000000 finec=137.03599
+     inh=0 pel=1 exl= 1 lab=1 lin=1 lex= 1
+     elab(1)=    16.0000 /
+
+
+! ================================================
+! PARTITIONS AND STATES
+! ================================================
+ &PARTITION namep='2H      ' massp=  2.0141 zp=  1 nex= 2 pwf=T
+            namet='12C     ' masst= 12.0000 zt=  6 qval=  0.0000/
+ &STATES jp= 1.0 ptyp= 1 ep=  0.0000  cpot=  1
+         jt= 0.0 ptyt= 1 et=  0.0000/
+ ! Entrance excitation #2: same deuteron, excited 12C core
+ &STATES copyp=1 cpot=1
+         jt=2.0 ptyt=1 et=4.4389 /
+
+ ! Exit #1 is the trial coherent total.
+ ! Exit #2-4 are independent diagnostic copies with the SAME exit OMP.
+ ! Do not use COPYt: these must retain independent CFP assignments.
+ &PARTITION namep='1H' massp=1.0078 zp=1 nex=4 pwf=T
+            namet='13C' masst=13.0034 zt=6 qval=2.7217 /
+ ! #1: TOTAL (trial amplitudes)
+ &STATES jp=0.5 ptyp=1 ep=0.0000 cpot=2
+         jt=2.5 ptyt=1 et=6.8640 /
+ ! #2: 0+ x 1d5/2 only, with entrance core coupling still active
+ &STATES copyp=1 cpot=2 jt=2.5 ptyt=1 et=6.8640 /
+ ! #3: 2+ x 2s1/2 only, UNIT spectroscopic amplitude
+ &STATES copyp=1 cpot=2 jt=2.5 ptyt=1 et=6.8640 /
+ ! #4: 2+ x 1d5/2 only, UNIT spectroscopic amplitude
+ &STATES copyp=1 cpot=2 jt=2.5 ptyt=1 et=6.8640 /
+ &partition /   ! END OF DEFINING PARTITIONS
+
+
+! ================================================
+! POTENTIALS
+! ================================================
+ ! Entrance diagonal OMP: SAME values as the DWBA comparison.
+ ! WD=9.2 deliberately retained; Ohnuma's CCBA value 6.0 is a later test.
+ ! Coupling strengths reused from your dpcc_3089keV.nin:
+ ! M(E2;0->2)=-6.160 e fm^2, reduced nuclear length=-1.440 fm.
+ ! These are adopted inputs, not fitted to 16-MeV elastic/inelastic data.
+ ! TYPE=13 + STEP restricts coupling to 0+ <-> 2+, no 2+ reorientation.
+ ! SHAPE=10 uses the first-order derivative nuclear coupling.
+ &pot kp=1 type=0 p(1:3)=12.000 0.0000 1.3000 /
+ &pot kp=1 type=13 itt=F shape=10 p(1:3)=0.000 -6.1600 0.0000 /
+   &step ib=-2 ia=1 k=2 str=-6.1600 /
+ &pot kp=1 type=1 p(1:3)=110.700 0.9000 0.8010 /
+ ! Negative TYPE adds the surface absorption to the preceding volume
+ ! before deforming the combined central potential.
+ &pot kp=1 type=-2
+      p(1:7)=0.0000 0.0000 0.0000 9.2000 1.4200 0.7940 0.0000 /
+ &pot kp=1 type=13 itt=F shape=10 p(1:3)=0.000 -1.4400 0.0000 /
+   &step ib=-2 ia=1 k=2 str=-1.4400 /
+ &pot kp=1 type=3 p(1:3)=4.660 0.9000 0.5510 /
+
+ ! Exit p+13C OMP: updated Ohnuma prescription, Ecm(out)=9.5582 MeV.
+ ! Ecm(in)=16*12/(12+2.0141); Qeff=2.7217-6.8640.
+ ! V=63.1-0.3*Ecm; WD=10.37-0.06*Ecm; r=1.15-0.001*Ecm.
+ ! Spin-orbit strengths retain the original card's conventions.
+ &pot kp=2 type=0 p(1:3)=13.000 0.0000 1.1404 /
+ &pot kp=2 type=1 p(1:3)=60.233 1.1404 0.5700 /
+ &pot kp=2 type=2
+      p(1:7)=0.0000 0.0000 0.0000 9.7970 1.1404 0.5000 0.0000 /
+ &pot kp=2 type=3 p(1:3)=5.500 1.1404 0.5700 /
+
+ &pot kp= 3 type= 0
+      p(1:3)=    1.000  0.0000  1.2500 /
+ &pot kp= 3 type= 1 itt=F shape= 5
+      p(1:3)=    1.000  0.0000  1.0000 /
+ &pot kp= 3 type= 3 itt=F shape= 5
+      p(1:3)=    1.000  0.0000  1.0000 /
+ &pot kp= 3 type= 4 itt=F shape= 5
+      p(1:3)=    1.000  0.0000  1.0000 /
+ &pot kp= 3 type= 7 itt=F shape= 5
+      p(1:3)=    1.000  0.0000  1.0000 /
+ &pot kp= 4 type= 0
+      p(1:3)=   12.000  0.0000  1.2500 /
+ &pot kp= 4 type= 1
+      p(1:3)=   50.000  1.2500  0.6500 /
+ &pot kp= 4 type= 3
+      p(1:3)=    6.000  1.2500  0.6500 /
+ &pot /   ! END OF DEFINING POTENTIALS
+
+
+! ================================================
+! OVERLAPS
+! ================================================
+ &OVERLAP kn1=  1 kn2=  2 ic1=1 ic2=2 in=-1
+    kind=3 ch1=' ' nn= 1 l=0 lmax=2 sn= 0.5 ia= 1 j= 1.5 ib= 1
+    kbpot= 3 krpot= 0 be=  2.2246 isc= 0 ipc=3 nfl=  0 nam=  0 ampl=  0.0000 /
+
+ &OVERLAP kn1=  3 kn2=  0 ic1=1 ic2=2 in=-2
+          kind=0 nn= 1 l=2 sn= 0.5 j= 2.5
+    kbpot= 4 krpot= 0 be=  1.9141 isc= 1 ipc=1 nfl=  0 nam=  0 ampl=  0.0000 /
+ ! kn=4: 12C(2+,4.4389) x 2s1/2 (NN=2 includes origin).
+ ! Physical closed-channel binding: 4.4389 - 1.9141 = 2.5248 MeV.
+
+ &OVERLAP kn1=4 kn2=0 ic1=1 ic2=2 in=-2
+    kind=0 nn=2 l=0 sn=0.5 j=0.5 ia=2 ib=1
+    kbpot=4 krpot=0 be=2.5248 isc=1 ipc=1 nfl=0 nam=0 ampl=0.0000 /
+ ! kn=5: 12C(2+,4.4389) x 1d5/2, same closed-channel threshold.
+
+ &OVERLAP kn1=5 kn2=0 ic1=1 ic2=2 in=-2
+    kind=0 nn=1 l=2 sn=0.5 j=2.5 ia=2 ib=1
+    kbpot=4 krpot=0 be=2.5248 isc=1 ipc=1 nfl=0 nam=0 ampl=0.0000 /
+    
+ &overlap /   ! END OF DEFINING OVERLAPS
+
+
+! ================================================
+! COUPLINGS
+! ================================================
+ ! IBLOCK=2 solves both entrance excitation pairs together to all orders.
+ ! ITER=IT0=1 transfers once from those coupled entrance waves.
+ ! Negative ICTO suppresses reverse transfer: CCBA, not a CRC iteration.
+ ! Preserve original finite-range POST operator and complex remnant.
+ &COUPLING icto=-2 icfrom=1 kind=7 ip1=0 ip2=-1 ip3=0 /
+   &cfp in=1 ib=1 ia=1 kn=1 a=1.0000 /
+
+ ! Exit #1 TOTAL: direct SA preserved; core SAs are EXPLICIT TRIAL VALUES.
+ ! Replace a=1.0000 in these two lines with verified SIGNED amplitudes.
+ ! Their plus signs do not predict the physical interference pattern.
+   &cfp in=2 ib=1 ia=1 kn=3 a=0.3254 /
+   &cfp in=2 ib=1 ia=2 kn=4 a=1.0000 /  ! TRIAL 2+ x 2s1/2
+   &cfp in=2 ib=1 ia=2 kn=5 a=1.0000 /  ! TRIAL 2+ x 1d5/2
+
+ ! Exit #2 DIRECT component with the SAME coupled entrance waves.
+   &cfp in=2 ib=2 ia=1 kn=3 a=0.3254 /
+ ! Exit #3 unit-amplitude 2+ x 2s1/2 basis curve.
+   &cfp in=2 ib=3 ia=2 kn=4 a=1.0000 /
+ ! Exit #4 unit-amplitude 2+ x 1d5/2 basis curve.
+   &cfp in=2 ib=4 ia=2 kn=5 a=1.0000 /
+   &cfp in=0 /
+ &COUPLING /
+ ! END OF FRESCO INPUT

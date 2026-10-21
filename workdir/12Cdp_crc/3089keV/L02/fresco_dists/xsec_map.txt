@@ -1,0 +1,120 @@
+================================================================================
+FRESCO CROSS-SECTION MAP
+================================================================================
+
+CALCULATION
+-----------
+Title           : 12C(d,p)13C(3.089 MeV,1/2+) CCBA
+Beam energy     : 16.000 MeV lab
+Theta range     : 0.0 - 180.0 deg
+Theta step      : 0.5 deg
+Jmax            : 18.0
+
+REACTION PARTITIONS
+-------------------
+Partition 1: 2H + 12C    Q = +0.0000 MeV
+    state 1: 2H(1+) + 12C(0+, Ex=0.0000 MeV)
+    state 2: 2H(1+) + 12C(2+, Ex=4.4389 MeV)
+
+Partition 2: 1H + 13C    Q = +2.7220 MeV
+    state 1: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+    state 2: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+    state 3: 1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+
+TRANSFER COUPLING
+-----------------
+Direction       : TWO-way
+KIND            : 7, 8
+Type            : finite-range
+Form            : POST
+IP1             : 0
+IP2             : -2 (NONO+COMPLEX)
+
+INTEGRATED CHANNEL CROSS SECTIONS
+---------------------------------
+2H + 12C state 1          :      0.00025 mb
+2H + 12C state 2          :     22.92945 mb
+1H + 13C state 1          :     36.72187 mb
+1H + 13C state 2          :     33.73312 mb
+1H + 13C state 3          :      0.65508 mb
+
+Total outgoing         :     94.03978 mb
+Reaction cross section :   1002.11770 mb
+Absorption             :    908.07793 mb
+
+================================================================================
+PARSED CROSS-SECTIONS
+================================================================================
+
+----------------------------------------
+state0.txt | output line 8748
+----------------------------------------
+Channel:
+    2H(1+) + 12C(0+, Ex=0.0000 MeV)
+Integrated cross section:
+    41014000000.0000 mb
+    angular range: 0.0 - 180.0 deg
+
+----------------------------------------
+state1.txt | output line 9835
+----------------------------------------
+Channel:
+    2H(1+) + 12C(2+, Ex=4.4389 MeV)
+Integrated cross section:
+    22.9290 mb
+    angular range: 0.0 - 180.0 deg
+
+----------------------------------------
+state2.txt | output line 10562
+----------------------------------------
+Channel:
+    1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+
+Transfer configurations:
+
+    12C(0+) + n -> 13C(1/2+)
+        SpecAmp         : -0.8974
+
+    12C(2+) + n -> 13C(1/2+)
+        SpecAmp         : +0.3124
+
+Integrated cross section:
+    36.7180 mb
+    angular range: 0.0 - 180.0 deg
+
+----------------------------------------
+state3.txt | output line 11289
+----------------------------------------
+Channel:
+    1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+
+Transfer configurations:
+
+    12C(0+) + n -> 13C(1/2+)
+        SpecAmp         : -0.8974
+
+    12C(2+) + n -> 13C(1/2+)
+        SpecAmp         : +0.0000
+
+Integrated cross section:
+    33.7290 mb
+    angular range: 0.0 - 180.0 deg
+
+----------------------------------------
+state4.txt | output line 12016
+----------------------------------------
+Channel:
+    1H(1/2+) + 13C(1/2+, Ex=3.0890 MeV)
+
+Transfer configurations:
+
+    12C(0+) + n -> 13C(1/2+)
+        SpecAmp         : +0.0000
+
+    12C(2+) + n -> 13C(1/2+)
+        SpecAmp         : +0.3124
+
+Integrated cross section:
+    0.6551 mb
+    angular range: 0.0 - 180.0 deg
+

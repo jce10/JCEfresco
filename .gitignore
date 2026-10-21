@@ -20,6 +20,7 @@ dp/*
 
 # Experiment specific files/directories
 13C_Campaign/*
+kgh_fresco/*
 
 
 # optionally ignore other local files
